@@ -1,27 +1,95 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+    @font-face {
+      font-family: 'PixelFont';
+      src: url('../assets/font/PIXEL_FONT.001.ttf') format('truetype');
+    }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+    body{
+      font-family: 'PixelFont', sans-serif;
+      padding: 0%;
+      margin: 0%;
+      width: 100%;
+      min-width: 320px;
+      height: 100vh;
+    }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    @layer base {
+      /*Dark Mode*/
+      :root {
+        
+        --color-bkg:0 0% 13%; /*Brown Black*/
+        --color-border:0 0% 13%; /*Brown Black*/
+        --color-content:0 0% 100%; /*White*/
+
+
+        /*Text*/
+        --color-text:0 0% 100%; /*White*/
+        --color-textHover:0	0%	80%; /*White*/
+
+
+        /*Toggle Button*/
+        --color-toggle:0 0% 100%;  /*White*/
+        --color-toggleHover:0	0%	80%; /*Light Gray*/
+
+        /*Title Border*/
+        --color-titleBorder:6 19% 78%; /*Dark Pink*/
+
+        /*Avatar Spotlight*/
+        --color-avatarSpotlight: invert(12%) sepia(7%) saturate(481%) hue-rotate(314deg) brightness(88%) contrast(79%);  /*Avatar Spotlight*/
+
+        /*Nameplate*/
+        --color-namePlate:0 16.67% 10.59%;/*Dark Brown Black*/
+        --color-namePlateText:0 0% 100%; /*White*/
+        
+        /*Textbox*/
+        --color-textbox: 0 3.23% 18.04%;/*Light Brown Black*/
+       
+        /*Download CV*/
+        --color-downloadButton: 0 0% 13%; /*Brown Black*/
+      }
+
+      /*Light Mode*/
+      :root[data-theme="light"]{
+        /*White*/
+        --color-bkg:0 0% 100%;
+        
+        /*Pink*/
+        --color-border:0	100%	96.67%;
+
+          /*Brown Black*/
+        --color-content:0 0% 13%;
+
+          /*Title Border*/
+          --color-titleBorder:0 0% 13%; /*Brown Black*/
+
+          /*Text*/
+          --color-text:0 0% 13%; /*Brown Black*/
+          --color-textHover:0 3% 19%;/* Light Brown Black*/
+
+          /*Toggle Button*/
+          --color-toggle:0 0% 13%; /*Brown Black*/
+          --color-toggleHover:0 3% 19%;/* Light Brown Black*/
+
+          /*Avatar Spotlight*/
+          --color-avatarSpotlight:invert(94%) sepia(2%) saturate(1230%) hue-rotate(314deg) brightness(100%) contrast(102%); /*Avatar Spotlight*/
+
+            /*Nameplate*/
+          --color-namePlate:0 3% 19%;/*Light Brown Black*/
+          --color-namePlateText:0 21%  11%;/*Dark Brown Black*/
+
+          /*Textbox*/
+          --color-textbox: 0	100%	96.67%;/*Pink*/
+
+          /*Download CV*/
+          --color-downloadButton:0	0%	80%; /*White*/
+      }
+    }
+
+
+    
+.space {
+  margin-right: .7rem;
 }

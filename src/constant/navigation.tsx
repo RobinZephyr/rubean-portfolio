@@ -1,0 +1,26 @@
+export const navigatorLinks = [
+    {
+        title:'HOME',
+        link:'/home',
+    },
+    {
+        title:'ABOUT',
+        link:'/about',
+    },
+    {
+        title:'PROJECT',
+        link:'/projects',
+    },
+    {
+        title:'BLOG',
+        link:'/blog',
+    },
+    {
+        title:'CONTACT',
+        link:'/contact',
+    },
+    {
+        title:'SERVICES',
+        link:'/services',
+    },
+]

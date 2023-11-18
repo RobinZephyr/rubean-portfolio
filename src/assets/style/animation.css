@@ -1,0 +1,39 @@
+.fadeAnimation {
+    transition: transform ease-in-out 0.2s;
+    
+  }
+  
+.fadeAnimation:hover {
+  transform: translateY(-3px); /* Adjust the value based on your preference */
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  animation: fadeInDown .3s ease-in-out;
+}
+
+@keyframes fadeSpotlight {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeSpotlight {
+  animation: fadeSpotlight .3s ease-in-out;
+}
