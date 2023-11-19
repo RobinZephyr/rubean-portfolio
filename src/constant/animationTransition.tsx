@@ -28,9 +28,6 @@ export function AnimationTransition() {
     duration: 0.5,
     delay: 4.7,
     x: 0,
-    onComplete: () => {
-      gsap.set(".nametag", { zIndex: 50, z: 'auto' }); // Update zIndex after animation
-    },
   });
 
     gsap.set(".hello-world-letter", { opacity: 0, y: -20 });
@@ -58,4 +55,24 @@ export function AnimationTransition() {
       ease: "power4.inOut",
       delay: 4.7, // stagger the animation
     });
+
+
+
+    gsap.set(".letter-chat", { opacity: 0, y:0 });
+    gsap.to(".letter-chat", {
+      opacity: 1,
+      duration: .01,
+      delay: (index) =>9 + index * 0.03, // stagger the animation
+      y: 0,
+    });
+
+    gsap.set(".play-icon", { opacity: 0, });
+    gsap.to(".play-icon", {
+      opacity: 1,
+      duration: .8,
+      x:0,
+      ease: "power4.inOut",
+      delay: 9, // stagger the animation
+    });
+
 }
