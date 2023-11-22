@@ -24,33 +24,31 @@ export default function HeadersPortfolio() {
   const toggleMobileMenu = () => {
     const mobileMenu = document.querySelector('.bgBlack');
     const xIcon = document.querySelector('.xIcon');
-
-    gsap.set(xIcon, { opacity: 0});
+  
+    gsap.set(xIcon, { opacity: 0 });
     if (isMobileMenuOpen) {
-      gsap.to([mobileMenu, ], {
+      gsap.to([mobileMenu,], {
         opacity: 0,
         duration: 0.5,
         y: 100,
         ease: 'power4.inOut',
         onComplete: () => {
           setIsMobileMenuOpen(false);
-          mobileMenu.classList.add('hidden');
+          gsap.set(mobileMenu, { opacity: 0, y: 100 });
+          mobileMenu.classList.add('hidden'); // Add hidden class after the animation completes
         },
       });
-
-
     } else {
-      const mobileMenu = document.querySelector('.bgBlack');
       mobileMenu.classList.remove('hidden');
-
+  
       gsap.set(mobileMenu, { opacity: 0, y: 100 });
-      gsap.to([mobileMenu, ], {
+      gsap.to([mobileMenu,], {
         opacity: 1,
         duration: 0.3,
         y: 0,
         ease: 'power1.out',
       });
-
+  
       const mobileNavButtons = document.querySelectorAll('.mobileNavButton');
       gsap.set(mobileNavButtons, { opacity: 0, y: 200 });
       Array.from(mobileNavButtons).forEach((button, index) => {
@@ -62,7 +60,7 @@ export default function HeadersPortfolio() {
           ease: 'back.out',
         });
       });
-
+  
       setIsMobileMenuOpen(true);
     }
   };

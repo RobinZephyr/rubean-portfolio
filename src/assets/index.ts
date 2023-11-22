@@ -7,6 +7,7 @@ import  circle from '../assets/avatar/circle.png'
 import circleSvg from '../assets/avatar/circle.svg'
 import rubeanProflie from '../assets/avatar/profile.jpg'
 import avatarTadaUp from '../assets/avatar/avatarPresentUp.gif'
+
 export {
     avatarStand,
     avatarSnap,
@@ -14,7 +15,7 @@ export {
     avatarSnapWink,
     avatarLaptopType,
     avatarTadaUp,
-    
+
     rubeanProflie,
     circle,
     circleSvg

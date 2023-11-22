@@ -102,6 +102,9 @@ const config: Config = {
         
         mainMenu: "hsl(var(--color-mainMenu) / <alpha-value>)",
         borderMenu: "hsl(var(--color-borderMenu) / <alpha-value>)",
+
+        skillMenu: "hsl(var(--color-skillMenu) / <alpha-value>)",
+        
         
         darkPink:'#C8A7A3',
         darkBrown:'#222222',

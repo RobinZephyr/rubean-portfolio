@@ -59,6 +59,9 @@
         /*MobileMenu*/
         --color-mainMenu:0 0% 13%; /*Brown Black*/
         --color-borderMenu:0 100% 0%; /*Black*/
+
+        /*Skills Menu*/
+        --color-skillMenu:6 19% 78%; /*Dark Pink*/
       }
 
       /*Light Mode*/
@@ -99,6 +102,9 @@
           /*MobileMenu*/
         --color-mainMenu:6 19% 78%; /*Dark Pink*/
         --color-borderMenu:0 0% 13%; /*Brown Black*/
+
+          /*Skills Menu*/
+          --color-skillMenu:0 0% 13%; /*Brown Black*/
       }
     }
 
