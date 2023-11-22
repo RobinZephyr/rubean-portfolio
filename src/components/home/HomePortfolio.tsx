@@ -15,7 +15,8 @@ export default function HomePortolio() {
   }, []);
 
   return (
-<div className={`h-100% w-full text-text bg-bkg justify-center pb-10`}>
+<div className={`h-full w-full bg-bkg justify-center  pb-20 `}>
+      <div className='h-screen w-screen m-0 p-0  no-overflow bg-black  absolute BgPitchBack'/>
       <TitleHome/>
       <div className='px-5 w-full flex justify-center items-center md:mt-14'>
         <div className=' md:space-x-10 md:flex md:h-60%  items-center '>
@@ -24,12 +25,13 @@ export default function HomePortolio() {
           </div>
 
           <div className=' w-full' >
-            <div className=' w-full flex justify-center HomeTextbox '>
-              <HomeTextbox/>
+            <div className=' w-full flex justify-center opacity-0 HomeTextbox text-text '>
+                <HomeTextbox/>
             </div>
 
-            <div className='flex  pt-2 items-center justify-between'>
+            <div className='flex  pt-2 items-center justify-between ContactAndDownload opacity-0'>
               <ContactLinks/>
+              <DownloadCvButton/>
             </div>
           </div>
 

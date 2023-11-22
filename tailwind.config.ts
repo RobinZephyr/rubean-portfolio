@@ -36,6 +36,7 @@ const config: Config = {
         '40%': '40%',
         '50%': '50%',
         '60%': '60%',
+        '65%':'65%',
         '70%': '70%',
         '75%': '75%',
         '80%': '80%',
@@ -58,7 +59,21 @@ const config: Config = {
         '80%': '80%',
         '90%': '90%',
         '100%': '100%',
+        
       },
+      minWidth: {
+        '10%': '10%',
+        '20%': '20%',
+        '30%': '30%',
+        '40%': '40%',
+        '50%': '50%',
+        '60%': '60%',
+        '70%': '70%',
+        '80%': '80%',
+        '90%': '90%',
+        'full': '100%',
+      },
+  
       colors: {
         accent: {
           1: "hsl(var(--color-accent1) / <alpha-value>)",
@@ -85,6 +100,8 @@ const config: Config = {
         
         downloadButton: "hsl(var(--color-downloadButton) / <alpha-value>)",
         
+        mainMenu: "hsl(var(--color-mainMenu) / <alpha-value>)",
+        borderMenu: "hsl(var(--color-borderMenu) / <alpha-value>)",
         
         darkPink:'#C8A7A3',
         darkBrown:'#222222',

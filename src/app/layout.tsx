@@ -5,10 +5,8 @@ import '../assets/style/header.css'
 import '../assets/style/animation.css'
 import '../assets/style/elements.css'
 import HeadersPortfolio from '@/components/layout/HeadersPortfolio'
-import SideBorder from '@/components/layout/SideBorder'
-import HomePortolio from '@/components/home/HomePortfolio'
-import AboutPortfolio from '@/components/about/AboutPortfolio'
-import Mobilenavbar from '@/components/layout/Mobilenavbar'
+import LeftSideBorder from '@/components/layout/LeftSideBorder.'
+import RightSideBorder from '@/components/layout/RightSideBorder'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,12 +24,12 @@ export default function RootLayout({
     <html lang="en">
       <body className='  h-full'>
         <div className='flex h-full'>
-          <SideBorder/>
+          <LeftSideBorder/>
             <div className='w-full h-full flex-col'>
               <HeadersPortfolio/>
                 {children}
             </div>
-            <SideBorder/>
+            <RightSideBorder/>
         </div>
       </body>
     </html>

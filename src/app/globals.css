@@ -6,7 +6,12 @@
       font-family: 'PixelFont';
       src: url('../assets/font/PIXEL_FONT.001.ttf') format('truetype');
     }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
+}
     body{
       font-family: 'PixelFont', sans-serif;
       padding: 0%;
@@ -14,6 +19,7 @@
       width: 100%;
       min-width: 320px;
       height: 100vh;
+      background-color: black;
     }
 
     @layer base {
@@ -49,12 +55,16 @@
        
         /*Download CV*/
         --color-downloadButton: 0 0% 13%; /*Brown Black*/
+
+        /*MobileMenu*/
+        --color-mainMenu:0 0% 13%; /*Brown Black*/
+        --color-borderMenu:0 100% 0%; /*Black*/
       }
 
       /*Light Mode*/
       :root[data-theme="light"]{
         /*White*/
-        --color-bkg:0 0% 100%;
+        --color-bkg:0 0% 100%; /**White*/
         
         /*Pink*/
         --color-border:0	100%	96.67%;
@@ -85,6 +95,10 @@
 
           /*Download CV*/
           --color-downloadButton:0	0%	80%; /*White*/
+
+          /*MobileMenu*/
+        --color-mainMenu:6 19% 78%; /*Dark Pink*/
+        --color-borderMenu:0 0% 13%; /*Brown Black*/
       }
     }
 

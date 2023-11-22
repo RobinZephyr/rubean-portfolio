@@ -3,8 +3,38 @@ import { useEffect } from 'react';
 import gsap from 'gsap'
 
 export function AnimationTransition() {
+  //Layout
+  gsap.set('.HeadersIntro', { opacity: 0, });
+  gsap.to('.HeadersIntro', {
+    opacity: 1,
+    duration: .5, 
+    delay: 4,
+    y: 0,
+  });
+  gsap.set('.SideBarLeftIntro', { opacity: 0,  });
+  gsap.to('.SideBarLeftIntro', {
+    opacity: 1,
+    duration: .5,
+    delay: 4,
+    x: 0,
+  });
+  gsap.set('.SidebarRightIntro', { opacity: 0,});
+  gsap.to('.SidebarRightIntro', {
+    opacity: 1,
+    duration: .5,
+    delay: 4,
+    x: 0,
+  });
 
-  gsap.set('.AvatarSnap', { opacity: 0, y: -20 });
+  gsap.to('.BgPitchBack', {
+    duration: .5,
+    className:'bg-bkg',
+    delay: 4,
+    opacity:0,
+  });
+  
+
+  gsap.set('.AvatarSnap', { opacity: 0,});
   gsap.to('.AvatarSnap', {
     opacity: 1,
     duration: 1,
@@ -12,21 +42,37 @@ export function AnimationTransition() {
     y: 0,
   });
 
+  gsap.to('.AvatarSnap', {
+    opacity: 0,
+    display: 'none',
+    duration: 0,
+    delay:9,
+  });
+
+  gsap.set('.AvatarType', { opacity: 0,display:'none'});
+  gsap.to('.AvatarType', {
+    opacity:1,
+    duration: 0,
+    delay:9,
+    display:'block'
+  });
+
   gsap.set('.AvatarCircle', { opacity: 0, y: 1, scale: .1 });
   gsap.to('.AvatarCircle', {
     opacity: 1,
     duration: 0.2,
-    delay: 4.7,
+    delay:4,
     ease:'power1.out',
     y: 0,
     scale: 1,
   });
 
+
   gsap.set(".HomeTextbox", { opacity: 0, x: -20, z: 50 });
   gsap.to(".HomeTextbox", {
     opacity: 1,
     duration: 0.5,
-    delay: 4.7,
+    delay: 4,
     x: 0,
   });
 
@@ -34,7 +80,7 @@ export function AnimationTransition() {
     gsap.to(".hello-world-letter", {
       opacity: 1,
       duration: .2,
-      delay: (index) =>4.7 + index * 0.1, // stagger the animation
+      delay: (index) =>4.0 + index * 0.1, // stagger the animation
       y: 0,
     });
 
@@ -44,7 +90,7 @@ export function AnimationTransition() {
         duration: .8,
         x:0,
         ease: "power4.inOut",
-        delay: 4.7, // stagger the animation
+        delay:4, // stagger the animation
       });
 
     gsap.set(".titleBorderRight", { opacity: 0, x:20 });
@@ -53,7 +99,7 @@ export function AnimationTransition() {
       duration: .8,
       x:0,
       ease: "power4.inOut",
-      delay: 4.7, // stagger the animation
+      delay: 4, // stagger the animation
     });
 
 
@@ -61,8 +107,8 @@ export function AnimationTransition() {
     gsap.set(".letter-chat", { opacity: 0, y:0 });
     gsap.to(".letter-chat", {
       opacity: 1,
-      duration: .01,
-      delay: (index) =>9 + index * 0.03, // stagger the animation
+      duration: .2,
+      delay: (index) =>8.7 + index * 0.03, // stagger the animation
       y: 0,
     });
 
@@ -72,7 +118,19 @@ export function AnimationTransition() {
       duration: .8,
       x:0,
       ease: "power4.inOut",
-      delay: 9, // stagger the animation
+      delay: 8.3, // stagger the animation
     });
 
-}
+    gsap.set(".ContactAndDownload", { opacity: 0, y:10});
+    gsap.to(".ContactAndDownload", {
+      opacity: 1,
+      y:0,
+      ease: "power1.inOut",
+      duration: .8,
+      delay:4, 
+    });
+
+    
+
+  }
+
