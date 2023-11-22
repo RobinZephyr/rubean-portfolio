@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { navigatorLinks } from '@/constant/navigation';
 import gsap from 'gsap';
+import { AnimationTransition } from '@/constant/animationTransition';
 
 function MobileNav() {
     const handleHoverEnter = (event: React.MouseEvent<HTMLParagraphElement>) => {
@@ -12,7 +13,6 @@ function MobileNav() {
         x:0,
         ease:'power1.out'
       });
-
     };
     const handleHoverLeave = (event: React.MouseEvent<HTMLParagraphElement>) => {
       const naviIcon = event.currentTarget.querySelector('.naviIconHover');
@@ -22,10 +22,7 @@ function MobileNav() {
       });
     };
     useEffect(() => {
-      const naviIcons = document.querySelectorAll('.naviIconHover');
-      naviIcons.forEach((naviIcon) => {
-        gsap.set(naviIcon, { opacity: 0, x: -50 });
-      });    
+      AnimationTransition();
     }, []);
 
   
@@ -53,7 +50,7 @@ function MobileNav() {
                 {nav.title}
               </div>
 
-              <div className=' button absolute w-full h-full bg-opacity-50 hover:bg:red-900'/>
+              <div className=' button  w-full h-full bg-opacity-50 hover:bg:red-900'/>
           </div>
         ))}
 

@@ -3,10 +3,9 @@ import React, { useEffect, useState } from 'react';
 import Nameplate from './Nameplate';
 //import Textbox from './Textbox';
 import { AnimationTransition } from '@/constant/animationTransition';
-import { FaCircleArrowUp, FaCircleNotch, FaPlay } from 'react-icons/fa6';
+import { FaLocationPin } from 'react-icons/fa6';
 import { chatDialog } from '@/constant/chatDialog';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
+import gsap from 'gsap';
 
 const HomeTextbox: React.FC = () => {
   useEffect(() => {
@@ -34,7 +33,6 @@ const HomeTextbox: React.FC = () => {
   const [finishTalk,setFinishTalk] = useState(false);
   useEffect(() => {
     const dialogLength = chatDialog.length > 0 ? chatDialog[0].dialog.length : 0;
-    console.log("Before Typing:", characterTyped);
     let timeout: NodeJS.Timeout;
     for (let i = 0; i < dialogLength; i++) {
       timeout = setTimeout(() => {
@@ -48,12 +46,25 @@ const HomeTextbox: React.FC = () => {
   }, [chatDialog]); 
 
   useEffect(() => {
-    console.log("After Typing:", characterTyped);
     const dialogLength = chatDialog.length > 0 ? chatDialog[0].dialog.length : 0;
-    if(dialogLength === characterTyped){
-      setFinishTalk(true)
+  
+    if (dialogLength === characterTyped) {
+      const nextDialogindicator = document.querySelector('.nextDialogindicator');
+  
+      // Check if nextDialogindicator exists before animating
+      if (nextDialogindicator) {
+        setFinishTalk(true);
+  
+        gsap.to([nextDialogindicator], {
+          y: -4,
+          ease: 'power4.inout',
+          yoyo: true,
+          repeat: -1,
+        });
+      }
     }
-  }, [finishTalk]);
+  }, [characterTyped, chatDialog]); // Include characterTyped and chatDialog in the dependency array
+  
 
   return (
     <div className='h-50% shadow-md'>
@@ -61,16 +72,17 @@ const HomeTextbox: React.FC = () => {
         <Nameplate name="WEB DEVELOPER" />
       </div>
       <div className='z-10 '>
-        <div className='relative p-3 min-w-[320px] max-w-[400px] md:min-w-[450px] bg-textbox mt-4 pt-5 md:mt-5 md:pt-6'>
-          <p className='text-md md:text-2xl '>
+        <div className='relative p-3 min-w-[320px] max-w-[400px] md:min-w-[420px] bg-textbox mt-4 pt-5 md:mt-5 md:pt-6'>
+          <p className='text-md md:text-xl '>
             {splitText(chatDialog[0].dialog)}
           </p>
 
-          <div className='w-full flex justify-end play-icon opacity-0'>
+          <div className='w-full flex justify-end play-icon opacity-0 absolute '>
             {finishTalk?(
-              <FaPlay className='text-white fa-beat fadeInDown'/>
+              <FaLocationPin className='text-text text-2xl p-0 fadeInDown absolute -top-5 right-3 nextDialogindicator'/>
             ):(
-              <FaCircleNotch className='text-white spin fadeInDown' />
+              ""
+              // <FaCircleNotch className='text-white spin fadeInDown' />
             )
             }
           </div>

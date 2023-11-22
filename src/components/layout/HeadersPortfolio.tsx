@@ -34,13 +34,15 @@ export default function HeadersPortfolio() {
         ease: 'power4.inOut',
         onComplete: () => {
           setIsMobileMenuOpen(false);
+          mobileMenu.classList.add('hidden');
         },
-
-        
       });
 
-      
+
     } else {
+      const mobileMenu = document.querySelector('.bgBlack');
+      mobileMenu.classList.remove('hidden');
+
       gsap.set(mobileMenu, { opacity: 0, y: 100 });
       gsap.to([mobileMenu, ], {
         opacity: 1,
@@ -50,13 +52,11 @@ export default function HeadersPortfolio() {
       });
 
       const mobileNavButtons = document.querySelectorAll('.mobileNavButton');
-
       gsap.set(mobileNavButtons, { opacity: 0, y: 200 });
-      
       Array.from(mobileNavButtons).forEach((button, index) => {
         gsap.to(button, {
           opacity: 1,
-          duration: 0.3,
+          duration: 0.4,
           delay: 0.6 + index * 0.2, // Incremental delay
           y: 0,
           ease: 'back.out',

@@ -131,6 +131,9 @@ export function AnimationTransition() {
     });
 
     
-
+    const naviIcons = document.querySelectorAll('.naviIconHover');
+    naviIcons.forEach((naviIcon) => {
+      gsap.set(naviIcon, { opacity: 0, x: -50 });
+    });    
   }
 
