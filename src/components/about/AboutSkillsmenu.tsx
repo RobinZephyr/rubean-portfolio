@@ -1,19 +1,28 @@
 import { skills } from '@/constant/skills';
 import React from 'react';
+import SkillName from './SkillName';
+import { avatarSnap } from '@/assets';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useRef, useEffect, useState } from 'react';
 
 function AboutSkillsmenu() {
-  const visibleSkills = skills.slice(0, 5); // Get the first 5 skills
+  const [width, setWidth]=useState(0);
+  const carousel = useRef(null);
+  useEffect(()=>{
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  })
 
   return (
-    <div className='bg-skillMenu w-full flex overflow-x-none justify-between flex p-3 '>
-      {visibleSkills.map((skill) => (
-        <div key={skill.id} className='text-text bg-black  items-center flex'>
-            <div className='h-[80px] w-[80px]'>
-            {skill.skill}
-            </div>
-        </div>
-      ))}
-    </div>
+        <motion.div ref={carousel} className='carousel bg-skillMenu w-[600px]'>
+          <motion.div className='inner-carousel bg-skillMenu space-x-2 p-2' drag="x" dragConstraints={{right:0, left:-width}}>
+            {skills.map((skill) => (
+              <motion.div key={skill.id} className='item '>
+                <Image src={skill.image} alt={skill.skill} className=''/>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
   );
 }
 

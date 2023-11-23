@@ -6,6 +6,7 @@ import AboutTitle from './TitleAbout';
 import { rubeanProflie } from '@/assets';
 import Image from 'next/image';
 import AvatarAboutAnimation from './AvatarAboutAnimation';
+import AboutTextbox from './AboutTextbox';
 gsap.registerPlugin(ScrollTrigger); // Register the ScrollTrigger plugin
 
 export default function AboutPortfolio() {
@@ -14,18 +15,22 @@ export default function AboutPortfolio() {
   }, []);
 
   return (
-    <div className='h-full w-full  text-text  bg-bkg flex-col border-2 border-black  pt-5 px-3'>
+    <div className='h-full w-full  text-text  bg-bkg flex-col   pt-5'>
       <div>
         <AboutTitle/>
       </div>
 
-      <div>
-        <div className='w-full h-full'>
-          <Image src={rubeanProflie} alt="Please dont Look" className='w-50% object-cover rounded-full h-50% '/>
+      <div className='mt-8 p-5 border-2 border-pink-500'>
+        <div className='w-full h-full flex justify-center'>
+          <Image src={rubeanProflie} alt="Please dont Look" className='w-56 h-72 object-cover rounded-full '/>
         </div>
-
-        <div>
-          <AvatarAboutAnimation/>
+        <div className='mt-4 '>
+          <div>
+            <AboutTextbox/>
+          </div>
+          <div className='mt-4 flex justify-center  w-full '>
+            <AvatarAboutAnimation/>
+          </div>
         </div>
       </div>
     </div>

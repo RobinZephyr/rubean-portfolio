@@ -18,24 +18,22 @@ export default function HomePortolio() {
 <div className={`h-full w-full bg-bkg justify-center  pb-20 `}>
       <div className='h-screen w-screen m-0 p-0  no-overflow bg-black  absolute BgPitchBack'/>
       <TitleHome/>
-      <div className='px-5 w-full flex justify-center items-center md:mt-14'>
-        <div className=' md:space-x-10 md:flex md:h-60%  items-center '>
-          <div className=' md:min-w-[260px]  md:min-h-[270px] w-full flex pt-20 md:pt-20 '>
-            <AvatarHomeAnimation/>
-          </div>
-
-          <div className=' w-full' >
-            <div className=' w-full flex justify-center opacity-0 HomeTextbox text-text '>
-                <HomeTextbox/>
+      <div className='px-5 w-full flex justify-center items-center md:mt-14 '>
+          <div className=' h-full md:flex items-center  lg:w-90% gap-5'>
+            <div className=' md:min-w-[240px]  md:min-h-[270px] w-full md:justify-end flex pt-20  '>
+              <AvatarHomeAnimation/>
             </div>
 
-            <div className='flex  pt-2 items-center justify-between ContactAndDownload opacity-0'>
-              <ContactLinks/>
-              <DownloadCvButton/>
+            <div className=''>
+              <div className='flex justify-start opacity-0 HomeTextbox text-text '>
+                  <HomeTextbox/>
+              </div>
+              <div className='flex  pt-2 items-center justify-between ContactAndDownload opacity-0'>
+                <ContactLinks/>
+                <DownloadCvButton/>
+              </div>
             </div>
-          </div>
-
-        </div>
+          </div> 
       </div>
 
     </div>

@@ -102,16 +102,6 @@ export function AnimationTransition() {
       delay: 4, // stagger the animation
     });
 
-
-
-    gsap.set(".letter-chat", { opacity: 0, y:0 });
-    gsap.to(".letter-chat", {
-      opacity: 1,
-      duration: .2,
-      delay: (index) =>8.7 + index * 0.03, // stagger the animation
-      y: 0,
-    });
-
     gsap.set(".play-icon", { opacity: 0, });
     gsap.to(".play-icon", {
       opacity: 1,

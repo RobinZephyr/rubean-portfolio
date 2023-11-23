@@ -1,5 +1,6 @@
 // Nameplate.tsx
 import React from 'react';
+import { FaCrow } from 'react-icons/fa6';
 
 interface NameplateProps {
   name: string;
@@ -9,7 +10,14 @@ const Nameplate: React.FC<NameplateProps> = ({ name }) => {
   return (
     <div className='flex items-center absolute z-20'>
       <div className=' border-4 border-namePlate bg-namePlate h-8 md:h-10 flex w-fit px-3 items-center font-bold'>
-        <p className='text-white text-md md:text-2xl'>{name}</p>
+        <div className='whitespace-nowrap text-white text-md md:text-2xl flex items-center space-x-3 '> 
+          <span>
+            <FaCrow/>   
+          </span>
+          <span>
+            {name}
+          </span>
+        </div>
       </div>
 
       <div className=' md:hidden

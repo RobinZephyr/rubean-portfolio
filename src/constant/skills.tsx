@@ -1,43 +1,45 @@
+import { css, html, javascript, laravel, mysql, postgresl, react, tailwind } from "@/assets";
+
 export const skills = [
     {
       id: '1',
       skill: 'React',
-      dialog: ``,
+      image: react,
     },
     {
         id: '2',
         skill: 'Tailwind',
-        dialog: ``,
+        image: tailwind,
       },
       {
         id: '3',
         skill: 'Laravel',
-        dialog: ``,
+        image: laravel,
       },
       {
         id: '4',
         skill: 'Javascript',
-        dialog: ``,
+        image: javascript,
       },
       {
         id: '5',
         skill: 'HTML',
-        dialog: ``,
+        image: html,
       },
       {
         id: '6',
         skill: 'CSS',
-        dialog: ``,
+        image: css,
       },
       {
         id: '7',
-        skill: 'XAMPP',
-        dialog: ``,
+        skill: 'MySQL',
+        image: mysql,
       },
       {
         id: '8',
-        skill: 'XPostgreSQLAMPP',
-        dialog: ``,
+        skill: 'PostgreSQL',
+        image: postgresl,
       },
 
   ];

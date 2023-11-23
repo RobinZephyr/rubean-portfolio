@@ -67,19 +67,19 @@ const HomeTextbox: React.FC = () => {
   
 
   return (
-    <div className='h-50% shadow-md'>
+    <div className='h-50% shadow-md w-full   '>
       <div>
         <Nameplate name="WEB DEVELOPER" />
       </div>
       <div className='z-10 '>
-        <div className='relative p-3 min-w-[320px] max-w-[400px] md:min-w-[420px] bg-textbox mt-4 pt-5 md:mt-5 md:pt-6'>
-          <p className='text-md md:text-xl '>
-            {splitText(chatDialog[0].dialog)}
+        <div className='relative p-3   bg-textbox w-full mt-4 pt-5 md:mt-5 md:pt-6'>
+          <p className='text-md md:text-xl   '>
+            {chatDialog[0].dialog}
           </p>
 
-          <div className='w-full flex justify-end play-icon opacity-0 absolute '>
+          <div className='  w-full flex justify-end play-icon opacity-0 absolute '>
             {finishTalk?(
-              <FaLocationPin className='text-text text-2xl p-0 fadeInDown absolute -top-5 right-3 nextDialogindicator'/>
+              <FaLocationPin className='text-text text-2xl p-0 fadeInDown absolute -top-4 right-3 nextDialogindicator'/>
             ):(
               ""
               // <FaCircleNotch className='text-white spin fadeInDown' />

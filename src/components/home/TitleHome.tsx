@@ -7,7 +7,7 @@ export default function TitleHome() {
     AnimationTransition()
   }, []);
 
-  const text = "HELLO  WORLD!";
+  const text = "HELLO WORLD!";
   return (
     <div className="w-full  flex items-center justify-between">
   
