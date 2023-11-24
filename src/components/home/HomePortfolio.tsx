@@ -16,7 +16,7 @@ export default function HomePortolio() {
 
   return (
 <div className={`h-full w-full bg-bkg justify-center  pb-20 `}>
-      <div className='h-screen w-screen m-0 p-0  no-overflow bg-black  absolute BgPitchBack'/>
+  <div className='h-screen w-screen m-0 p-0 bg-black absolute BgPitchBack' style={{overflowY: 'hidden'}} />
       <TitleHome/>
       <div className='px-5 w-full flex justify-center items-center md:mt-14 '>
           <div className=' h-full md:flex items-center  lg:w-90% gap-5'>

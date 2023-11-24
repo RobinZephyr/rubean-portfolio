@@ -5,25 +5,34 @@ import { avatarSnap } from '@/assets';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
+import Nameplate from '../home/Nameplate';
 
 function AboutSkillsmenu() {
-  const [width, setWidth]=useState(0);
-  const carousel = useRef(null);
-  useEffect(()=>{
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  })
+
 
   return (
-        <motion.div ref={carousel} className='carousel bg-skillMenu w-[600px]'>
-          <motion.div className='inner-carousel bg-skillMenu space-x-2 p-2' drag="x" dragConstraints={{right:0, left:-width}}>
-            {skills.map((skill) => (
-              <motion.div key={skill.id} className='item '>
-                <Image src={skill.image} alt={skill.skill} className=''/>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+  <div className='w-full'>
+      <div className='justify-center flex'>
+        <SkillName skillName="SKILLS"/>
+      </div>
+
+    <div  className='carousel bg-skillMenu w-full md:w-[600px] mt-4 pt-4  rounded-sm'>
+    <div className='overflow-none overflow-x-auto scrollbar px-2 inner-carousel bg-skillMenu   flex gap-4 py-1' >
+      {skills.map((skill) => (
+        < div key={skill.id} className='min-w-[4rem] px-2 py-1 rounded-md item bg-textbox fadeAnimation shadow-sm' >
+            <Image src={skill.image} alt={skill.skill} className='' title={skill.skill}/>
+        </div>
+      ))}
+    </div>
+
+    </div>
+  </div>
+
   );
 }
 
 export default AboutSkillsmenu;
+
+
+
+

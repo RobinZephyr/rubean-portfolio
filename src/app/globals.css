@@ -19,6 +19,7 @@
       width: 100%;
       min-width: 320px;
       height: 100vh;
+      overflow-x: hidden;
       background-color: black;
     }
 

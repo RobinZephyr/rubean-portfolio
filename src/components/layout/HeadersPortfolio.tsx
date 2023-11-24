@@ -81,6 +81,8 @@ export default function HeadersPortfolio() {
               </div>
 
               <div className='  items-center  p-3 justify-end flex  '>
+
+                  {/**Desktop */}
                   <div className='relative justify-end  space-x-5 whitespace-nowrap hidden md:flex grid grid-cols-2'>
                       {navigatorLinks.map((nav)=>(
                         <span className='fadeInDown  whitespace-nowrap fadeAnimation text-text  hover:underline cursor-pointer' 
@@ -96,6 +98,7 @@ export default function HeadersPortfolio() {
                   <div className='fadeAnimation text-text   md:hidden block  mr-3' style={{ zIndex: 100 }}> 
                       <ThemeButton isLightTheme={isLightTheme} toggleTheme={toggleTheme} />
                   </div>
+
                   <div
                     className={`text-2xl w-10 h-10 md:hidden block flex items-center justify-center fadeAnimation text-text  `}
                     onClick={toggleMobileMenu}>

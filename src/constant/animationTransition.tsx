@@ -124,6 +124,23 @@ export function AnimationTransition() {
     const naviIcons = document.querySelectorAll('.naviIconHover');
     naviIcons.forEach((naviIcon) => {
       gsap.set(naviIcon, { opacity: 0, x: -50 });
-    });    
+    });
+    
+    
+    const loadinPage = document.querySelectorAll('.loadinPage');
+
+    gsap.to(loadinPage, {
+      opacity: 1,
+      y: 0,
+      ease: "power1.inOut",
+      duration: 0.8,
+      delay: 4,
+      onComplete: function() {
+        loadinPage.forEach(element => {
+          element.classList.remove('hidden');
+        });
+      },
+    });
+    
   }
 

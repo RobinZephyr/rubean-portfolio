@@ -15,7 +15,7 @@ const SkillName: React.FC<SkillNameProps> = ({ skillName }) => {
                       border-b-[16px] border-b-transparent'/>
 
       <div className=' border-4 border-namePlate bg-namePlate h-8 md:h-10 flex w-fit px-3 items-center'>
-        <p className='text-white text-md md:text-2xl'>{skillName}</p>
+        <p className='text-white text-lg md:text-2xl'>{skillName}</p>
       </div>
 
       <div className=' md:hidden

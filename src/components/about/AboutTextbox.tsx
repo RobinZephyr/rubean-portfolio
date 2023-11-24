@@ -22,12 +22,12 @@ const AboutTextbox: React.FC = () => {
 
   
   return (
-    <div className='h-50% shadow-md w-full border-2 border-blue-400'>
+    <div className='h-50% shadow-md w-full'>
       <div>
         <Nameplate name="Rubean Rakeru" />
       </div>
-      <div className='z-10 '>
-        <div className='relative p-3  bg-textbox w-full md:max-w-[480px] mt-4 pt-5 md:mt-5 md:pt-6'>
+      <div className='z-10 pt-5 '>
+        <div className='relative p-3   bg-textbox w-full md:max-w-[480px] pt-5'>
           <div className='text-md md:text-xl   '>
             <div style={{ whiteSpace: 'pre-line' }}>
               {chatAbout[0].parts.map((part, index) => (
