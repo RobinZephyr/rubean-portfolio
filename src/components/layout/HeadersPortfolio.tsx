@@ -71,7 +71,7 @@ export default function HeadersPortfolio() {
     }
   };
   return (
-    <header className="sticky top-0 absolute z-50 h-full flex items-center bg-bkg h-20 z-50 HeadersIntro opacity-0">
+    <header className="sticky top-0 absolute z-50 h-full flex items-center bg-bkg h-20 z-50 HeadersIntro opacity-0" style={{zIndex:'9999'}}>
         <div className='w-full h-full flex-col items-center'>
           
           <div className='text-content  border-b-2 border-content h-70% w-full flex bg-border grid grid-cols-2'>

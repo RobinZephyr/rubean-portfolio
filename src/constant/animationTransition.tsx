@@ -127,26 +127,13 @@ export function AnimationTransition() {
     });
     
     
-    const loadinPage = document.querySelectorAll('.loadinPage');
 
-    gsap.to(loadinPage, {
-      opacity: 1,
-      y: 0,
-      ease: "power1.inOut",
-      duration: 0.8,
-      delay: 4,
-      onComplete: function() {
-        loadinPage.forEach(element => {
-          element.classList.remove('hidden');
-        });
-      },
-    });
     
 
 
 
     //ABOUT SCROLL ANIMATION
-
-    
+      //ABOUT TITLE
+      
   }
 
