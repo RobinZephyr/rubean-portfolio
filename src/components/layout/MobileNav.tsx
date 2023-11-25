@@ -41,7 +41,7 @@ function MobileNav() {
             onMouseLeave={handleHoverLeave}
           >   
               <div className='text-8xl items-center flex opacity-0 naviIconHover text-text h-full  '>
-                <span className='absolute'>
+                <span className='absolute opacity-50'>
                   {nav.icon && React.createElement(nav.icon, { className: 'mr-2' })}
                 </span>
               </div>

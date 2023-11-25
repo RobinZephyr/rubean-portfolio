@@ -1,7 +1,7 @@
 // AnimationTransition.js
 import { useEffect } from 'react';
 import gsap from 'gsap'
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 export function AnimationTransition() {
   //Layout
   gsap.set('.HeadersIntro', { opacity: 0, });
@@ -141,6 +141,12 @@ export function AnimationTransition() {
         });
       },
     });
+    
+
+
+
+    //ABOUT SCROLL ANIMATION
+
     
   }
 

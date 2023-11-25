@@ -1,30 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { AnimationTransition } from "@/constant/animationTransition";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function AboutTitle() {
+  const titleRef = useRef(null);
+
   useEffect(() => {
-    AnimationTransition()
+    AnimationTransition();
   }, []);
 
-  const text = "About Me";
+  useEffect(() => {
+    gsap.set('.custard', { opacity: 0,x:0 });
+
+    gsap.to('.custard', {
+      scrollTrigger: {
+        trigger: '.custard',
+        scrub: true,
+        start: 'top center',
+        end: 'top 100px',
+      },
+      duration: 10,
+      ease: 'power4.out',
+      rotation: 360,
+      opacity: 1,
+      x:0
+    });
+  }, []);
+
+  const text = "ABOUT ME";
+
   return (
-    <div className="w-full  flex items-center justify-between">
-  
-      <div className="titleBorderLeft opacity-0 h-3 sm:h-5 md:h-7 w-15% min-w-[20px] bg-titleBorder"/>
-  
-      <div className="items-center  flex text-center px-2 w-full sm:w-50% justify-center flex text-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap font-bold">
-        <span style={{ whiteSpace: 'pre' }}>
-          {text.split("").map((char, index) => (
-            <span key={index} className={`opacity-0 hello-world-letter${char === ' ' ? '' : ''}`}>
-              {char === '' ? '\u00A0' : char}
-            </span>
-          ))}
-        </span>
+    <div className="w-full flex items-center justify-between">
+      <div className="titleBorderLeft opacity-0 h-3 sm:h-5 md:h-7 w-20% min-w-[16px] bg-titleBorder" />
+
+      <div
+        className="items-center text-center px-2 sm:w-50% justify-center flex text-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap font-bold custard "
+      >
+        {text}
       </div>
-  
-      <div className="titleBorderRight opacity-0  h-3 sm:h-5 md:h-7 w-15%  sm:w-full bg-titleBorder"/>
+
+      <div className="titleBorderRight opacity-0 h-3 sm:h-5 md:h-7 w-20% sm:w-full bg-titleBorder" />
     </div>
   );
-  
 }

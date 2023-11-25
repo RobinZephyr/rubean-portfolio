@@ -9,6 +9,8 @@ const config: Config = {
   theme: {
     fontFamily: {
       pixel: ['PixelFont', 'sans'],
+      pixeBoy: ['PixeBoy', 'sans'],
+      mushroomFont: ['MushroomFont', 'sans'],
     },
     extend: {
       fontSize: {
@@ -112,6 +114,7 @@ const config: Config = {
       screens: {
         xs: '320px',
         sm: '376px',
+        xmd: '500px',
         md: '768px',
         lg: '992px',
         xl: '1280px',

@@ -6,11 +6,19 @@
       font-family: 'PixelFont';
       src: url('../assets/font/PIXEL_FONT.001.ttf') format('truetype');
     }
+    @font-face {
+      font-family: 'PixeBoy';
+      src: url('../assets/font/PixeBoy-z8XGD.ttf') format('truetype');
+    }
+    @font-face {
+      font-family: 'MushroomFont';
+      src: url('../assets/font/Mushroomfont2.ttf') format('truetype');
+    }
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  
 }
     body{
       font-family: 'PixelFont', sans-serif;

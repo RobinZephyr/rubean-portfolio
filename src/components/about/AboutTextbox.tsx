@@ -1,18 +1,17 @@
 // HomeTextbox.tsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 //import Textbox from './Textbox';
 import { AnimationTransition } from '@/constant/animationTransition';
 import { FaLocationPin } from 'react-icons/fa6';
-import { chatAbout, chatDialog } from '@/constant/chatDialog';
+import { chatAbout, chatHome } from '@/constant/chatDialog';
 import gsap from 'gsap';
 import Nameplate from '../home/Nameplate';
 
 const AboutTextbox: React.FC = () => {
   useEffect(() => {
     AnimationTransition();
-    const nextDialogindicator = document.querySelector('.nextDialogindicatorAbout');
-  
-      gsap.to([nextDialogindicator], {
+    const nextDialogindicator2 = document.querySelector('.nextDialogindicatorAbout');
+      gsap.to([nextDialogindicator2], {
         y: -4,
         ease: 'power4.inout',
         yoyo: true,
@@ -22,13 +21,13 @@ const AboutTextbox: React.FC = () => {
 
   
   return (
-    <div className='h-50% shadow-md w-full'>
+    <div className='h-50% w-full flex justify-center'>
       <div>
         <Nameplate name="Rubean Rakeru" />
       </div>
       <div className='z-10 pt-5 '>
-        <div className='relative p-3   bg-textbox w-full md:max-w-[480px] pt-5'>
-          <div className='text-md md:text-xl   '>
+        <div className='relative p-3   bg-textbox w-full  shadow-md md:max-w-[600px] pt-5'>
+          <div className='text-sm md:text-xl   '>
             <div style={{ whiteSpace: 'pre-line' }}>
               {chatAbout[0].parts.map((part, index) => (
                 <span key={index} style={part.styles}>

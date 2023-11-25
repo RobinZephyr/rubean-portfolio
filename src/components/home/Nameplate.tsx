@@ -9,7 +9,7 @@ interface NameplateProps {
 const Nameplate: React.FC<NameplateProps> = ({ name }) => {
   return (
     <div className='flex items-center absolute z-20'>
-      <div className=' border-4 border-namePlate bg-namePlate h-8 md:h-10 flex w-fit px-3 items-center font-bold'>
+      <div className=' border-4 border-namePlate bg-namePlate h-8 md:h-10 flex w-fit px-3 items-center '>
         <div className='whitespace-nowrap text-white text-md md:text-2xl flex items-center space-x-3 '> 
           <span>
             <FaCrow/>   
