@@ -6,7 +6,7 @@ import gsap from 'gsap';
 function AvatarAboutAnimation() {
 
   useEffect(() => {
-    gsap.set('.aboutSkills',{y:200,opacity:0})
+    gsap.set('.aboutSkills',{})
     gsap.to('.aboutSkills', {
       scrollTrigger: {
         trigger: '.aboutSkills  ', // Updated trigger to '.titleScrollAbout'
@@ -42,13 +42,13 @@ function AvatarAboutAnimation() {
   
   return (
     <div className='w-full justify-center h-43% '>
-        <div className=' justify-center flex w-full aboutSkills opacity-0  ' style={{zIndex:'300'}}>
+        <div className=' justify-center flex w-full opacity-0 bgSkillSelectIntro   ' style={{zIndex:'300'}}>
             <AboutSkillsmenu/>
         </div>
 
         <div className=' justify-center relative flex '>
-          <div className='relative' style={{zIndex:'300'}}>
-            <Image src={avatarTadaUp} alt="Avatar Skills Present" className="  w-44 h-44 md:w-52 md:h-52 z-20 " />
+          <div className='opacity-0 aboutAvatarIntro' style={{zIndex:'300'}}>
+            <Image src={avatarTadaUp} alt="Avatar Skills Present" className="  w-44 h-44 md:w-52 md:h-52 z-20   " />
           </div>
         </div>
     </div>

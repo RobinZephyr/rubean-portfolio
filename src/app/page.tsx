@@ -11,13 +11,16 @@ export default function Home() {
  
   
   return (
-    <main className='w-full flex h-full'>
-      <div className="w-full h-full overflow-none scrollbarRestrict flex-col  ">
+    <main className='w-full flex h-full overflow-x-none '  >
+      <div className="w-full h-full  flex-col  " >
         <div>
           <HomePortolio/>
         </div>
-        <div>
+        <div >
           <AboutPortfolio/>
+        </div>
+        <div>
+          <ProjectPortfolio/>
         </div>
       </div>  
 

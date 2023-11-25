@@ -3,10 +3,11 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import AboutTitle from './TitleAbout';
 import { circle, rubeanProflie } from '@/assets';
-import Image from 'next/image';
+
 import AvatarAboutAnimation from './AvatarAboutAnimation';
 import AboutTextbox from './AboutTextbox';
 import { AnimationTransition } from '@/constant/animationTransition';
+import ProfileImage from './ProfileImage';
 
 export default function AboutPortfolio() {
   useEffect(() => {
@@ -14,42 +15,54 @@ export default function AboutPortfolio() {
   }, []);
 
   useEffect(() => {
-    gsap.set('.profileImage', { x: -100 });
+    gsap.set('.profileImage', { });
     gsap.to('.profileImage', {
       scrollTrigger: {
-        trigger: '.titleScrollAbout',
-        start: 'top center',
-        end: 'top 400px',
-        scrub: 2
+        trigger: '.profileImage',
+        start: 'top 60%',
+        end: 'bottom 400px',
+        scrub: 1,
       },
-      x: 0,
-      duration: 2,
-      ease: 'power3.out',
+      duration: .5,
+      ease: 'power1.out',
       opacity: 1,
       scaleX: 1,
-      delay: 3,
-      onComplete: () => {
-      
-      },
+      delay: 2,
     });
     
-    gsap.set('.aboutTextbox', { x: 100 });
-    gsap.to('.aboutTextbox', {
+    gsap.set('.aboutTextboxMobile', { y: 30 });
+    gsap.to('.aboutTextboxMobile', {
       scrollTrigger: {
         trigger: '.profileImage', // Updated trigger to '.titleScrollAbout'
-        start: 'top center',
-        end: 'top 300px',
-        scrub: 2,
+        start: 'top 60%',
+        end: 'bottom 200px',
+        scrub: 1,
       },
-      x: 0,
+      y: 0,
       duration: 2,
       ease: 'power2.out',
       opacity: 1,
       delay: 3.2,
     });
 
+    gsap.set('.aboutSpotlightIntro', {opacity:0});
+    gsap.to('.aboutSpotlightIntro', {
+      scrollTrigger: {
+        trigger: '.profileImage', // Updated trigger to '.titleScrollAbout'
+        start: 'top 60%',
+        end: 'bottom 400px',
+        scrub: 1,
+      },
+      x: 0,
+      duration: 2,
+      ease: 'power1.out',
+      opacity: 1,
+      delay: 3.2,
+    });
+    
+
     gsap.to('.profileImage', {
-      y: -15,
+      y: -20,
       ease: "sine.out",
       yoyo: true,
       repeat: -1,
@@ -63,38 +76,67 @@ export default function AboutPortfolio() {
       repeat: -1,
       duration: 2,
     });
+
+    gsap.set('.bgSkillSelectIntro', {opacity:0,y:50});
+    gsap.to('.bgSkillSelectIntro', {
+      scrollTrigger: {
+        trigger: '.profileImage', // Updated trigger to '.titleScrollAbout'
+        start: 'top 60%',
+        end: 'bottom 200px',
+        scrub: 1,
+      },
+      y: 0,
+      duration: 2,
+      ease: 'power1.out',
+      opacity: 1,
+      delay: 3.2,
+    });
+
+    gsap.set('.aboutAvatarIntro', {opacity:0,y:50});
+    gsap.to('.aboutAvatarIntro', {
+      scrollTrigger: {
+        trigger: '.profileImage', // Updated trigger to '.titleScrollAbout'
+        start: 'top 60%',
+        end: 'bottom 200px',
+        scrub: 1,
+      },
+      y: 0,
+      duration: 2,
+      ease: 'power1.out',
+      opacity: 1,
+      delay: 3.3,
+    });
+    
   }, []);
   
   
   return (
-    <div className='h-full w-full  text-text  bg-bkg  pt-5 '>
-      <div>
+    <div className='h-full w-full  text-text justify-center bg-bkg  md:pt-5  ' >
+      <div className='overdlow-x-hidden'>
         <AboutTitle/>
       </div>
-
-      <div className='mt-8 p-5 md:grid md:grid-cols-2 md:gap-4 '>
-        <div className='w-full h-900%  relative flex justify-center'>
-          <div className='w-full h-full flex  justify-center md:p-5 profileImage opacity-0 ' style={{zIndex:'50'}}>
-            <Image src={rubeanProflie} alt="Please dont Look" className='w-56 h-72 md:w-96 md:h-[600px] object-cover rounded-full '/>
+      
+      <div className='mt-8 p-5 flex justify-center  w-full'>
+        <div className='md:grid md:grid-cols-2 w-full md:gap-4 md:max-w-6xl '>
+          <div className=''>
+          <ProfileImage/>
           </div>
-          <div className={`absolute bottom-[-10px] md:bottom-[40px] `} >
-            <Image src={circle} alt='Avatar Spotlight'
-             style={{ filter: 'var(--color-avatarSpotlight) ', zIndex:'10' }}
-              className='w-48 h-6 md:h-[20px] md:w-[300px] profileShadow '/>
+
+          <div className='mt-10 md:mt-0 md:p-5  w-full '>
+            <div className='aboutTextboxMobile  opacity-0  '  style={{overflowX:'hidden'}}>
+              <AboutTextbox/>
+            </div>
+            <div className=' flex justify-center mt-5 md:mt-0   '>
+              <AvatarAboutAnimation/>
+            </div>
           </div>
         </div>
 
-        <div className='mt-5 md:mt-0 md:p-5 '>
-          <div className='aboutTextbox opacity-0'>
-            <AboutTextbox/>
-          </div>
-          <div className=' flex justify-center mt-12  '>
-            <AvatarAboutAnimation/>
-          </div>
-        </div>
 
 
       </div>
+
+
     </div>
   );
 }
