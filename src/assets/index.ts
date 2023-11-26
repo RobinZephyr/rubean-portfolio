@@ -16,7 +16,29 @@ import javascript from  '../assets/avatar/skills/javascript.png'
 import html from  '../assets/avatar/skills/html.png'
 import mysql from  '../assets/avatar/skills/mysql.png'
 import postgresl from '../assets/avatar/skills/postgresql.png'
+import netbeans from '../assets/avatar/skills/netbeans.png'
+import animateCC from '../assets/avatar/skills/animateCC.png'
+import paintToolSai from '../assets/avatar/skills/painttoolsai.png'
+import photoshop from '../assets/avatar/skills/photoshop.png'
 
+import logoDarkMode from '../assets/avatar/logoDarkMode.png'
+import logoLightMode from '../assets/avatar/logoLightMode.png'
+
+import portfolioVid from '../assets/avatar/projects/portfolio.png'
+import standardCheckpoint from '../assets/avatar/projects/UFT.png'
+import videoGameSystem from '../assets/avatar/projects/VideoGameSystem.png'
+import journalComplete from '../assets/avatar/projects/journal.jpg'
+import sirmatafarm from '../assets/avatar/projects/sirmata.png'
+
+import iconPortfolioVid from '../assets/avatar/projects/icon_portfolio.png'
+import iconStandardCheckpoint from '../assets/avatar/projects/icon_standardCheckpoint.png'
+import iconVideoGameSystem from '../assets/avatar/projects/icon_videogames.png'
+import iconJournalComplete from '../assets/avatar/projects/icon_journal.png'
+import iconSirmatafarm from '../assets/avatar/projects/icon_sirmata.png'
+import iconSelector from '../assets/avatar/projects/slectIcon.png'
+
+import iconYoutube from '../assets/avatar/projects/icon_youtube.png'
+import iconSirmata from '../assets/avatar/projects/sirmata_logo.png'
 export {
     avatarStand,
     avatarSnap,
@@ -29,6 +51,8 @@ export {
     circle,
     circleSvg,
 
+    logoDarkMode,
+    logoLightMode,
 
 //Skills
     react,
@@ -38,7 +62,27 @@ export {
     javascript,
     html,
     mysql,
-    postgresl
+    postgresl,
+    netbeans,
+    animateCC,
+    photoshop,
+    paintToolSai,
+
+//Project
+    portfolioVid,
+    standardCheckpoint,
+    videoGameSystem,
+    journalComplete,
+    sirmatafarm,
+    iconSelector,
+
+    iconJournalComplete,
+    iconPortfolioVid,
+    iconSirmatafarm,
+    iconVideoGameSystem,
+    iconStandardCheckpoint,
+    iconYoutube,
+    iconSirmata,
 
 }
 

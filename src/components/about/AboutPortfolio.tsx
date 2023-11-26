@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import AboutTitle from './TitleAbout';
-import { circle, rubeanProflie } from '@/assets';
 
 import AvatarAboutAnimation from './AvatarAboutAnimation';
 import AboutTextbox from './AboutTextbox';
@@ -18,7 +17,7 @@ export default function AboutPortfolio() {
     gsap.set('.profileImage', { });
     gsap.to('.profileImage', {
       scrollTrigger: {
-        trigger: '.profileImage',
+        trigger: '.titleScrollAbout',
         start: 'top 60%',
         end: 'bottom 400px',
         scrub: 1,
@@ -33,7 +32,7 @@ export default function AboutPortfolio() {
     gsap.set('.aboutTextboxMobile', { y: 30 });
     gsap.to('.aboutTextboxMobile', {
       scrollTrigger: {
-        trigger: '.profileImage', // Updated trigger to '.titleScrollAbout'
+        trigger: '.titleScrollAbout', // Updated trigger to '.titleScrollAbout'
         start: 'top 60%',
         end: 'bottom 200px',
         scrub: 1,
@@ -48,7 +47,7 @@ export default function AboutPortfolio() {
     gsap.set('.aboutSpotlightIntro', {opacity:0});
     gsap.to('.aboutSpotlightIntro', {
       scrollTrigger: {
-        trigger: '.profileImage', // Updated trigger to '.titleScrollAbout'
+        trigger: '.titleScrollAbout', // Updated trigger to '.titleScrollAbout'
         start: 'top 60%',
         end: 'bottom 400px',
         scrub: 1,
@@ -80,7 +79,7 @@ export default function AboutPortfolio() {
     gsap.set('.bgSkillSelectIntro', {opacity:0,y:50});
     gsap.to('.bgSkillSelectIntro', {
       scrollTrigger: {
-        trigger: '.profileImage', // Updated trigger to '.titleScrollAbout'
+        trigger: '.titleScrollAbout', // Updated trigger to '.titleScrollAbout'
         start: 'top 60%',
         end: 'bottom 200px',
         scrub: 1,
@@ -95,7 +94,7 @@ export default function AboutPortfolio() {
     gsap.set('.aboutAvatarIntro', {opacity:0,y:50});
     gsap.to('.aboutAvatarIntro', {
       scrollTrigger: {
-        trigger: '.profileImage', // Updated trigger to '.titleScrollAbout'
+        trigger: '.titleScrollAbout', // Updated trigger to '.titleScrollAbout'
         start: 'top 60%',
         end: 'bottom 200px',
         scrub: 1,
@@ -111,22 +110,22 @@ export default function AboutPortfolio() {
   
   
   return (
-    <div className='h-full w-full  text-text justify-center bg-bkg  md:pt-5  ' >
-      <div className='overdlow-x-hidden'>
+    <div className='h-full w-full  text-text justify-center bg-bkg  md:pt-10 ' >
+      <div className=''>
         <AboutTitle/>
       </div>
       
       <div className='mt-8 p-5 flex justify-center  w-full'>
         <div className='md:grid md:grid-cols-2 w-full md:gap-4 md:max-w-6xl '>
           <div className=''>
-          <ProfileImage/>
+            <ProfileImage/>
           </div>
 
           <div className='mt-10 md:mt-0 md:p-5  w-full '>
             <div className='aboutTextboxMobile  opacity-0  '  style={{overflowX:'hidden'}}>
               <AboutTextbox/>
             </div>
-            <div className=' flex justify-center mt-5 md:mt-0   '>
+            <div className=' flex justify-center mt-5    '>
               <AvatarAboutAnimation/>
             </div>
           </div>

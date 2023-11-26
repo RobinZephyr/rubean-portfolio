@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { useEffect } from 'react';
 import gsap from 'gsap'
 import ProjectPortfolio from '@/components/projects/ProjectPortfolio';
+import ContactPortfolio from '@/components/contact/ContactPortfolio';
 export default function Home() {
 
  
@@ -13,14 +14,17 @@ export default function Home() {
   return (
     <main className='w-full flex h-full overflow-x-none '  >
       <div className="w-full h-full  flex-col  " >
-        <div>
+        <div className='h-full'>
           <HomePortolio/>
         </div>
-        <div >
+        <div className='h-full overflow-x-none w-full'>
           <AboutPortfolio/>
         </div>
-        <div>
+        <div className='h-full overflow-x-none w-full'>
           <ProjectPortfolio/>
+        </div>
+        <div className='h-full overflow-x-none w-full'>
+          <ContactPortfolio/>
         </div>
       </div>  
 

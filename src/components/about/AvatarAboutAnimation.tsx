@@ -11,7 +11,7 @@ function AvatarAboutAnimation() {
       scrollTrigger: {
         trigger: '.aboutSkills  ', // Updated trigger to '.titleScrollAbout'
         start: 'top center',
-        end: 'top 300px',
+        end: 'top 400px',
         scrub: 2,
       },
       y: 0,
@@ -26,7 +26,7 @@ function AvatarAboutAnimation() {
       scrollTrigger: {
         trigger: '.titleScrollAbout', // Updated trigger to '.titleScrollAbout'
         start: 'top center',
-        end: 'top 200px',
+        end: 'top 400px',
         scrub: 2,
       },
       y: 0,

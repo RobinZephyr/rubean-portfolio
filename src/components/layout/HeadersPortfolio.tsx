@@ -8,6 +8,8 @@ import { navigatorLinks } from '@/constant/navigation';
 import '../../assets/style/animation.css'
 import gsap from 'gsap'
 import MobileNav from './MobileNav';
+import { logoDarkMode, logoLightMode } from '@/assets';
+import Image from 'next/image';
 library.add(fas);
 
 
@@ -71,13 +73,17 @@ export default function HeadersPortfolio() {
     }
   };
   return (
-    <header className="sticky top-0 absolute z-50 h-full flex items-center bg-bkg h-20 z-50 HeadersIntro opacity-0" style={{zIndex:'9999'}}>
-        <div className='w-full h-full flex-col items-center'>
+    <header className="sticky top-0 absolute z-50 h-full flex  items-center bg-bkg h-20 z-50 HeadersIntro opacity-0" style={{zIndex:'9999'}}>
+        <div className='w-full h-full flex-col items-center  my-3'>
           
-          <div className='text-content  border-b-2 border-content h-70% w-full flex bg-border grid grid-cols-2'>
+          <div className='text-content  border-b-2  border-t-2 border-content h-70% w-full flex bg-border grid grid-cols-2'>
            
-              <div className='p-3  md:border-r-2 border-content items-center flex  justify-start md:w-25% md:justify-start'>
-                  <div className='w-10 h-10 flex items-center justify-center text-black rounded-full bg-white'>Logo</div>
+              <div className='p-3   items-center flex  justify-start md:w-25% md:justify-start'>
+                {isLightTheme ? (
+                  <Image src={ logoLightMode} alt="Logo" className='w-10 h-10'/>
+                ):(
+                  <Image src={logoDarkMode} alt="Logo" className='w-10 h-10'/>
+                )}
               </div>
 
               <div className='  items-center  p-3 justify-end flex  '>

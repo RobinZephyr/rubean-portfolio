@@ -40,7 +40,7 @@ function AboutSkillsmenu() {
   }, []);
 
   return (
-    <div className='w-full md:max-w-[600px] ' style={{zIndex:'100'}}>
+    <div className='w-full md:max-w-[600px] max-w-[500px]  ' style={{zIndex:'100'}}>
       <div className='justify-center flex'>
         <SkillName skillName="SKILLS" />
       </div>
@@ -52,13 +52,14 @@ function AboutSkillsmenu() {
 
               {/* Hover Show */}
               <div
-                className=' h-full absolute top-0 left-0 w-full h-full'
+                className=' h-full absolute top-0 left-0 w-full'
                 onMouseEnter={handleHoverEnter}
                 onMouseLeave={handleHoverLeave}>
                 <span className='absolute flex bgSkillSelect opacity-0   w-full h-full text-white text-xs'>
-                  <div className='w-full h-full flex items-center justify-center border-4 border-content '>
+                  <div className='w-full h-full flex  items-center justify-center border-4  border-white rounded-sm '>
+                    <span className='m-1'>
                     {skill.skill}
-                  
+                    </span>
                   </div>
                   <div className=' skillButton absolute  w-full h-full bg-opacity-70 hover:bg:black-900'/>
                 </span>

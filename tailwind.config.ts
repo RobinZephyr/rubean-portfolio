@@ -107,9 +107,12 @@ const config: Config = {
 
         skillMenu: "hsl(var(--color-skillMenu) / <alpha-value>)",
         
+        projectSelectorFilter: 'var(--color-projectSelectorFilter)',
         
         darkPink:'#C8A7A3',
         darkBrown:'#222222',
+        lightPink:'#FFEEEE'
+        
       },
       screens: {
         xs: '320px',

@@ -5,21 +5,21 @@ import { AnimationTransition } from "@/constant/animationTransition";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function AboutTitle() {
+export default function TitleProject() {
   const titleRef = useRef(null);
 
   useEffect(() => {
     AnimationTransition();
   }, []);
 
-  const text = "ABOUT ME";
+  const text = "My Works";
 
   useEffect(() => {
-    gsap.set('.titleScrollAbout', { y: 50 });
-    gsap.to('.titleScrollAbout', {
+    gsap.set('.titleScrollProject', { y: 50 });
+    gsap.to('.titleScrollProject', {
       scrollTrigger: {
-        trigger: '.titleScrollAbout', // Updated trigger to '.titleScrollAbout'
-       start: 'top 80%',
+        trigger: '.titleScrollProject', // Updated trigger to '.titleScrollProject'
+        start: 'top 80%',
         end: 'bottom 400px',
         scrub: 1,
       },
@@ -30,11 +30,11 @@ export default function AboutTitle() {
       delay: .2,
     });
 
-    gsap.set('.leftTitle', { x: -100 });
-    gsap.to('.leftTitle', {
+    gsap.set('.leftTitleProject', { x: -100 });
+    gsap.to('.leftTitleProject', {
       scrollTrigger: {
-        trigger: '.titleScrollAbout', // Updated trigger to '.titleScrollAbout'
-       start: 'top 80%',
+        trigger: '.titleScrollProject', // Updated trigger to '.titleScrollProject'
+         start: 'top 80%',
         end: 'bottom 400px',
         scrub: 1,
       },
@@ -45,15 +45,15 @@ export default function AboutTitle() {
       delay: .2,
     });
 
-    const rightTitle = document.querySelectorAll('.rightTitle');
-    rightTitle.forEach(element => {
+    const rightTitleProject = document.querySelectorAll('.rightTitleProject');
+    rightTitleProject.forEach(element => {
       element.classList.remove('hidden');
     });
-    gsap.set('.rightTitle', { x: 100 });
-    gsap.to('.rightTitle', {
+    gsap.set('.rightTitleProject', { x: 100 });
+    gsap.to('.rightTitleProject', {
       scrollTrigger: {
-        trigger: '.titleScrollAbout', // Updated trigger to '.titleScrollAbout'
-       start: 'top 80%',
+        trigger: '.titleScrollProject', // Updated trigger to '.titleScrollProject'
+         start: 'top 80%',
         end: 'bottom 400px',
         scrub: 1,
       },
@@ -69,15 +69,15 @@ export default function AboutTitle() {
  
   return (
     <div className="w-full flex items-center ">
-      <div className="leftTitle opacity-0 h-3 md:h-5 w-full md:w-15% bg-titleBorder" />
+      <div className="leftTitleProject opacity-0 h-3 md:h-5 w-full md:w-15% bg-titleBorder" />
 
       <div
-        className="titleScrollAbout text-center opacity-0 border-red-900 mx-2 text-2xl sm:text-3xl md:text-5xl whitespace-nowrap"
+        className="titleScrollProject text-center text-text opacity-0 border-red-900 mx-2 text-2xl sm:text-3xl md:text-5xl whitespace-nowrap"
         ref={titleRef}>
         {text}
       </div>
 
-      <div className="rightTitle opacity-0 h-3 md:h-5 w-full bg-titleBorder hidden" />
+      <div className="rightTitleProject opacity-0 h-3 md:h-5 w-full bg-titleBorder hidden" />
     </div>
   );
 }

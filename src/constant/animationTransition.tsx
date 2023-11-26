@@ -130,10 +130,8 @@ export function AnimationTransition() {
 
     
 
+  
 
-
-    //ABOUT SCROLL ANIMATION
-      //ABOUT TITLE
       
   }
 
