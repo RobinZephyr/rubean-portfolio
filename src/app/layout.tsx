@@ -44,8 +44,8 @@ export default function RootLayout({
             <div className='w-full h-full flex-col'>
               <HeadersPortfolio/>
                 {children}
-            <FooterPortfolio/>
-            </div>
+          <FooterPortfolio/>
+d            </div>
             <RightSideBorder/>
         </div>
 

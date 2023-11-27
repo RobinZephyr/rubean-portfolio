@@ -7,31 +7,25 @@ export const navigatorLinks = [
     {   
         id:'1',
         title:'HOME',
-        link:'/home',
+        link:'home',
         icon: FaHouseChimney,
       },
     {
         id:'2',
         title:'ABOUT',
-        link:'/about',
+        link:'about',
         icon: IoInformationCircleSharp,
       },
     {
         id:'3',
         title:'PROJECT',
-        link:'/projects',
+        link:'projects',
         icon: FaToolbox,
       },
     {
         id:'4',
-        title:'BLOG',
-        link:'/blog',
-        icon: FaLaptopFile,
-    },
-    {
-        id:'5',
         title:'CONTACT',
-        link:'/contact',
+        link:'contact',
         icon: IoIosContact,
 
     },

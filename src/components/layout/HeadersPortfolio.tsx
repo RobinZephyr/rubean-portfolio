@@ -10,6 +10,9 @@ import gsap from 'gsap'
 import MobileNav from './MobileNav';
 import { logoDarkMode, logoLightMode } from '@/assets';
 import Image from 'next/image';
+// HeadersPortfolio.js
+import { Link as ScrollLink } from 'react-scroll';
+
 library.add(fas);
 
 
@@ -72,6 +75,18 @@ export default function HeadersPortfolio() {
       toggleMobileMenu();
     }
   };
+
+  const scrollToSection = (link, event) => {
+    event.preventDefault();
+    const section = document.querySelector(link);
+    console.log("Link:", link);
+    console.log("Section:", section);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      console.log("Found", link);
+    }
+  };
+  
   return (
     <header className="sticky top-0 absolute z-50 h-full flex  items-center bg-bkg h-20 z-50 HeadersIntro opacity-0" style={{zIndex:'9999'}}>
         <div className='w-full h-full flex-col items-center  my-3'>
@@ -90,11 +105,14 @@ export default function HeadersPortfolio() {
 
                   {/**Desktop */}
                   <div className='relative justify-end  space-x-5 whitespace-nowrap hidden md:flex grid grid-cols-2'>
-                      {navigatorLinks.map((nav)=>(
-                        <span className='fadeInDown  whitespace-nowrap fadeAnimation text-text  hover:underline cursor-pointer' 
-                        key={nav.title}>
+                        {navigatorLinks.map((nav) => (
+                        <span
+                          key={nav.id}
+                          className='fadeInDown  whitespace-nowrap fadeAnimation text-text  hover:underline cursor-pointer'
+                          onClick={(event) => scrollToSection(nav.link, event)}
+                        >
                           {nav.title}
-                          </span>
+                        </span>
                       ))}
                       <div className='fadeAnimation text-text ' style={{ zIndex: 100 }}> 
                         <ThemeButton isLightTheme={isLightTheme} toggleTheme={toggleTheme} />

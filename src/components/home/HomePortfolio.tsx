@@ -30,8 +30,17 @@ export default function HomePortolio() {
     };
   }, []);
 
+  const scrollToSection = (link) => {
+    event.preventDefault();
+    const section = document.querySelector(link);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  
   return (
-<div className={`h-screen w-full bg-bkg justify-center overflow-x-hidden  `}  style={{overflowX:'hidden'}}>
+<div id="home" className={`h-screen w-full bg-bkg justify-center overflow-x-hidden  `}  style={{overflowX:'hidden'}}>
 
       <TitleHome/>
       <div className='px-5 w-full flex justify-center items-center md:mt-14  '>

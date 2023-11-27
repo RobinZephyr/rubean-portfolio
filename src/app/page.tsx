@@ -3,10 +3,13 @@ import AboutPortfolio from '@/components/about/AboutPortfolio'
 import HomePortolio from '@/components/home/HomePortfolio'
 import { AnimationTransition } from '@/constant/animationTransition';
 import Image from 'next/image'
-import { useEffect } from 'react';
 import gsap from 'gsap'
 import ProjectPortfolio from '@/components/projects/ProjectPortfolio';
 import ContactPortfolio from '@/components/contact/ContactPortfolio';
+import { useEffect, useState } from 'react';
+
+// Rest of your code...
+
 export default function Home() {
 
  
@@ -14,16 +17,16 @@ export default function Home() {
   return (
     <main className='w-full flex h-full overflow-x-none bg-bkg'  >
       <div className="w-full h-full  flex-col  " >
-        <div className='h-full'>
+        <div  id="home" className='h-full'>
           <HomePortolio/>
         </div>
-        <div className='h-full overflow-x-none w-100%' style={{overflowX:'hidden'}}>
+        <div  id="about" className='h-full overflow-x-none w-100%' style={{overflowX:'hidden'}}>
           <AboutPortfolio/>
         </div>
-        <div className='h-full overflow-x-none w-full' style={{overflowX:'hidden'}}>
+        <div  id="projects" className='h-full overflow-x-none w-full' style={{overflowX:'hidden'}}>
           <ProjectPortfolio/>
         </div>
-        <div className='h-full overflow-x-none w-full pt-10' style={{overflowX:'hidden'}}>
+        <div  id="contact"className='h-full overflow-x-none w-full pt-10' style={{overflowX:'hidden'}}>
           <ContactPortfolio/>
         </div>
       </div>  
