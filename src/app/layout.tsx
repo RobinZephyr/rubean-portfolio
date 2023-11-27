@@ -11,6 +11,7 @@ import RightSideBorder from '@/components/layout/RightSideBorder'
 import { useEffect } from 'react'
 import { AnimationTransition } from '@/constant/animationTransition'
 import gsap from 'gsap'
+import FooterPortfolio from '@/components/layout/FooterPortfolio'
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -37,15 +38,17 @@ export default function RootLayout({
   return (
     
     <html lang="en">
-      <body className='  h-full overflow-x-none scrollbarRestrict'style={{overflowX:'hidden'}}>
+      <body className='w-full  h-full overflow-x-none overflow-hidden scrollbarRestrict'style={{overflowX:'hidden'}}>
         <div className='flex h-full'>
           <LeftSideBorder/>
             <div className='w-full h-full flex-col'>
               <HeadersPortfolio/>
                 {children}
+            <FooterPortfolio/>
             </div>
             <RightSideBorder/>
         </div>
+
       </body>
     </html>
   )

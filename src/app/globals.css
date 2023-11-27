@@ -76,6 +76,9 @@
         
         /*contact Border Color*/
         --color-letterBorderColor:0 0% 100%; /*White*/
+
+        /*contact Border Color*/
+        --color-footerBkg:0 16.67% 10.59%;/*Dark Brown Black*/
       }
 
       /*Light Mode*/
@@ -123,6 +126,9 @@
      
         /*contact Border Color*/
         --color-letterBorderColor:0 0% 19%; /*Brown Black*/
+
+        /*contact Border Color*/
+        --color-footerBkg:6 19% 78%; /*Dark Pink*/
         }
     }
 

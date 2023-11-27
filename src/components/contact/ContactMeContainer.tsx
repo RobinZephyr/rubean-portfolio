@@ -8,11 +8,11 @@ function ContactMeContainer() {
 
     
   return (
-    <div className='w-full '>
+    <div className='w-full'>
         <div className=' relative abslolute pb-4'>
             <ContactNamplate name="Lets Talk!"/>
         </div>
-        <div className='md:grid md:grid-cols-2 w-full border-letterBorderColor border-2 py-2 pt-5 px'>
+        <div className='md:grid md:grid-cols-2 w-full border-letterBorderColor border-2 py-2 pt-5 px '>
             <div className='flex justify-center w-full'>
                 <ContactForm/>
             </div>

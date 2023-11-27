@@ -111,6 +111,9 @@ const config: Config = {
         
         letterBorderColor: "hsl(var(--color-letterBorderColor) / <alpha-value>)",
         
+        footerBkg: "hsl(var(--color-footerBkg) / <alpha-value>)",
+        
+        
         darkPink:'#C8A7A3',
         darkBrown:'#222222',
         lightPink:'#FFEEEE'
