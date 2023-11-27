@@ -52,7 +52,7 @@ export const projects = [
         image:sirmatafarm,
         icon:iconSirmatafarm,
         parts:[
-            { text: 'A boooking website for the Sirmata Ecofarm and Nature Park. If we have the freedom we could remake this poroject into something better.', styles: {} },
+            { text: 'A boooking website for the Sirmata Ecofarm and Nature Park. We are doing our best.', styles: {} },
           ],
     },
 

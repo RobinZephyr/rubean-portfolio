@@ -12,7 +12,7 @@ export default function Home() {
  
   
   return (
-    <main className='w-full flex h-full overflow-x-none '  >
+    <main className='w-full flex h-full overflow-x-none bg-bkg'  >
       <div className="w-full h-full  flex-col  " >
         <div className='h-full'>
           <HomePortolio/>
@@ -23,7 +23,7 @@ export default function Home() {
         <div className='h-full overflow-x-none w-full'>
           <ProjectPortfolio/>
         </div>
-        <div className='h-full overflow-x-none w-full'>
+        <div className='h-full overflow-x-none w-full pt-10'>
           <ContactPortfolio/>
         </div>
       </div>  
