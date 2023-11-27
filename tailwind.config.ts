@@ -109,6 +109,8 @@ const config: Config = {
         
         projectSelectorFilter: 'var(--color-projectSelectorFilter)',
         
+        letterBorderColor: "hsl(var(--color-letterBorderColor) / <alpha-value>)",
+        
         darkPink:'#C8A7A3',
         darkBrown:'#222222',
         lightPink:'#FFEEEE'

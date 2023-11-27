@@ -76,7 +76,7 @@ export default function AboutPortfolio() {
       duration: 2,
     });
 
-    gsap.set('.bgSkillSelectIntro', {opacity:0,y:50});
+    gsap.set('.bgSkillSelectIntro', {opacity:0,y:20});
     gsap.to('.bgSkillSelectIntro', {
       scrollTrigger: {
         trigger: '.titleScrollAbout', // Updated trigger to '.titleScrollAbout'
@@ -91,7 +91,7 @@ export default function AboutPortfolio() {
       delay: 3.2,
     });
 
-    gsap.set('.aboutAvatarIntro', {opacity:0,y:50});
+    gsap.set('.aboutAvatarIntro', {opacity:0,y:20});
     gsap.to('.aboutAvatarIntro', {
       scrollTrigger: {
         trigger: '.titleScrollAbout', // Updated trigger to '.titleScrollAbout'
@@ -110,19 +110,19 @@ export default function AboutPortfolio() {
   
   
   return (
-    <div className='h-full w-full  text-text justify-center bg-bkg  md:pt-10 ' >
+    <div className='h-full w-full  text-text justify-center bg-bkg ' >
       <div className=''>
         <AboutTitle/>
       </div>
       
-      <div className='mt-8 p-5 flex justify-center  w-full'>
+      <div className=' p-5 flex justify-center  w-full'>
         <div className='md:grid md:grid-cols-2 w-full md:gap-4 md:max-w-6xl '>
           <div className=''>
             <ProfileImage/>
           </div>
 
           <div className='mt-10 md:mt-0 md:p-5  w-full '>
-            <div className='aboutTextboxMobile  opacity-0  '  style={{overflowX:'hidden'}}>
+            <div className='aboutTextboxMobile  opacity-0  '>
               <AboutTextbox/>
             </div>
             <div className=' flex justify-center mt-5    '>

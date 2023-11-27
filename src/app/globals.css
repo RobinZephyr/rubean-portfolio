@@ -73,13 +73,15 @@
         --color-skillMenu:6 19% 78%; /*Dark Pink*/
 
         --color-projectSelectorFilter:  invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%); /*White*/
-      
+        
+        /*contact Border Color*/
+        --color-letterBorderColor:0 0% 100%; /*White*/
       }
 
       /*Light Mode*/
       :root[data-theme="light"]{
         /*White*/
-        --color-bkg:0 0% 100%; /**White*/
+        --color-bkg:0 0% 98%; /**White*/
         
         /*Pink*/
         --color-border:0	100%	96.67%;
@@ -118,7 +120,10 @@
           /*Skills Menu*/
           --color-skillMenu:0 0% 13%; /*Brown Black*/
           --color-projectSelectorFilter:  invert(0%) sepia(6%) saturate(24%) hue-rotate(268deg) brightness(97%) contrast(107%);/*Black*/
-      }
+     
+        /*contact Border Color*/
+        --color-letterBorderColor:0 0% 19%; /*Brown Black*/
+        }
     }
 
 

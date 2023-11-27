@@ -9,8 +9,8 @@ function ContactPortfolio() {
         <TitleContact/>
       </div>
 
-      <div className='w-full flex justify-center border-2 border-green-600 mt-5 p-5 '>
-        <div className='md:max-w-4xl w-full border-2 border-red-900'>
+      <div className='w-full flex justify-center mt-5 p-5 pb-10 '>
+        <div className='md:max-w-3xl w-full '>
             <div>
               <ContactMeContainer/>
             </div>

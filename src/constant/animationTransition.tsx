@@ -8,60 +8,64 @@ export function AnimationTransition() {
   gsap.to('.HeadersIntro', {
     opacity: 1,
     duration: .5, 
-    delay: 4,
+    delay: 3.7, 
     y: 0,
   });
   gsap.set('.SideBarLeftIntro', { opacity: 0,  });
   gsap.to('.SideBarLeftIntro', {
     opacity: 1,
     duration: .5,
-    delay: 4,
+    delay: 3.7, 
     x: 0,
   });
   gsap.set('.SidebarRightIntro', { opacity: 0,});
   gsap.to('.SidebarRightIntro', {
     opacity: 1,
     duration: .5,
-    delay: 4,
+    delay: 3.7, 
     x: 0,
   });
 
-  gsap.to('.BgPitchBack', {
-    duration: .5,
-    className:'bg-bkg',
-    delay: 4,
-    opacity:0,
-  });
-  
+
 
   gsap.set('.AvatarSnap', { opacity: 0,});
   gsap.to('.AvatarSnap', {
     opacity: 1,
     duration: 1,
-    delay: 0.5,
+    delay: 0,
     y: 0,
+  });
+
+ 
+  gsap.to('.BgPitchBack', {
+    duration: .5,
+    className:'bg-bkg',
+    delay: 3.7,
+    opacity:0,
   });
 
   gsap.to('.AvatarSnap', {
     opacity: 0,
     display: 'none',
     duration: 0,
-    delay:9,
+    delay:8.7,
   });
 
   gsap.set('.AvatarType', { opacity: 0,display:'none'});
   gsap.to('.AvatarType', {
     opacity:1,
     duration: 0,
-    delay:9,
+    delay:8.7,
     display:'block'
   });
+
+
 
   gsap.set('.AvatarCircle', { opacity: 0, y: 1, scale: .1 });
   gsap.to('.AvatarCircle', {
     opacity: 1,
     duration: 0.2,
-    delay:4,
+    delay: 3.7,
     ease:'power1.out',
     y: 0,
     scale: 1,
@@ -72,7 +76,7 @@ export function AnimationTransition() {
   gsap.to(".HomeTextbox", {
     opacity: 1,
     duration: 0.5,
-    delay: 4,
+    delay: 3.7, 
     x: 0,
   });
 
@@ -90,7 +94,7 @@ export function AnimationTransition() {
         duration: .8,
         x:0,
         ease: "power4.inOut",
-        delay:4, // stagger the animation
+        delay: 3.7, // stagger the animation
       });
 
     gsap.set(".titleBorderRight", { opacity: 0, x:20 });
@@ -99,7 +103,7 @@ export function AnimationTransition() {
       duration: .8,
       x:0,
       ease: "power4.inOut",
-      delay: 4, // stagger the animation
+      delay: 3.7,  // stagger the animation
     });
 
     gsap.set(".play-icon", { opacity: 0, });
@@ -117,7 +121,7 @@ export function AnimationTransition() {
       y:0,
       ease: "power1.inOut",
       duration: .8,
-      delay:4, 
+      delay: 3.7, 
     });
 
     

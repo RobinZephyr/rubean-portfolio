@@ -26,7 +26,6 @@ export default function RootLayout({
     const scrollRestrict = document.querySelectorAll('.scrollbarRestrict');
     window.scrollTo(0, 0);
     gsap.to(scrollRestrict, {
-      delay: 4,
       onComplete: function() {
         scrollRestrict.forEach(element => {
           element.classList.remove('overflow-hidden');
@@ -38,7 +37,7 @@ export default function RootLayout({
   return (
     
     <html lang="en">
-      <body className='  h-full  overflow-hidden scrollbarRestrict'>
+      <body className='  h-full overflow-x-none scrollbarRestrict'style={{overflowX:'hidden'}}>
         <div className='flex h-full'>
           <LeftSideBorder/>
             <div className='w-full h-full flex-col'>

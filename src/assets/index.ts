@@ -39,6 +39,7 @@ import iconSelector from '../assets/avatar/projects/slectIcon.png'
 
 import iconYoutube from '../assets/avatar/projects/icon_youtube.png'
 import iconSirmata from '../assets/avatar/projects/sirmata_logo.png'
+import stamp from '../assets/avatar/Stamp.png'
 export {
     avatarStand,
     avatarSnap,
@@ -53,6 +54,8 @@ export {
 
     logoDarkMode,
     logoLightMode,
+
+    stamp,
 
 //Skills
     react,
@@ -83,6 +86,8 @@ export {
     iconStandardCheckpoint,
     iconYoutube,
     iconSirmata,
+
+
 
 }
 

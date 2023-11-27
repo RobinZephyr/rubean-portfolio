@@ -17,13 +17,13 @@ export default function Home() {
         <div className='h-full'>
           <HomePortolio/>
         </div>
-        <div className='h-full overflow-x-none w-full'>
+        <div className='h-full overflow-x-none w-100%' style={{overflowX:'hidden'}}>
           <AboutPortfolio/>
         </div>
-        <div className='h-full overflow-x-none w-full'>
+        <div className='h-full overflow-x-none w-full' style={{overflowX:'hidden'}}>
           <ProjectPortfolio/>
         </div>
-        <div className='h-full overflow-x-none w-full pt-10'>
+        <div className='h-full overflow-x-none w-full pt-10' style={{overflowX:'hidden'}}>
           <ContactPortfolio/>
         </div>
       </div>  

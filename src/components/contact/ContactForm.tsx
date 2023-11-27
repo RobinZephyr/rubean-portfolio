@@ -2,7 +2,7 @@ import React from 'react'
 
 function ContactForm() {
   return (
-    <div className=''>
+    <div className='w-full min-w-70% max-w-[500px]'>
     <div className='w-full px-4 mt-2'>
         <div className='text-text text-xl'>
             Name

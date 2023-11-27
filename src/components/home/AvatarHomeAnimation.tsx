@@ -14,7 +14,7 @@ const AvatarHomeAnimation = () => {
   
   return (
     <div className="w-full h-43%  flex justify-center items-end relative ">
-      <div className="relative z-10">
+      <div className="relative z-10" style={{zIndex:'200'}}>
       <Image
         src={avatarSnapWink}
         className="object-cover AvatarSnap opacity-0  w-52 h-52 md:w-64 md:h-64 "
