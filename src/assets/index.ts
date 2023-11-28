@@ -20,6 +20,7 @@ import netbeans from '../assets/avatar/skills/netbeans.png'
 import animateCC from '../assets/avatar/skills/animateCC.png'
 import paintToolSai from '../assets/avatar/skills/painttoolsai.png'
 import photoshop from '../assets/avatar/skills/photoshop.png'
+import nextjs from '../assets/avatar/skills/nextjs.png'
 
 import logoDarkMode from '../assets/avatar/logoDarkMode.png'
 import logoLightMode from '../assets/avatar/logoLightMode.png'
@@ -70,7 +71,7 @@ export {
     animateCC,
     photoshop,
     paintToolSai,
-
+    nextjs,
 //Project
     portfolioVid,
     standardCheckpoint,

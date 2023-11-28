@@ -77,13 +77,8 @@ export default function HeadersPortfolio() {
   };
   const scrollToSection = (link, event) => {
     event.preventDefault();
-  
-    // Set the default height of your fixed header
     let headerHeight = 73;
-  
-    // Check if it's a mobile view (window width less than 768px)
     if (window.innerWidth < 768) {
-      // Set a different header h eight for mobile view
       headerHeight = 90; // Adjust this value as needed for your design
     }
   

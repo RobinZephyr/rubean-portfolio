@@ -20,7 +20,7 @@ export default function Home() {
       <div className="w-full h-full  flex-col  " >
         <HeadersPortfolio/>
         <div  id="home" className='h-full'>
-          <HomePortolio/>
+          <HomePortolio />
         </div>
         <div  id="about" className='h-full overflow-x-none w-100%' style={{overflowX:'hidden'}}>
           <AboutPortfolio/>

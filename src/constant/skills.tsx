@@ -1,4 +1,4 @@
-import { animateCC, css, html, javascript, laravel, mysql, netbeans, paintToolSai, photoshop, postgresl, react, tailwind } from "@/assets";
+import { animateCC, css, html, javascript, laravel, mysql, netbeans, nextjs, paintToolSai, photoshop, postgresl, react, tailwind } from "@/assets";
 
 export const skills = [
     {
@@ -60,6 +60,11 @@ export const skills = [
         id: '12',
         skill: 'Paint Tool Sai',
         image: paintToolSai,
+      },
+      {
+        id: '13',
+        skill: 'Next JS',
+        image: nextjs,
       },
   ];
   
