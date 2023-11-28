@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import gsap from 'gsap';
 import AboutTitle from './TitleAbout';
 
@@ -108,7 +108,7 @@ export default function AboutPortfolio() {
     
   }, []);
   
-  
+  const [aboutDialog, setAboutDialog] = useState(0);
   return (
     <div className='h-full w-full  text-text justify-center bg-bkg ' >
       <div className=''>
@@ -118,7 +118,7 @@ export default function AboutPortfolio() {
       <div className=' p-5 flex justify-center  w-full'>
         <div className='md:grid md:grid-cols-2 w-full md:gap-4 md:max-w-6xl '>
           <div className=''>
-            <ProfileImage/>
+            <ProfileImage setAboutDialog={setAboutDialog}/>
           </div>
 
           <div className='mt-10 md:mt-0 md:p-5  w-full '>

@@ -56,4 +56,11 @@ export const chatAbout = [
       { text: "\nI'm a passionate developer with a penchant for learning new skills and tools. With the right instructions and inspiration, ideas can be brought to life.", styles: {} },
     ],
   },
+  {
+    id: '2',
+    topic: 'thanks',
+    parts: [
+      { text: `Oh thanks I've been meaning to hide that! `, styles: {} },
+    ],
+  },
 ];

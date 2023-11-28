@@ -1,5 +1,5 @@
 // HomeTextbox.tsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 //import Textbox from './Textbox';
 import { AnimationTransition } from '@/constant/animationTransition';
 import { FaLocationPin } from 'react-icons/fa6';
@@ -19,7 +19,8 @@ const AboutTextbox: React.FC = () => {
       });
   }, []); 
 
-  
+  const [aboutDialog, setAboutDialog] = useState(0);
+
   return (
     <div className='h-50% w-full flex justify-center'>
       <div>
@@ -28,13 +29,15 @@ const AboutTextbox: React.FC = () => {
       <div className='z-10 pt-5 '>
         <div className='relative p-3   bg-textbox w-full  shadow-md md:max-w-[500px] md:w-100% pt-5'>
           <div className='text-sm md:text-xl '>
-            <div style={{ whiteSpace: 'pre-line' }}>
-              {chatAbout[0].parts.map((part, index) => (
-                <span key={index} style={part.styles}>
-                  {part.text}
-                </span>
-              ))}
-            </div>
+          <div style={{ whiteSpace: 'pre-line' }}>
+            {chatAbout[aboutDialog] && chatAbout[aboutDialog].parts
+              ? chatAbout[aboutDialog].parts.map((part, index) => (
+                  <span key={index} style={part.styles}>
+                    {part.text}
+                  </span>
+                ))
+              : null}
+          </div>
           </div>
 
           <div className='w-full flex justify-end play-icon opacity-0 absolute '>

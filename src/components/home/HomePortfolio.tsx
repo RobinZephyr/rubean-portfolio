@@ -14,16 +14,10 @@ export default function HomePortolio() {
 
   useEffect(() => {
     AnimationTransition();
-
-    // Disable scroll on mount
     document.body.style.overflow = 'hidden';
-
-    // Enable scroll after 4.7 seconds
     const timeoutId = setTimeout(() => {
       document.body.style.overflow = 'auto';
     }, 4700);
-
-    // Clean up when the component unmounts or when the timeout completes
     return () => {
       clearTimeout(timeoutId);
       document.body.style.overflow = 'auto';
