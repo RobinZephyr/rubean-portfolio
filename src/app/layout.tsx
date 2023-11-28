@@ -36,7 +36,12 @@ export default function RootLayout({
   }, []);
   
   return (
-    
+    <>
+    <head>
+      <title>
+        Rubean Rakeru Portfolio
+      </title>
+    </head>
     <html lang="en">
       <body className='w-full  h-full overflow-x-none overflow-hidden scrollbarRestrict'style={{overflowX:'hidden'}}>
         <div className='flex h-full'>
@@ -47,8 +52,9 @@ export default function RootLayout({
             </div>
             <RightSideBorder/>
         </div>
-
       </body>
     </html>
+    </>
+
   )
 }

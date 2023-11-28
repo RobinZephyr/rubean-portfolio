@@ -1,20 +1,20 @@
 import React from 'react';
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa6';
+import { FaFacebook, FaGithub, FaLinkedin, FaDev } from 'react-icons/fa6';
 
 export const ContactLinks = () => {
   return (
     <div className='text-2xl text-text  flex gap-2 md:gap-3 '>
-      <a href='https://facebook.com' className='fadeAnimation cursor-pointer '>
+      <a href="https://www.facebook.com/profile.php?id=100006948285802" className='fadeAnimation cursor-pointer '>
         <FaFacebook />
       </a>
-      <a href='https://twitter.com' className='fadeAnimation cursor-pointer'>
-        <FaTwitter />
-      </a>
-      <a href='https://github.com' className='fadeAnimation cursor-pointer '>
+      <a href='https://github.com/RobinZephyr' className='fadeAnimation cursor-pointer '>
         <FaGithub />
       </a>
-      <a href='https://linkedin.com' className='fadeAnimation cursor-pointer'>
+      <a href='https://www.linkedin.com/in/rubean-esguerra-a53151117/' className='fadeAnimation cursor-pointer'>
         <FaLinkedin />
+      </a>
+      <a href='https://dev.to/robinzephyr' className='fadeAnimation cursor-pointer'>
+        <FaDev/>
       </a>
     </div>
   );
