@@ -41,11 +41,10 @@ export default function RootLayout({
       <body className='w-full  h-full overflow-x-none overflow-hidden scrollbarRestrict'style={{overflowX:'hidden'}}>
         <div className='flex h-full'>
           <LeftSideBorder/>
-            <div className='w-full h-full flex-col'>
-              <HeadersPortfolio/>
+            <div className='w-full h-full flex-col '>
                 {children}
-          <FooterPortfolio/>
-d            </div>
+              <FooterPortfolio/>
+            </div>
             <RightSideBorder/>
         </div>
 

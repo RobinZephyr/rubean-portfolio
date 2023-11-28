@@ -26,7 +26,7 @@ const AboutTextbox: React.FC = () => {
         <Nameplate name="Rubean Rakeru" />
       </div>
       <div className='z-10 pt-5 '>
-        <div className='relative p-3   bg-textbox w-full  shadow-md md:min-w-[500px] pt-5'>
+        <div className='relative p-3   bg-textbox w-full  shadow-md md:max-w-[500px] md:w-100% pt-5'>
           <div className='text-sm md:text-xl '>
             <div style={{ whiteSpace: 'pre-line' }}>
               {chatAbout[0].parts.map((part, index) => (

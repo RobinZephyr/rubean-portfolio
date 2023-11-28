@@ -60,7 +60,7 @@ export default function HeadersPortfolio() {
         gsap.to(button, {
           opacity: 1,
           duration: 0.4,
-          delay: 0.6 + index * 0.2, // Incremental delay
+          delay: 0.3+ index * 0.2, // Incremental delay
           y: 0,
           ease: 'back.out',
         });
@@ -75,17 +75,46 @@ export default function HeadersPortfolio() {
       toggleMobileMenu();
     }
   };
-
   const scrollToSection = (link, event) => {
     event.preventDefault();
-    const section = document.querySelector(link);
-    console.log("Link:", link);
-    console.log("Section:", section);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      console.log("Found", link);
+  
+    // Set the default height of your fixed header
+    let headerHeight = 73;
+  
+    // Check if it's a mobile view (window width less than 768px)
+    if (window.innerWidth < 768) {
+      // Set a different header h eight for mobile view
+      headerHeight = 90; // Adjust this value as needed for your design
     }
+  
+    const headerHeightContact = 0;
+  
+    if (link === 'home') {
+      const homeSection = document.getElementById('home');
+      if (homeSection) {
+        const scrollPosition = homeSection.offsetTop - headerHeight;
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      }
+    } else {
+      const section = document.getElementById(link);
+      if (section) {
+        let scrollPosition;
+  
+        if (link === "contact") {
+          // Use headerHeightContact for the "Contact" section
+          scrollPosition = section.offsetTop - headerHeightContact;
+        } else {
+          // Use headerHeight for other sections
+          scrollPosition = section.offsetTop - headerHeight;
+        }
+  
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      }
+    }
+  
+    closeMobileMenu();
   };
+  
   
   return (
     <header className="sticky top-0 absolute z-50 h-full flex  items-center bg-bkg h-20 z-50 HeadersIntro opacity-0" style={{zIndex:'9999'}}>
@@ -106,11 +135,11 @@ export default function HeadersPortfolio() {
                   {/**Desktop */}
                   <div className='relative justify-end  space-x-5 whitespace-nowrap hidden md:flex grid grid-cols-2'>
                         {navigatorLinks.map((nav) => (
-                        <span
-                          key={nav.id}
-                          className='fadeInDown  whitespace-nowrap fadeAnimation text-text  hover:underline cursor-pointer'
-                          onClick={(event) => scrollToSection(nav.link, event)}
-                        >
+                            <span
+                            key={nav.id}
+                            className='fadeInDown  whitespace-nowrap fadeAnimation text-text  hover:underline cursor-pointer'
+                            onClick={(event) => scrollToSection(nav.link, event)}
+                          >
                           {nav.title}
                         </span>
                       ))}
@@ -139,7 +168,7 @@ export default function HeadersPortfolio() {
        
        
           {/**Mobile Nav */}
-          <MobileNav/>
+          <MobileNav scrollToSection={scrollToSection}/>
         </div>
     </header>
   );
