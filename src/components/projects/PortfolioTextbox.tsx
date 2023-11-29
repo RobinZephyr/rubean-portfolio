@@ -27,7 +27,7 @@ const PortfolioTextbox: React.FC = ({selectedProjectData}) => {
         <Nameplate name="Rubean Rakeru" />
       </div>
       <div className='z-10 pt-5  '>
-        <div className='relative p-3   bg-textbox w-full  shadow-md  pt-7'>
+        <div className='relative p-3   bg-textbox w-full  shadow-md  pt-7 '>
           <div className='text-sm md:text-lg text-text  '>
           <div style={{ whiteSpace: 'pre-line' }} className='projectTextboxText'>
             {selectedProjectData && selectedProjectData.parts.map((part, index) => (

@@ -95,7 +95,8 @@ export const chatHome = [
       id: '7',
       topic: '2',
       parts: [
-        { text: `In short, I'm Rubean Rakeru C. Esguerra.`, styles: {} },
+        { text: `In short I'm  `, styles: {} },
+        { text: 'RUBEAN RAKERU C. ESGUERRA ⭐', styles: {whiteSpace:'nowrap'} },
         { text: `\nA fledgling web developer and artist, where learning is the name of the game and I'm in it for the long haul.`, styles: {} },
       ],
     },

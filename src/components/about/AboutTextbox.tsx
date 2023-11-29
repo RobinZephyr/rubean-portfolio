@@ -27,7 +27,7 @@ const AboutTextbox: React.FC<{ aboutDialog: number; increaseAboutDialog: () => v
         <Nameplate name="Rubean Rakeru" />
       </div>
       <div className='z-10 pt-5 '>
-        <div className='relative p-3   bg-textbox w-100%   xmd:w-[400px] md:w-auto md:h-auto shadow-md pt-5'>
+        <div className='relative p-3   bg-textbox w-100%  min-w-[300px] xmd:w-[400px] md:w-auto md:h-auto shadow-md pt-5'>
           <div className='text-sm md:text-lg aboutTextboxIntro '>
           <div style={{ whiteSpace: 'pre-line' }}>
             {chatAbout[aboutDialog] && chatAbout[aboutDialog].parts

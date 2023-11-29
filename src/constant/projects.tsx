@@ -22,7 +22,7 @@ export const projects = [
         image:journalComplete,
         icon:iconJournalComplete,
         parts:[
-            { text: 'A small showcase of a Journal project. The pandemic was just catching up, so that explains all the "wash your hands" references.', styles: {} },
+            { text: 'A small showcase of a Journal project. The pandemic was just catching up which explains all the "wash your hands" references.', styles: {} },
           ],
     },
     {
@@ -32,7 +32,7 @@ export const projects = [
         image:videoGameSystem,
         icon:iconVideoGameSystem,
         parts:[
-            { text: 'I believe this was a final project for one of my online classes. Using netbeans and 2-3 workdays i finished and submitted it. I always found it difficult trying to save none Web based projects', styles: {} },
+            { text: 'I believe this was a final project for one of my online classes. Made this using Netbeans and 2-3 days worth of work. I can not be sure, the pandemic season ruined my sense of time.', styles: {} },
           ],
     },
     {
@@ -42,7 +42,7 @@ export const projects = [
         image:standardCheckpoint,
         icon:iconStandardCheckpoint,
         parts:[
-            { text: 'This is a short video infomercial about UFTs and Standard Checkpoints. Made this for a 3LP activity and I really tried to capture those educational tutorials in youtube.', styles: {} },
+            { text: 'This is a short video infomercial about UFTs and Standard Checkpoints. Made this for a 3LP activity. I tried to capture the classic energy of a very helpful indian man on youtube.', styles: {} },
           ],
     },
     {
@@ -52,7 +52,7 @@ export const projects = [
         image:sirmatafarm,
         icon:iconSirmatafarm,
         parts:[
-            { text: 'A boooking website for the Sirmata Ecofarm and Nature Park. We are doing our best.', styles: {} },
+            { text: 'A boooking website for the Sirmata Ecofarm and Nature Park. \nWe are doing our best.', styles: {} },
           ],
     },
 
