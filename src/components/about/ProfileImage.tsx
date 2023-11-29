@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image';
 import gsap from "gsap";
 import { chatAbout } from '@/constant/chatDialog';
-function ProfileImage({ setAboutDialog }) {
+function ProfileImage({onToggleHideProfile}) {
 
  const [hideProfile, setHideProfile]=useState(false);
  
@@ -12,16 +12,19 @@ function ProfileImage({ setAboutDialog }) {
     return
   }
 
+  setHideProfile(true);
+  onToggleHideProfile(true);
   const hideProfilePicOutro = event.currentTarget.querySelector('.hideProfilePicOutro');
   gsap.set(hideProfilePicOutro, { opacity: 1, scaleX: 1 });
   gsap.to(hideProfilePicOutro, {
+    display:'none',
     opacity: 0,
-    duration: 0.2,
+    duration: 0,
     scaleX: 0,
     ease: 'power4.out',
     delay: 0,
     onComplete: () => {
-      hideProfilePicOutro.style.display = 'none';
+      setHideProfile(true);
     },
   });
   
@@ -32,18 +35,18 @@ function ProfileImage({ setAboutDialog }) {
     duration: 0.3,
     scaleX: 1,
     ease: 'power4.out',
-    delay: .2,
-    display: 'block',
+    delay: 0,
+    display:'block',
     onComplete: () => {
       setHideProfile(true);
-      setAboutDialog(1);
+
     },
   });
  }
 
   return (
   <div className='w-full h-90%  relative flex justify-center overflow-x-none'>
-          <div className='profileImage  opacity-0 w-full h-full flex  justify-center md:p-5  ' style={{zIndex:'50'}} onClick={hideProfilePic}> 
+          <div className='profileImage  opacity-0 w-full h-full flex  justify-center md:p-5 relative ' style={{zIndex:'50'}} onClick={hideProfilePic}> 
               <Image src={avatarLaptopBig} alt="Nvm its fine" className='w-56 h-72 md:w-96 hidden md:h-[530px] object-cover rounded-full showNewPicIntro'
               />
               <div  className='w-56 h-72  md:w-96 md:h-[530px] bg-white object-cover rounded-full  hideProfilePicOutro  '>

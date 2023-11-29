@@ -26,7 +26,7 @@ const PortfolioTextbox: React.FC = ({selectedProjectData}) => {
       <div>
         <Nameplate name="Rubean Rakeru" />
       </div>
-      <div className='z-10 pt-5  max-w-[310px] md:w-80% md:max-w-[500px] '>
+      <div className='z-10 pt-5 min-w-[300px] w-full max-w-[310px] md:w-100% md:max-w-[500px] '>
         <div className='relative p-3   bg-textbox w-full  shadow-md  pt-5'>
           <div className='text-sm md:text-lg text-text  '>
           <div style={{ whiteSpace: 'pre-line' }} className='projectTextboxText'>

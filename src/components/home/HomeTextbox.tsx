@@ -35,8 +35,6 @@ const HomeTextbox: React.FC = () => {
     
     const link = chatHome[currentDialog]?.link || chatHome[currentDialog]?.parts[0]?.link;
     if (link) {
-      console.log(`Clicked link: ${link}`);
-    
       let headerHeight = 73;
     if (window.innerWidth < 768) {
       headerHeight = 90; // Adjust this value as needed for your design
@@ -63,14 +61,14 @@ const HomeTextbox: React.FC = () => {
   };
 
   return (
-    <div className='h-50% shadow-md w-full'>
+    <div className='h-50% w-full '>
       <div>
         <Nameplate name="Rubean Rakeru" />
       </div>
       <div className='z-10 pt-5 '>
-        <div className='relative  p-3  fade bg-textbox  w-100% min-w-[300px] md:w-[400px] md:max-w-[400px] pt-5'
+        <div className='relative  p-3  fade bg-textbox  items-center     pt-7'
         >
-          <div className='text-md md:text-xl   '>
+          <div className='text-md md:text-xl h-full flex items-center   '>
           <div style={{ whiteSpace: 'pre-line' }} className='homeTextboxText'>
               {chatHome[currentDialog].parts.map((part, index) => (
                 <span
@@ -100,8 +98,8 @@ const HomeTextbox: React.FC = () => {
             </div>
 
           </div>
-          <div className='w-full flex justify-end play-icon opacity-0  mt-2   '  onClick={advanceDialog}>
-            <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-10px]  hover:cursor-pointer nextDialogindicatorHome' />
+          <div className='w-full flex justify-end play-icon opacity-0   h-[20px] '  onClick={advanceDialog}>
+            <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-15px]  hover:cursor-pointer nextDialogindicatorHome' />
           </div>
         </div>
       </div>

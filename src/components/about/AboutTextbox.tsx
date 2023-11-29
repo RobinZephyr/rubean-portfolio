@@ -7,7 +7,7 @@ import { chatAbout, chatHome } from '@/constant/chatDialog';
 import gsap from 'gsap';
 import Nameplate from '../home/Nameplate';
 
-const AboutTextbox: React.FC = () => {
+const AboutTextbox: React.FC<{ aboutDialog: number; increaseAboutDialog: () => void }> = ({ aboutDialog, increaseAboutDialog }) => {
   useEffect(() => {
     AnimationTransition();
     const nextDialogindicator2 = document.querySelector('.nextDialogindicatorAbout');
@@ -19,7 +19,7 @@ const AboutTextbox: React.FC = () => {
       });
   }, []); 
 
-  const [aboutDialog, setAboutDialog] = useState(0);
+
 
   return (
     <div className='h-50% w-full flex justify-center'>
@@ -27,8 +27,8 @@ const AboutTextbox: React.FC = () => {
         <Nameplate name="Rubean Rakeru" />
       </div>
       <div className='z-10 pt-5 '>
-        <div className='relative p-3   bg-textbox w-full  shadow-md md:max-w-[500px] md:w-100% pt-5'>
-          <div className='text-sm md:text-xl '>
+        <div className='relative p-3   bg-textbox w-100% md:w-[400px] min-w-[300px] md:max-w-[400px]  shadow-md pt-5'>
+          <div className='text-sm md:text-lg aboutTextboxIntro '>
           <div style={{ whiteSpace: 'pre-line' }}>
             {chatAbout[aboutDialog] && chatAbout[aboutDialog].parts
               ? chatAbout[aboutDialog].parts.map((part, index) => (
@@ -40,8 +40,8 @@ const AboutTextbox: React.FC = () => {
           </div>
           </div>
 
-          <div className='w-full flex justify-end play-icon opacity-0 absolute '>
-              <FaLocationPin className='text-text text-2xl p-0 fadeInDown absolute -top-4 right-3 nextDialogindicatorAbout'/>
+          <div className='w-full flex justify-end play-icon opacity-0  mt-2   ' onClick={increaseAboutDialog}>
+              <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-10px]  hover:cursor-pointer nextDialogindicatorAbout'/>
           </div>
         </div>
 

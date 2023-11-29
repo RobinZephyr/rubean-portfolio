@@ -7,6 +7,7 @@ import AvatarAboutAnimation from './AvatarAboutAnimation';
 import AboutTextbox from './AboutTextbox';
 import { AnimationTransition } from '@/constant/animationTransition';
 import ProfileImage from './ProfileImage';
+import { chatAbout } from '@/constant/chatDialog';
 
 export default function AboutPortfolio() {
   useEffect(() => {
@@ -109,6 +110,45 @@ export default function AboutPortfolio() {
   }, []);
   
   const [aboutDialog, setAboutDialog] = useState(0);
+  const [hideProfile, setHideProfile]=useState(false);
+
+const increaseAboutDialog = () => {
+  setAboutDialog((prev) => {
+    let nextDialogIndex = (prev + 1) % 8
+    
+    gsap.set('.aboutTextboxIntro', { opacity: 0 });
+    gsap.to('.aboutTextboxIntro', {
+      duration: 0.5,  
+      ease: 'power1.inOut',
+      opacity: 1,
+    });
+
+  if(!hideProfile){  
+      while ([1, 2, 3].includes(nextDialogIndex)) {
+        nextDialogIndex = (nextDialogIndex + 1) % 8
+      }
+      if (nextDialogIndex === 8-1) {
+        return prev;
+      }
+    }
+    if(hideProfile){
+      if (nextDialogIndex === 8-1) {
+        return prev;
+      }
+    }
+    return nextDialogIndex;
+  });
+};
+
+  
+
+useEffect(() => {
+  if(hideProfile===true){
+    setAboutDialog(1)
+  }
+}, [hideProfile]);
+
+  
   return (
     <div className='h-full w-full  text-text justify-center bg-bkg ' >
       <div className=''>
@@ -117,13 +157,13 @@ export default function AboutPortfolio() {
       
       <div className=' p-5 flex justify-center  w-full'>
         <div className='md:grid md:grid-cols-2 w-full md:gap-4 md:max-w-6xl '>
-          <div className=''>
-            <ProfileImage setAboutDialog={setAboutDialog}/>
+          <div className='' onClick={increaseAboutDialog} >
+            <ProfileImage onToggleHideProfile={setHideProfile} />
           </div>
 
           <div className='mt-10 md:mt-0 md:p-5  w-full '>
             <div className='aboutTextboxMobile  opacity-0  '>
-              <AboutTextbox/>
+              <AboutTextbox aboutDialog={aboutDialog} increaseAboutDialog={increaseAboutDialog} />
             </div>
             <div className=' flex justify-center mt-5    '>
               <AvatarAboutAnimation/>
