@@ -9,13 +9,16 @@ import ProjectShowcase from './ProjectShowcase';
 import PortfolioTextbox from './PortfolioTextbox';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
 function ProjectPortfolio() {
     const [selectedProject, setSelectedProject] = useState(1);
 
-    const handleProjectSelect = (projectId) => {
+    const handleProjectSelect = (projectId:number) => {
         setSelectedProject(projectId);
         console.log('Selected Project:', projectId);
     };
+    
     const selectedProjectData = projects.find((project) => project.id === selectedProject);
 
     useEffect(() => {
@@ -97,14 +100,19 @@ function ProjectPortfolio() {
             <div className='p-5 md:pt-16 md:pb-16  flex justify-center h-full items-center '>
                 <div className='md:grid md:grid-cols-2 md:max-w-7xl md:gap-10'>
 
-                    <div className='flex justify-center w-full h-full relative md:mt-0 mt-2 projectSchowcaseIntro opacity-0'>
-                      <ProjectShowcase selectedProjectData={selectedProjectData} />
-                    </div>
+                <div className='flex justify-center w-full h-full relative md:mt-0 mt-2 projectSchowcaseIntro opacity-0'>
+                {selectedProjectData ? (
+                  <ProjectShowcase selectedProjectData={selectedProjectData} />
+                ) : (
+                  ""
+                )}
+              </div>
+
 
                     <div className='flex justify-center mt-5 md:mt-0  '>
                         <div className=' flex-col  w-full md:w-80% md:max-w-[500px] min-w-60%'>
                             <div className='mt-5 md:mt-0 projectTextboxIntro opacity-0'>
-                              <PortfolioTextbox selectedProjectData={selectedProjectData} />
+                              <PortfolioTextbox data={selectedProjectData} />
                             </div>
                             <div className=' md:block mt-5 projectSelectIntro opacity-0 '>
                               <ProjectSelection onProjectSelect={handleProjectSelect} />

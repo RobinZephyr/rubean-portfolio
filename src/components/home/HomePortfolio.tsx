@@ -24,14 +24,13 @@ export default function HomePortolio() {
     };
   }, []);
 
-  const scrollToSection = (link) => {
+  const scrollToSection = (link: string, event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const section = document.querySelector(link);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
   
   return (
 <div className='pb-10' >

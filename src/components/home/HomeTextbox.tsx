@@ -6,6 +6,8 @@ import { chatHome } from '@/constant/chatDialog';
 import gsap from 'gsap';
 import Nameplate from '../home/Nameplate';
 
+
+
 const HomeTextbox: React.FC = () => {
   useEffect(() => {
     AnimationTransition();
@@ -31,34 +33,62 @@ const HomeTextbox: React.FC = () => {
     });
   };
 
+  interface ChatPart {
+    text: string;
+    styles: {
+      whiteSpace: string;
+      color?: string; // Add color as an optional property
+    };
+    link?: string; // Make link property optional
+  }
   const scrollToSection = () => {
-    
-    const link = chatHome[currentDialog]?.link || chatHome[currentDialog]?.parts[0]?.link;
-    if (link) {
-      let headerHeight = 73;
-    if (window.innerWidth < 768) {
-      headerHeight = 90; // Adjust this value as needed for your design
-    }
-    if (link === 'home') {
-      const homeSection = document.getElementById('home');
-      if (homeSection) {
-        const scrollPosition = homeSection.offsetTop - headerHeight;
-        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-      }
-    } else {
-      const section = document.getElementById(link);
-      if (section) {
-        let scrollPosition;
-        if (link === "contact") {
-          scrollPosition = section.offsetTop - 0;
-        } else {
-          scrollPosition = section.offsetTop - headerHeight;
+    const currentDialogData = chatHome[currentDialog];
+  
+    if (currentDialogData) {
+      let link: string | undefined;
+  
+      for (const part of currentDialogData.parts) {
+        if ('link' in part && typeof part.link === 'string') {
+          link = part.link;
+          break;
         }
-        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
       }
-    }
+  
+      if (link) {
+        let headerHeight = 73;
+  
+        if (window.innerWidth < 768) {
+          headerHeight = 90; // Adjust this value as needed for your design
+        }
+  
+        if (link === 'home') {
+          const homeSection = document.getElementById('home');
+  
+          if (homeSection) {
+            const scrollPosition = homeSection.offsetTop - headerHeight;
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+          }
+        } else {
+          const section = document.getElementById(link);
+  
+          if (section) {
+            let scrollPosition;
+  
+            if (link === 'contact') {
+              scrollPosition = section.offsetTop - 0;
+            } else {
+              scrollPosition = section.offsetTop - headerHeight;
+            }
+  
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+          }
+        }
+      }
     }
   };
+  
+  
+  
 
   return (
     <div className='h-50% w-full '>
@@ -70,13 +100,14 @@ const HomeTextbox: React.FC = () => {
         >
           <div className='text-md md:text-lg h-full flex items-center   '>
           <div style={{ whiteSpace: 'pre-line' }} className='homeTextboxText'>
-              {chatHome[currentDialog].parts.map((part, index) => (
-                <span
+            {chatHome[currentDialog].parts.map((part, index) => (
+              <span
                 key={index}
                 style={{
-                  ...part.styles,
-                  color: ['ABOUT', 'PROJECT', 'CONTACT'].includes(part.text) ? '' : part.styles?.color,
+                  whiteSpace: part.styles.whiteSpace as React.CSSProperties['whiteSpace'],
+                  color: (part.styles && 'color' in part.styles ? part.styles.color : undefined) as React.CSSProperties['color'],
                 }}
+                
                 className={[
                   'ABOUT',
                   'PROJECT',
@@ -93,10 +124,8 @@ const HomeTextbox: React.FC = () => {
               >
                 {part.text + ' '}
               </span>
-              
-              ))}
-            </div>
-
+            ))}
+          </div>
           </div>
           <div className='w-full flex justify-end play-icon opacity-0   h-[20px] '  onClick={advanceDialog}>
             <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-10px]  hover:cursor-pointer nextDialogindicatorHome' />

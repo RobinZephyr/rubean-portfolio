@@ -6,10 +6,14 @@ import { iconSelector } from '@/assets';
 import gsap from 'gsap';
 import { AnimationTransition } from '@/constant/animationTransition';
 
-function ProjectSelection({onProjectSelect } ) {
+interface ProjectSelectionProps {
+    onProjectSelect: (projectId: number) => void;
+  }
+
+function ProjectSelection({ onProjectSelect }: ProjectSelectionProps) {
     const [selectedProject, setSelectedProject] = useState(1);
 
-    const onClickChangeProject = (projectId) => {
+    const onClickChangeProject = (projectId: number) => {
         setSelectedProject(projectId);
 
         const selectorIconGsap = document.querySelector('.selectorIconGsap');

@@ -1,5 +1,5 @@
 // HomeTextbox.tsx
-import React, { useEffect, useState } from 'react';
+import React, { CSSProperties, useEffect, useState } from 'react';
 //import Textbox from './Textbox';
 import { AnimationTransition } from '@/constant/animationTransition';
 import { FaLocationPin } from 'react-icons/fa6';
@@ -30,14 +30,14 @@ const AboutTextbox: React.FC<{ aboutDialog: number; increaseAboutDialog: () => v
         <div className='relative p-3   bg-textbox w-100%  min-w-[300px] xmd:w-[400px] md:w-auto md:h-auto shadow-md pt-5'>
           <div className='text-sm md:text-lg aboutTextboxIntro '>
           <div style={{ whiteSpace: 'pre-line' }}>
-            {chatAbout[aboutDialog] && chatAbout[aboutDialog].parts
-              ? chatAbout[aboutDialog].parts.map((part, index) => (
-                  <span key={index} style={part.styles}>
-                    {part.text}
-                  </span>
-                ))
-              : null}
-          </div>
+          {chatAbout[aboutDialog] && chatAbout[aboutDialog].parts
+            ? chatAbout[aboutDialog].parts.map((part, index) => (
+                <span key={index} style={part.styles as CSSProperties}>
+                  {part.text}
+                </span>
+              ))
+            : null}
+        </div>
           </div>
 
           <div className='w-full flex justify-end play-icon opacity-0  h-[20px]  ' onClick={increaseAboutDialog}>

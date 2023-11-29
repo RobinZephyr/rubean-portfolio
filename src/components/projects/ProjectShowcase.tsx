@@ -1,9 +1,22 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { circle, iconSirmata, iconYoutube } from '@/assets';
 import SkillName from './ProjectName';
 import gsap from 'gsap';
-function ProjectShowcase({ selectedProjectData }) {
+
+interface ProjectData {
+    id: number;
+    projectName: string;
+    image: StaticImageData;
+    link: string;
+  }
+  
+  interface ProjectShowcaseProps {
+    selectedProjectData: ProjectData;
+  }
+
+  
+  function ProjectShowcase({ selectedProjectData }: ProjectShowcaseProps) {
 
     const hoverProjectEnter = (event: React.MouseEvent<HTMLDivElement>) => {
         const projectOverlayHover = event.currentTarget.querySelector('.projectOverlayHover');
