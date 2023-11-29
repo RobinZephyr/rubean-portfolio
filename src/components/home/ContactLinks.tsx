@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin, FaDev } from 'react-icons/fa6';
 
 export const ContactLinks = () => {
   return (
-    <div className='text-2xl text-text  flex gap-2 md:gap-3 '>
+    <div className='text-lg md:text-2xl text-text  flex gap-2 md:gap-3 '>
       <a href="https://www.facebook.com/profile.php?id=100006948285802" className='fadeAnimation cursor-pointer '>
         <FaFacebook />
       </a>

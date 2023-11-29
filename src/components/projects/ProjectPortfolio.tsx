@@ -90,7 +90,7 @@ function ProjectPortfolio() {
 
     
     return (
-        <div className='w-full h-100% bg-bkg flex-col justify-center  '>
+        <div className='w-full px-3  h-100% bg-bkg flex-col justify-center  '>
             <div className=' '>
                 <TitleProject />
             </div>
@@ -101,12 +101,12 @@ function ProjectPortfolio() {
                       <ProjectShowcase selectedProjectData={selectedProjectData} />
                     </div>
 
-                    <div className='flex justify-center mt-5 md:mt-0 '>
-                        <div className='flex-col '>
+                    <div className='flex justify-center mt-5 md:mt-0  '>
+                        <div className=' flex-col  w-full md:w-80% md:max-w-[500px] min-w-60%'>
                             <div className='mt-5 md:mt-0 projectTextboxIntro opacity-0'>
                               <PortfolioTextbox selectedProjectData={selectedProjectData} />
                             </div>
-                            <div className='mt-5 projectSelectIntro opacity-0 '>
+                            <div className=' md:block mt-5 projectSelectIntro opacity-0 '>
                               <ProjectSelection onProjectSelect={handleProjectSelect} />
                             </div>
                         </div>

@@ -68,7 +68,7 @@ const HomeTextbox: React.FC = () => {
       <div className='z-10 pt-5 '>
         <div className='relative  p-3  fade bg-textbox  items-center     pt-7'
         >
-          <div className='text-md md:text-xl h-full flex items-center   '>
+          <div className='text-md md:text-lg h-full flex items-center   '>
           <div style={{ whiteSpace: 'pre-line' }} className='homeTextboxText'>
               {chatHome[currentDialog].parts.map((part, index) => (
                 <span
@@ -99,7 +99,7 @@ const HomeTextbox: React.FC = () => {
 
           </div>
           <div className='w-full flex justify-end play-icon opacity-0   h-[20px] '  onClick={advanceDialog}>
-            <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-15px]  hover:cursor-pointer nextDialogindicatorHome' />
+            <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-10px]  hover:cursor-pointer nextDialogindicatorHome' />
           </div>
         </div>
       </div>

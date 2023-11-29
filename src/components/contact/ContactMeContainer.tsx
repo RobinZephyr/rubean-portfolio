@@ -52,7 +52,7 @@ function ContactMeContainer() {
                     </div>
                     <div className='text-lg md:text-xl flex items-center  mt-2 '>
                         <FaPhone/>
-                        <span className='pl-2'>0999-9999-999</span>
+                        <span className='pl-2'>0915-0844-151</span>
                     </div>
                 </div>
             </div>  

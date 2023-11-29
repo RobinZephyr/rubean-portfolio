@@ -55,7 +55,7 @@ function ProfileImage({onToggleHideProfile}) {
      
 
           </div>
-          <div className={`absolute bottom-[-20px] `} >
+          <div className={`absolute bottom-[-20px] md:bottom-[-50px]`} >
             <Image src={circle} alt='Avatar Spotlight'
              style={{ filter: 'var(--color-avatarSpotlight) ', zIndex:'10' }}
               className='w-48 h-6 md:h-[20px] md:w-[300px] profileShadow aboutSpotlightIntro opacity-0' />

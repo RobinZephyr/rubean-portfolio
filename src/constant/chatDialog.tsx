@@ -12,7 +12,7 @@ export const chatHome = [
       id: '2',
       link:'about',
       parts: [
-        { text: `If you want to know more about my skills.\n Head right on to  `, styles: {} },
+        { text: `If you want to know more about me and my skills.\n Head right on to  `, styles: {} },
         { text: `ABOUT`, styles: {} },
       ],
     },
@@ -23,7 +23,6 @@ export const chatHome = [
         { text: `Curios about my work? Its in the  `, styles: {} },
         { text: `PROJECT`, styles: {} },
         { text: `section. It's a culmination of my old`, styles: {} },
-        { text: `hyperfixations`, styles: {textDecoration:'line-through'} },
         { text: ` interests in the past.`, styles: {} },
       ],
     },
@@ -52,10 +51,9 @@ export const chatHome = [
       id: '1',
       topic: 'AboutIntroduction',
       parts: [
-        { text: 'Greetings there!', styles: {} },
-        { text: '\nMy name’s ', styles: {} },
-        { text: 'RUBEAN RAKERU C. ESGUERRA', styles: { textDecoration: 'underline', whiteSpace:'nowrap' } },
-        { text: "\nI'm a passionate developer with a penchant for learning new skills and tools. With the right instructions and inspiration, ideas can be brought to life.", styles: {} },
+        { text: 'My name’s ', styles: {} },
+        { text: 'RUBEAN RAKERU C. ESGUERRA', styles: {whiteSpace:'nowrap'} },
+        { text: "\nI'm a passionate developer with a penchant for learning new skills and tools. \nWith the right instructions and inspiration, ideas can be brought to life.", styles: {} },
       ],
     },
     {
@@ -69,7 +67,7 @@ export const chatHome = [
       id: '3',
       topic: '2',
       parts: [
-        { text: `Nope I am not bringing it back. Lets's just continue with the about.`, styles: {} },
+        { text: `No  I will not be bringing it back thank you. Lets's just continue on learning about me`, styles: {} },
       ],
     },
     {
@@ -83,7 +81,7 @@ export const chatHome = [
       id: '5',
       topic: '2',
       parts: [
-        { text: `I'm a student studying to be a Web Developer. Currently expanding my skills in both Front End and Back End Developing.`, styles: {} },
+        { text: `I'm a student studying to be a Web Developer. Currently expanding my skills in both Front and Back End Development.`, styles: {} },
       ],
     },
     {

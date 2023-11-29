@@ -86,11 +86,11 @@ function ProjectSelection({onProjectSelect } ) {
             <div className='flex justify-center absolute'>
                 <ProjectName projectName='Projects' />
             </div>
-            <div className='mt-5 pt-6 pb-2 max-w-[310px] md:w-80% md:max-w-[500px]  gap-5 md:gap-8 bg-skillMenu flex flex-wrap relative whitespace-pre justify-center'>
+            <div className='mt-5 pt-6 pb-2  gap-5 max-w-[300px] md:max-w-[450px] bg-skillMenu flex flex-wrap relative whitespace-pre justify-center'>
                 {projects.map((project) => (
                     <div
                         key={project.id}
-                        className={`w-[4.7rem] md:w-[6.5rem]  bg-textbox p-3  relative cursor-pointer  `}
+                        className={`w-[4.7rem] md:w-[5rem] lg:w-[5.5rem]  bg-textbox p-3  relative cursor-pointer  `}
                         onClick={() => onClickChangeProject(project.id)}
                         onMouseEnter={handleHoverEnter}
                         onMouseLeave={handleHoverLeave}

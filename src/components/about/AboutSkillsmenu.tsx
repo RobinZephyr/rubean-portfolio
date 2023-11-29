@@ -40,13 +40,13 @@ function AboutSkillsmenu() {
   }, []);
 
   return (
-    <div className='w-full md:max-w-[600px] max-w-[500px]  ' style={{zIndex:'100'}}>
+    <div className='w-full xmd:w-[400px] md:w-full md:h-auto   ' style={{zIndex:'100'}}>
       <div className='justify-center flex'>
         <SkillName skillName="SKILLS" />
       </div>
 
       <div className='carousel bg-skillMenu w-full  mt-5 pt-6 rounded'>
-        <div className='overflow-none overflow-x-auto scrollbar px-2 inner-carousel bg-skillMenu flex gap-4 py-1'>
+        <div className='overflow-none overflow-x-auto scrollbar px-2 inner-carousel bg-skillMenu flex gap-4 py-1 '>
           {skills.map((skill) => (
             <div key={skill.id} className='min-w-[5rem] relative fadeAnimationSkills shadow-md'>
 

@@ -150,7 +150,7 @@ useEffect(() => {
 
   
   return (
-    <div className='h-full w-full  text-text justify-center bg-bkg ' >
+    <div className='h-full w-full  text-text justify-center bg-bkg pb-20 ' >
       <div className=''>
         <AboutTitle/>
       </div>
@@ -161,12 +161,14 @@ useEffect(() => {
             <ProfileImage onToggleHideProfile={setHideProfile} />
           </div>
 
-          <div className='mt-10 md:mt-0 md:p-5  w-full '>
-            <div className='aboutTextboxMobile  opacity-0  '>
-              <AboutTextbox aboutDialog={aboutDialog} increaseAboutDialog={increaseAboutDialog} />
-            </div>
-            <div className=' flex justify-center mt-5    '>
-              <AvatarAboutAnimation/>
+          <div className='mt-10 md:mt-0 md:p-5  flex items-center '>
+            <div className='w-full'>
+              <div className='aboutTextboxMobile  opacity-0  h-full'>
+                <AboutTextbox aboutDialog={aboutDialog} increaseAboutDialog={increaseAboutDialog} />
+              </div>
+              <div className=' flex justify-center mt-5    '>
+                <AvatarAboutAnimation/>
+              </div>
             </div>
           </div>
         </div>

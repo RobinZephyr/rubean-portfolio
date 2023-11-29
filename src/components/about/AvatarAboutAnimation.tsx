@@ -46,11 +46,11 @@ function AvatarAboutAnimation() {
             <AboutSkillsmenu/>
         </div>
 
-        <div className=' justify-center relative flex '>
+        {/* <div className=' justify-center relative flex '>
           <div className='opacity-0 aboutAvatarIntro' style={{zIndex:'300'}}>
             <Image src={avatarTadaUp} alt="Avatar Skills Present" className="  w-44 h-44 md:w-52 md:h-52 z-20   " />
           </div>
-        </div>
+        </div> */}
     </div>
   )
 }

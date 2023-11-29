@@ -34,19 +34,19 @@ export default function HomePortolio() {
 
   
   return (
-<div id="home" className={`w-full bg-bkg justify-center overflow-x-hidden  `}  style={{overflowX:'hidden'}}>
+<div className='pb-10' >
 
       <TitleHome/>
-      <div className='px-5 w-full flex justify-center items-center md:mt-14  '>
+      <div className='px-5 w-full flex justify-center items-center md:mt-14   '>
 
           <div className=' md:gap-5 h-full md:flex items-center  '>
-            <div className=' md:w-[300px]  md:min-h-[270px] w-full md:justify-end flex pt-20  '>
+            <div className=' md:max-w-[300px]  md:min-h-[270px] w-full md:justify-end flex pt-20  '>
               <AvatarHomeAnimation/>
             </div>
-            <div className='  w-full m-0 p-0 bg-black  absolute top-0 left-0 BgPitchBack' style={{overflow:'none'}}/>
+            <div className='h-screen  w-full m-0 p-0 bg-black  absolute top-0 left-0 BgPitchBack' />
 
             <div className=' h-full  flex justify-center'>
-              <div className=' h-full w-full h-[200px] xmd:w-[400px] lg:w-[500px] '>
+              <div className=' h-full w-full min-w-[300px] h-[200px] xmd:max-w-[370px] md:w-[400px] md:max-w-[470px] '>
               <div className='flex w-full justify-start opacity-0 HomeTextbox text-text '>
                   <HomeTextbox/>
               </div>

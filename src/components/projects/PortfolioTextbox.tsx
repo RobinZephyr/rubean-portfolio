@@ -26,8 +26,8 @@ const PortfolioTextbox: React.FC = ({selectedProjectData}) => {
       <div>
         <Nameplate name="Rubean Rakeru" />
       </div>
-      <div className='z-10 pt-5 min-w-[300px] w-full max-w-[310px] md:w-100% md:max-w-[500px] '>
-        <div className='relative p-3   bg-textbox w-full  shadow-md  pt-5'>
+      <div className='z-10 pt-5  '>
+        <div className='relative p-3   bg-textbox w-full  shadow-md  pt-7'>
           <div className='text-sm md:text-lg text-text  '>
           <div style={{ whiteSpace: 'pre-line' }} className='projectTextboxText'>
             {selectedProjectData && selectedProjectData.parts.map((part, index) => (
@@ -38,7 +38,7 @@ const PortfolioTextbox: React.FC = ({selectedProjectData}) => {
             </div>
           </div>
 
-          <div className='w-full flex justify-end play-icon opacity-0 absolute '>
+          <div className='w-full flex justify-end play-icon opacity-0 absolute h-[20px]'>
               <FaLocationPin className='text-text text-2xl p-0 fadeInDown absolute -top-4 right-3 nextDialogindicatorProject'/>
           </div>
         </div>

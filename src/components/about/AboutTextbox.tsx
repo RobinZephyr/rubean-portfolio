@@ -27,7 +27,7 @@ const AboutTextbox: React.FC<{ aboutDialog: number; increaseAboutDialog: () => v
         <Nameplate name="Rubean Rakeru" />
       </div>
       <div className='z-10 pt-5 '>
-        <div className='relative p-3   bg-textbox w-100% md:w-[400px] min-w-[300px] md:max-w-[400px]  shadow-md pt-5'>
+        <div className='relative p-3   bg-textbox w-100%   xmd:w-[400px] md:w-auto md:h-auto shadow-md pt-5'>
           <div className='text-sm md:text-lg aboutTextboxIntro '>
           <div style={{ whiteSpace: 'pre-line' }}>
             {chatAbout[aboutDialog] && chatAbout[aboutDialog].parts
@@ -40,7 +40,7 @@ const AboutTextbox: React.FC<{ aboutDialog: number; increaseAboutDialog: () => v
           </div>
           </div>
 
-          <div className='w-full flex justify-end play-icon opacity-0  mt-2   ' onClick={increaseAboutDialog}>
+          <div className='w-full flex justify-end play-icon opacity-0  h-[20px]  ' onClick={increaseAboutDialog}>
               <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-10px]  hover:cursor-pointer nextDialogindicatorAbout'/>
           </div>
         </div>

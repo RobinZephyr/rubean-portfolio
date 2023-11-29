@@ -77,11 +77,11 @@ function ProjectShowcase({ selectedProjectData }) {
                 <span className='h-full absolute top-0 left-0 w-full flex items-center justify-center opacity-0 projectYoutubeHover' style={{ zIndex: '100' }}>
                     {/* Conditionally render icon based on selected data id */}
                     {selectedProjectData.id === 5 ? (
-                    <a href={selectedProjectData.link} className='flex justify-center' title={selectedProjectData.link}>
+                  <a href={selectedProjectData.link} className='flex justify-center' title={selectedProjectData.link} target="_blank">
                         <Image src={iconSirmata} alt="Sirmata Link" className='w-60%' />
                     </a>
                     ) : (
-                    <a href={selectedProjectData.link} className=' flex justify-center' title={selectedProjectData.link}>
+                    <a href={selectedProjectData.link} className=' flex justify-center' title={selectedProjectData.link} target="_blank">
                         <Image src={iconYoutube} alt="Youtube Link" className='w-60%' />
                     </a>
                     )}
