@@ -31,8 +31,9 @@ export default function HeadersPortfolio() {
     const xIcon = document.querySelector('.xIcon');
   
     gsap.set(xIcon, { opacity: 0 });
-    if (isMobileMenuOpen) {
-      gsap.to([mobileMenu,], {
+  
+    if (isMobileMenuOpen && mobileMenu) {
+      gsap.to([mobileMenu], {
         opacity: 0,
         duration: 0.5,
         y: 100,
@@ -43,11 +44,11 @@ export default function HeadersPortfolio() {
           mobileMenu.classList.add('hidden'); // Add hidden class after the animation completes
         },
       });
-    } else {
+    } else if (mobileMenu) {
       mobileMenu.classList.remove('hidden');
   
       gsap.set(mobileMenu, { opacity: 0, y: 100 });
-      gsap.to([mobileMenu,], {
+      gsap.to([mobileMenu], {
         opacity: 1,
         duration: 0.3,
         y: 0,
@@ -60,7 +61,7 @@ export default function HeadersPortfolio() {
         gsap.to(button, {
           opacity: 1,
           duration: 0.4,
-          delay: 0.3+ index * 0.2, // Incremental delay
+          delay: 0.3 + index * 0.2, // Incremental delay
           y: 0,
           ease: 'back.out',
         });
@@ -69,13 +70,14 @@ export default function HeadersPortfolio() {
       setIsMobileMenuOpen(true);
     }
   };
+  
 
   const closeMobileMenu = () => {
     if (isMobileMenuOpen) {
       toggleMobileMenu();
     }
   };
-  const scrollToSection = (link, event) => {
+  const scrollToSection = (link: string, event: React.MouseEvent<HTMLDivElement>) => {
     event.preventDefault();
     let headerHeight = 73;
     if (window.innerWidth < 768) {
@@ -129,19 +131,20 @@ export default function HeadersPortfolio() {
 
                   {/**Desktop */}
                   <div className='relative justify-end  space-x-5 whitespace-nowrap hidden md:flex grid grid-cols-2'>
-                        {navigatorLinks.map((nav) => (
-                            <span
-                            key={nav.id}
-                            className='fadeInDown  whitespace-nowrap fadeAnimation text-text  hover:underline cursor-pointer'
-                            onClick={(event) => scrollToSection(nav.link, event)}
-                          >
-                          {nav.title}
-                        </span>
-                      ))}
-                      <div className='fadeAnimation text-text ' style={{ zIndex: 100 }}> 
-                        <ThemeButton isLightTheme={isLightTheme} toggleTheme={toggleTheme} />
-                      </div>
-                  </div>
+  {navigatorLinks.map((nav) => (
+    <div
+      key={nav.id}
+      className='fadeInDown  whitespace-nowrap fadeAnimation text-text  hover:underline cursor-pointer'
+      onClick={(event) => scrollToSection(nav.link, event)}
+    >
+      {nav.title}
+    </div>
+  ))}
+  <div className='fadeAnimation text-text ' style={{ zIndex: 100 }}> 
+    <ThemeButton isLightTheme={isLightTheme} toggleTheme={toggleTheme} />
+  </div>
+</div>
+
                   
                   <div className='fadeAnimation text-text   md:hidden block  mr-3' style={{ zIndex: 100 }}> 
                       <ThemeButton isLightTheme={isLightTheme} toggleTheme={toggleTheme} />
