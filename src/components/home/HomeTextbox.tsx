@@ -41,52 +41,36 @@ const HomeTextbox: React.FC = () => {
     };
     link?: string; // Make link property optional
   }
+  
+
   const scrollToSection = () => {
     const currentDialogData = chatHome[currentDialog];
-  
-    if (currentDialogData) {
-      let link: string | undefined;
-  
-      for (const part of currentDialogData.parts) {
-        if ('link' in part && typeof part.link === 'string') {
-          link = part.link;
-          break;
-        }
+    const link = (currentDialogData.link || (currentDialogData.parts[0] as ChatPart | undefined)?.link) as string | undefined;
+    if (link) {
+      let headerHeight = 73;
+    if (window.innerWidth < 768) {
+      headerHeight = 90; // Adjust this value as needed for your design
+    }
+    if (link === 'home') {
+      const homeSection = document.getElementById('home');
+      if (homeSection) {
+        const scrollPosition = homeSection.offsetTop - headerHeight;
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
       }
-  
-      if (link) {
-        let headerHeight = 73;
-  
-        if (window.innerWidth < 768) {
-          headerHeight = 90; // Adjust this value as needed for your design
-        }
-  
-        if (link === 'home') {
-          const homeSection = document.getElementById('home');
-  
-          if (homeSection) {
-            const scrollPosition = homeSection.offsetTop - headerHeight;
-            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-          }
+    } else {
+      const section = document.getElementById(link);
+      if (section) {
+        let scrollPosition;
+        if (link === "contact") {
+          scrollPosition = section.offsetTop - 0;
         } else {
-          const section = document.getElementById(link);
-  
-          if (section) {
-            let scrollPosition;
-  
-            if (link === 'contact') {
-              scrollPosition = section.offsetTop - 0;
-            } else {
-              scrollPosition = section.offsetTop - headerHeight;
-            }
-  
-            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-          }
+          scrollPosition = section.offsetTop - headerHeight;
         }
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
       }
     }
+    }
   };
-  
   
   
 

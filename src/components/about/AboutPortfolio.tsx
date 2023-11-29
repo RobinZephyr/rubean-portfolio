@@ -157,7 +157,7 @@ useEffect(() => {
       
       <div className=' p-5 flex justify-center  w-full'>
         <div className='md:grid md:grid-cols-2 w-full md:gap-4 md:max-w-6xl '>
-          <div className='' onClick={increaseAboutDialog} >
+          <div className='hover:cursor-pointer ' title='Click Me' onClick={increaseAboutDialog} >
             <ProfileImage onToggleHideProfile={setHideProfile} />
           </div>
 
