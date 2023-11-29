@@ -3,7 +3,11 @@ import { navigatorLinks } from '@/constant/navigation';
 import gsap from 'gsap';
 import { AnimationTransition } from '@/constant/animationTransition';
 
-function MobileNav({scrollToSection}) {
+interface MobileNavProps {
+  scrollToSection: (link: string, event: React.MouseEvent<HTMLDivElement>) => void;
+}
+
+function MobileNav({ scrollToSection }: MobileNavProps) {
     const handleHoverEnter = (event: React.MouseEvent<HTMLParagraphElement>) => {
       const naviIcon = event.currentTarget.querySelector('.naviIconHover');
       gsap.set(naviIcon, { opacity: 0, x:-50 });

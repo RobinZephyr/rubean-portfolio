@@ -3,11 +3,16 @@ import React, { useState } from 'react'
 import Image from 'next/image';
 import gsap from "gsap";
 import { chatAbout } from '@/constant/chatDialog';
-function ProfileImage({onToggleHideProfile}) {
+
+interface ProfileImageProps {
+  onToggleHideProfile: (value: boolean) => void;
+}
+
+function ProfileImage({ onToggleHideProfile }: ProfileImageProps) {
 
  const [hideProfile, setHideProfile]=useState(false);
  
- const hideProfilePic =()=>{
+ const hideProfilePic = (event: React.MouseEvent<HTMLDivElement>) => {
   if(hideProfile===true){
     return
   }
