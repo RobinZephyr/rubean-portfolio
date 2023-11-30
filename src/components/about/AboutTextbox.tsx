@@ -41,7 +41,7 @@ const AboutTextbox: React.FC<{ aboutDialog: number; increaseAboutDialog: () => v
           </div>
 
           <div className='w-full flex justify-end play-icon opacity-0  h-[20px]  ' onClick={increaseAboutDialog}>
-              <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-10px]  hover:cursor-pointer nextDialogindicatorAbout'/>
+              <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-10px]  hover:cursor-pointer nextDialogindicatorAbout   transform duration-200 opacity-100 hover:text-gray-400 '/>
           </div>
         </div>
 

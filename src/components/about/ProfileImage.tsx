@@ -52,9 +52,10 @@ function ProfileImage({ onToggleHideProfile }: ProfileImageProps) {
   return (
   <div className='w-full h-90%  relative flex justify-center overflow-x-none'>
           <div className='profileImage  opacity-0 w-full h-full flex  justify-center md:p-5 relative ' style={{zIndex:'50'}} onClick={hideProfilePic}> 
-              <Image src={avatarLaptopBig} alt="Nvm its fine" className='w-56 h-72 md:w-96 hidden md:h-[530px] object-cover rounded-full showNewPicIntro'
-              />
-              <div  className='w-56 h-72  md:w-96 md:h-[530px] bg-white object-cover rounded-full  hideProfilePicOutro  '>
+              <div title="Thanks!" className=' hover:cursor-pointer w-56 h-72 md:w-96 border-2 border-textbox shadow-sm bg-textbox hidden md:h-[530px] object-cover rounded-full showNewPicIntro'>
+                <Image src={avatarLaptopBig} alt="Nvm its fine" className='w-56 h-72 md:w-96  md:h-[530px] object-cover rounded-full '/>
+              </div>
+              <div title="Click Me"  className='w-56 h-72 hover:cursor-pointer  md:w-96 md:h-[530px] bg-white object-cover rounded-full  hideProfilePicOutro  '>
                   <Image src={rubeanProflie} alt="Please dont Look" className='w-56 h-72  md:w-96 md:h-[530px] object-cover rounded-full    '/>
               </div>
      

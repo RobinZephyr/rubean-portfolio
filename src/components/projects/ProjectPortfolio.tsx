@@ -93,11 +93,11 @@ function ProjectPortfolio() {
 
     
     return (
-        <div className='w-full px-3  h-100% bg-bkg flex-col justify-center  '>
+        <div className='w-full h-100% bg-bkg flex-col justify-center  '>
             <div className=' '>
                 <TitleProject />
             </div>
-            <div className='p-5 md:pt-16 md:pb-16  flex justify-center h-full items-center '>
+            <div className='p-5  px-3  md:pt-16 md:pb-16  flex justify-center h-full items-center '>
                 <div className='md:grid md:grid-cols-2 md:max-w-7xl md:gap-10'>
 
                 <div className='flex justify-center w-full h-full relative md:mt-0 mt-2 projectSchowcaseIntro opacity-0'>

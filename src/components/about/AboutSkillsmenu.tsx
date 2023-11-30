@@ -4,7 +4,7 @@ import SkillName from './SkillName';
 import Image from 'next/image';
 import { AnimationTransition } from '@/constant/animationTransition';
 import gsap from 'gsap';
-
+import Marquee from 'react-fast-marquee'
 function AboutSkillsmenu() {
 
 
@@ -45,8 +45,9 @@ function AboutSkillsmenu() {
         <SkillName skillName="SKILLS" />
       </div>
 
-      <div className='carousel bg-skillMenu w-full  mt-5 pt-6 rounded'>
-        <div className='overflow-none overflow-x-auto scrollbar px-2 inner-carousel bg-skillMenu flex gap-4 py-1 '>
+      <Marquee speed={60} pauseOnHover={true} className='carousel bg-skillMenu w-full   mt-5 pt-6 rounded'>
+      {/* overflow-none overflow-x-auto scrollbar */}
+        <div className=' px-2 inner-carousel bg-skillMenu flex gap-4 py-1'>
           {skills.map((skill) => (
             <div key={skill.id} className='min-w-[5rem] relative fadeAnimationSkills shadow-md'>
 
@@ -66,13 +67,13 @@ function AboutSkillsmenu() {
               </div>
 
               {/* Container for skill image */}
-              <div className='px-2 w-full h-full py-1  item bg-textbox shadow-sm'>
+              <div className='px-2 w-[5rem] h-[6rem] py-1  item bg-textbox shadow-sm'>
                 <Image src={skill.image} alt={skill.skill} className='' title={skill.skill} />
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </Marquee>
     </div>
   );
 }

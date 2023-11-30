@@ -32,7 +32,7 @@ function MobileNav({ scrollToSection }: MobileNavProps) {
   
 
   return (
-    <div className='bgBlack opacity-0 flex hidden justify-center items-center h-screen absolute bg-black bg-opacity-50 w-full md:hidden' style={{ zIndex: 20 }}>
+    <div className='bgBlack opacity-0 flex hidden justify-center pt-32 h-screen absolute bg-black bg-opacity-50 w-full md:hidden' style={{ zIndex: 20 }}>
       <div className='flex  justify-center  w-60% max-w-[300px] mainMenu'>
 
         <div className='flex-col items-center text-text text-xl w-full '>

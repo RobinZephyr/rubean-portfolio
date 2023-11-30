@@ -19,15 +19,15 @@ interface PortfolioTextboxProps {
 const PortfolioTextbox: React.FC<PortfolioTextboxProps> = ({ data }) => {
   useEffect(() => {
     AnimationTransition();
-    const nextDialogindicator3 = document.querySelector('.nextDialogindicatorProject');
-    if (nextDialogindicator3) {
-      gsap.to([nextDialogindicator3], {
-        y: -4,
-        ease: 'power4.inout',
-        yoyo: true,
-        repeat: -1,
-      });
-    }
+    // const nextDialogindicator3 = document.querySelector('.nextDialogindicatorProject');
+    // if (nextDialogindicator3) {
+    //   gsap.to([nextDialogindicator3], {
+    //     y: -4,
+    //     ease: 'power4.inout',
+    //     yoyo: true,
+    //     repeat: -1,
+    //   });
+    // }
   }, []); 
 
   return (
@@ -48,7 +48,7 @@ const PortfolioTextbox: React.FC<PortfolioTextboxProps> = ({ data }) => {
           </div>
 
           <div className='w-full flex justify-end play-icon opacity-0 absolute h-[20px]'>
-            <FaLocationPin className='text-text text-2xl p-0 fadeInDown absolute -top-4 right-3 nextDialogindicatorProject' />
+            {/* <FaLocationPin className='text-text text-2xl p-0 fadeInDown absolute -top-4 right-3 nextDialogindicatorProject' /> */}
           </div>
         </div>
       </div>

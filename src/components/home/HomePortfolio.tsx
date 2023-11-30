@@ -33,19 +33,21 @@ export default function HomePortolio() {
   };
   
   return (
-<div className='pb-10' >
+<div className='pb-10 h-screen  ' >
 
-      <TitleHome/>
-      <div className='px-5 w-full flex justify-center items-center md:mt-14   '>
+    <div className='pt-5 md:pt-0 '>
+        <TitleHome/>
+      </div>     
+   <div className='px-5 w-full h-full md:h-50% flex  justify-center items-center md:mt-14   '>
 
-          <div className=' md:gap-5 h-full md:flex items-center  '>
-            <div className=' md:max-w-[300px]  md:min-h-[270px] w-full md:justify-end flex pt-20  '>
+          <div className=' md:gap-5 md:flex items-center'>
+            <div className='  md:w-80% w-full md:justify-end flex  '>
               <AvatarHomeAnimation/>
             </div>
-            <div className='h-screen  w-full m-0 p-0 bg-black  absolute top-0 left-0 BgPitchBack' />
+            <div className='h-70% w-full m-0 p-0 bg-black  absolute top-0 left-0 BgPitchBack' />
 
-            <div className=' h-full  flex justify-center'>
-              <div className=' h-full w-full min-w-[300px] h-[200px] xmd:max-w-[370px] md:w-[400px] md:max-w-[470px] '>
+            <div className=' h-full items-center  flex justify-center'>
+              <div className='  w-full min-w-[300px] h-[200px] xmd:max-w-[370px] md:w-[400px] md:max-w-[470px] '>
               <div className='flex w-full justify-start opacity-0 HomeTextbox text-text '>
                   <HomeTextbox/>
               </div>
@@ -53,7 +55,7 @@ export default function HomePortolio() {
                 <ContactLinks/>
                 <DownloadCvButton/>
               </div>                
-              </div>
+            </div>
 
             </div>
           </div> 

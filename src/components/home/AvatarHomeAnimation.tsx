@@ -28,10 +28,10 @@ const AvatarHomeAnimation = () => {
         priority
       />
       </div>
-      <div className={`-top-10 md:-top-20  absolute`}>
+      <div className={`-top-10 md:-top-20  absolute md:full`}>
         <Image
           src={circle}
-          className="object-cover AvatarCircle opacity-0 w-52 h-52 md:h-[250px] md:w-[250px]   "
+          className=" AvatarCircle opacity-0 w-52 h-52 md:w-100% md:h-[250px] md:max-w-[250px] md:min-w-60%   "
           style={{ filter: 'var(--color-avatarSpotlight)' }}
           alt="Circle Image"
           priority
