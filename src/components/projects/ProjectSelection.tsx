@@ -94,7 +94,7 @@ function ProjectSelection({ onProjectSelect }: ProjectSelectionProps) {
                 {projects.map((project) => (
                     <div
                         key={project.id}
-                        className={`w-[4.7rem] md:w-[5rem] lg:w-[5.5rem]  bg-textbox p-3  relative cursor-pointer  `}
+                        className={`w-[4.7rem] md:w-[5rem] lg:w-[6.5rem]  bg-textbox p-3  relative cursor-pointer  `}
                         onClick={() => onClickChangeProject(project.id)}
                         onMouseEnter={handleHoverEnter}
                         onMouseLeave={handleHoverLeave}

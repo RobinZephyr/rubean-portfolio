@@ -162,7 +162,7 @@ useEffect(() => {
           </div>
 
           <div className='mt-10 md:mt-0   w-full flex justify-center  '>
-            <div className='w-full  max-w-[400px]'>
+            <div className='w-full  max-w-[450px]'>
               <div className=' items-center flex  md:h-50%'>
                 <AvatarAboutAnimation/>
               </div>
