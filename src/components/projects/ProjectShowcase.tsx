@@ -1,6 +1,6 @@
 import React from 'react';
 import Image, { StaticImageData } from 'next/image';
-import { circle, iconSirmata, iconYoutube } from '@/assets';
+import { circle, iconSirmata, iconYoutube, logoDarkMode } from '@/assets';
 import SkillName from './ProjectName';
 import gsap from 'gsap';
 
@@ -87,18 +87,21 @@ interface ProjectData {
                 <div className='h-full absolute top-0 left-0 w-full  hover:cursor-pointer'
                     onMouseEnter={hoverProjectEnter}
                     onMouseLeave={hoverProjectLeave}>
-                <span className='h-full absolute top-0 left-0 w-full flex items-center justify-center opacity-0 projectYoutubeHover' style={{ zIndex: '100' }}>
-                    {/* Conditionally render icon based on selected data id */}
-                    {selectedProjectData.id === 5 ? (
-                  <a href={selectedProjectData.link} className='flex justify-center' title={selectedProjectData.link} target="_blank">
+ <span className='h-full absolute top-0 left-0 w-full flex items-center justify-center opacity-0 projectYoutubeHover' style={{ zIndex: '100' }}>
+                {selectedProjectData.id === 5 ? (
+                    <a href={selectedProjectData.link} className='flex justify-center' title={selectedProjectData.link} target="_blank">
                         <Image src={iconSirmata} alt="Sirmata Link" className='w-60%' />
                     </a>
-                    ) : (
+                ) : selectedProjectData.id === 6 ? (
+                  <a href={selectedProjectData.link} className='flex justify-center' title={selectedProjectData.link} target="_blank">
+                    <Image src={logoDarkMode} alt="I wonder where it could be." className='w-60% projectLogoDarkMode' />
+                    </a>
+                ) : (
                     <a href={selectedProjectData.link} className=' flex justify-center' title={selectedProjectData.link} target="_blank">
                         <Image src={iconYoutube} alt="Youtube Link" className='w-60%' />
                     </a>
-                    )}
-                </span>
+                )}
+            </span>
 
                     <span className='h-full absolute top-0 left-0 w-full bg-white opacity-0 projectOverlayHover'>
                     </span>

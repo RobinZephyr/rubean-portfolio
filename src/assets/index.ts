@@ -4,7 +4,6 @@ import avatarLaptopBig from '../assets/avatar/laptop.gif'
 import  avatarSnapWink from '../assets/avatar/idleSnapWink.gif'
 import avatarLaptopType from '../assets/avatar/laptopType.gif'
 import  circle from '../assets/avatar/circle.png'
-import circleSvg from '../assets/avatar/circle.svg'
 import rubeanProflie from '../assets/avatar/profile.png'
 import avatarTadaUp from '../assets/avatar/avatarPresentUp.gif'
 
@@ -54,7 +53,6 @@ export {
 
     rubeanProflie,
     circle,
-    circleSvg,
 
     logoDarkMode,
     logoLightMode,

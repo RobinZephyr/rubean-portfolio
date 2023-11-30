@@ -48,7 +48,7 @@ export const projects = [
     {
         id:5,
         projectName:'2023 SirmataFarm Website',
-        link:'sirmatafarm.com',
+        link:'https://sirmatafarm.com',
         image:sirmatafarm,
         icon:iconSirmatafarm,
         parts:[
@@ -58,11 +58,11 @@ export const projects = [
     {
         id:6,
         projectName:'2023 Portfolio Website',
-        link:'rubean-portfolio.vercel.app',
+        link:'https://rubean-portfolio.vercel.app',
         image:webPortfolio,
         icon:iconPortfolio,
         parts:[
-            { text: `My first Web Portfolio. \nA Pity I can't seem to find it.`, styles: {} },
+            { text: `My first Web Portfolio. \nA pity I can't seem to find it.`, styles: {} },
           ],
     },
 
