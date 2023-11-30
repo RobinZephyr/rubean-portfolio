@@ -44,7 +44,7 @@ export default function HomePortolio() {
             <div className='  md:w-80% w-full md:justify-end flex  '>
               <AvatarHomeAnimation/>
             </div>
-            <div className='h-70% w-full m-0 p-0 bg-black  absolute top-0 left-0 BgPitchBack' />
+            <div className='h-70% w-full m-0 p-0 bg-black h-screen absolute top-0 left-0 BgPitchBack' />
 
             <div className=' h-full items-center  flex justify-center'>
               <div className='  w-full min-w-[300px] h-[200px] xmd:max-w-[370px] md:w-[400px] md:max-w-[470px] '>
