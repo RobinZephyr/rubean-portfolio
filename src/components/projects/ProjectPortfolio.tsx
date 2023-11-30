@@ -110,8 +110,8 @@ function ProjectPortfolio() {
 
 
                     <div className='flex justify-center mt-5 md:mt-0  '>
-                        <div className=' flex-col  w-full md:w-80% md:max-w-[500px] min-w-60%'>
-                            <div className='mt-5 md:mt-0 projectTextboxIntro opacity-0'>
+                        <div className=' flex-col  w-full md:w-100% md:max-w-[500px] min-w-60%'>
+                            <div className='mt-5 items-center relative  md:mt-0 projectTextboxIntro opacity-0'>
                               <PortfolioTextbox data={selectedProjectData} />
                             </div>
                             <div className=' md:block mt-5 projectSelectIntro opacity-0 '>

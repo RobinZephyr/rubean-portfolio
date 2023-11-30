@@ -150,24 +150,24 @@ useEffect(() => {
 
   
   return (
-    <div className='h-full w-full  text-text justify-center bg-bkg pb-20 ' >
+    <div className='h-full w-full  text-text justify-center bg-bkg md:pb-20' >
       <div className=''>
         <AboutTitle/>
       </div>
       
-      <div className=' p-5 flex justify-center  w-full'>
-        <div className='md:grid md:grid-cols-2 w-full md:gap-4 md:max-w-6xl '>
+      <div className=' p-5 flex justify-center pt-10 h-full w-full'>
+        <div className='md:grid md:grid-cols-2 w-full  md:max-w-5xl   '>
           <div  onClick={increaseAboutDialog} >
             <ProfileImage onToggleHideProfile={setHideProfile} />
           </div>
 
-          <div className='mt-10 md:mt-0 md:p-5  flex items-center '>
-            <div className='w-full'>
-              <div className='aboutTextboxMobile  opacity-0  h-full'>
-                <AboutTextbox aboutDialog={aboutDialog} increaseAboutDialog={increaseAboutDialog} />
-              </div>
-              <div className=' flex justify-center mt-5    '>
+          <div className='mt-10 md:mt-0   w-full flex justify-center  '>
+            <div className='w-full  max-w-[400px]'>
+              <div className=' items-center flex  md:h-50%'>
                 <AvatarAboutAnimation/>
+              </div>
+              <div className='aboutTextboxMobile items-center flex opacity-0 mt-5 md:mt-0 '>
+                <AboutTextbox aboutDialog={aboutDialog} increaseAboutDialog={increaseAboutDialog} />
               </div>
             </div>
           </div>

@@ -12,6 +12,7 @@ import { useEffect } from 'react'
 import { AnimationTransition } from '@/constant/animationTransition'
 import gsap from 'gsap'
 import FooterPortfolio from '@/components/layout/FooterPortfolio'
+import { iconPortfolio } from '@/assets'
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -39,6 +40,7 @@ export default function RootLayout({
     <>
     <head>
       <title>
+      <link rel="icon" href="/assets/avatar/projects/icon_portfolio_website.png" type="image/png" />
         Rubean Rakeru Portfolio
       </title>
     </head>

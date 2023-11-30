@@ -22,13 +22,13 @@ const AboutTextbox: React.FC<{ aboutDialog: number; increaseAboutDialog: () => v
 
 
   return (
-    <div className='h-50% w-full flex justify-center'>
+    <div className='w-full flex justify-center'>
       <div>
         <Nameplate name="Rubean Rakeru" />
       </div>
       <div className='z-10 pt-5 '>
-        <div className='relative p-3   bg-textbox w-100%  min-w-[300px] xmd:w-[400px] md:w-auto md:h-auto shadow-md pt-5'>
-          <div className='text-sm md:text-lg aboutTextboxIntro '>
+        <div className='relative p-3   bg-textbox  shadow-md pt-5'>
+          <div className='text-sm md:text-md xlg:text-lg   aboutTextboxIntro '>
           <div style={{ whiteSpace: 'pre-line' }}>
           {chatAbout[aboutDialog] && chatAbout[aboutDialog].parts
             ? chatAbout[aboutDialog].parts.map((part, index) => (

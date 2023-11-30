@@ -40,7 +40,7 @@ function AboutSkillsmenu() {
   }, []);
 
   return (
-    <div className='w-full xmd:w-[400px] md:w-full md:h-auto   ' style={{zIndex:'100'}}>
+    <div className='w-full  ' style={{zIndex:'100'}}>
       <div className='justify-center flex'>
         <SkillName skillName="SKILLS" />
       </div>

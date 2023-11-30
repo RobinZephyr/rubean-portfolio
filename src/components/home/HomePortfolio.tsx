@@ -33,18 +33,18 @@ export default function HomePortolio() {
   };
   
   return (
-<div className='pb-10 h-screen  ' >
+<div className='mb-[5rem]  ' >
 
     <div className='pt-5 md:pt-0 '>
         <TitleHome/>
       </div>     
-   <div className='px-5 w-full h-90% flex  justify-center    '>
+   <div className='px-5 w-full h-full md:h-50% flex  justify-center items-center md:mt-14     '>
 
           <div className=' md:gap-5 md:flex items-center md:mt-0 pt-14 '>
             <div className='  md:w-80% w-full md:justify-end flex  '>
               <AvatarHomeAnimation/>
             </div>
-            <div className='h-60% w-full m-0 p-0 bg-black h-screen absolute top-0 left-0 BgPitchBack  ' />
+            <div className='h-screen w-full m-0 p-0 bg-black absolute top-0 left-0 BgPitchBack  ' />
 
             <div className='  items-center  flex justify-center'>
               <div className='  w-full min-w-[300px] h-[200px] xmd:max-w-[370px] md:w-[400px] md:max-w-[470px] '>

@@ -135,6 +135,7 @@ const config: Config = {
         sm: '376px',
         xmd: '500px',
         md: '768px',
+        xlg:'850px',
         lg: '992px',
         xl: '1280px',
         '2xl': '1536px',

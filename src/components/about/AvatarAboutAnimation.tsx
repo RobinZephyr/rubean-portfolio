@@ -41,16 +41,16 @@ function AvatarAboutAnimation() {
   }, []);  // Removed extra closing parenthesis here
   
   return (
-    <div className='w-full justify-center h-[300px] '>
+    <div className='w-full justify-center  '>
         <div className=' justify-center flex w-full opacity-0 bgSkillSelectIntro   ' style={{zIndex:'300'}}>
             <AboutSkillsmenu/>
         </div>
 
-        <div className=' justify-center relative flex '>
+        {/* <div className=' justify-center relative flex '>
           <div className='opacity-0 aboutAvatarIntro' style={{zIndex:'300'}}>
             <Image src={avatarTadaUp} alt="Avatar Skills Present" className="  w-44 h-44 md:w-48 md:h-48 z-20   " />
           </div>
-        </div>
+        </div> */}
     </div>
   )
 }

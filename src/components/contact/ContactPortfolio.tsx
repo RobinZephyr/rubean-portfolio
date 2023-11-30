@@ -22,12 +22,12 @@ function ContactPortfolio() {
   }, []);
 
   return (
-    <div className='py-20 bg-bkg'>
+    <div className=' bg-bkg pb-[5rem]'>
       <div>
         <TitleContact/>
       </div>
 
-      <div className='w-full flex justify-center mt-5 p-5 pb-10 '>
+      <div className='w-full flex justify-center mt-5 p-5  '>
         <div className='md:max-w-3xl w-full '>
             <div className=' contactFormIntro opacity-0'>
               <ContactMeContainer/>

@@ -22,7 +22,7 @@ export default function Home() {
         <div  id="home" className='h-full'style={{overflowX:'hidden', overflowY:'hidden'}}> 
           <HomePortolio />
         </div>
-        <div  id="about" className='h-full overflow-x-none w-100%' style={{overflowX:'hidden'}}>
+        <div  id="about" className='h-full  w-100%' style={{overflowX:'hidden', overflowY:'hidden'}}> 
           <AboutPortfolio/>
         </div>
         <div  id="projects" className='h-full overflow-x-none w-full' style={{overflowX:'hidden'}}>

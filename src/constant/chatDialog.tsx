@@ -67,7 +67,7 @@ export const chatHome = [
       id: '3',
       topic: '2',
       parts: [
-        { text: `No  I will not be bringing it back thank you. Lets's just continue on learning about me`, styles: {} },
+        { text: `No, I will not be bringing it back thank you very much. Lets's just continue on learning about me`, styles: {} },
       ],
     },
     {

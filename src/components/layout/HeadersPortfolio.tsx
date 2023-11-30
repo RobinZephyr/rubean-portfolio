@@ -84,7 +84,7 @@ export default function HeadersPortfolio() {
       headerHeight = 90; // Adjust this value as needed for your design
     }
   
-    const headerHeightContact = 0;
+    const headerHeightContact = 73;
   
     if (link === 'home') {
       const homeSection = document.getElementById('home');
@@ -114,12 +114,12 @@ export default function HeadersPortfolio() {
   
   
   return (
-    <header className="sticky top-0 absolute z-50 h-full flex  items-center bg-bkg h-20 z-50 HeadersIntro opacity-0" style={{zIndex:'9999'}}>
-        <div className='w-full h-full flex-col items-center  my-3'>
+    <header className="sticky top-0 absolute z-50 h-full flex  items-center bg-bkg  z-50 HeadersIntro opacity-0 " style={{zIndex:'9999'}}>
+        <div className='w-full h-full flex-col items-center  my-2'>
           
           <div className='text-content  border-b-2  border-t-2 border-content h-70% w-full flex bg-border grid grid-cols-2'>
            
-              <div className='p-3   items-center flex  justify-start md:w-25% md:justify-start'>
+              <div className='py-1 px-3  items-center flex  justify-start md:w-25% md:justify-start'>
                 {isLightTheme ? (
                   <Image src={ logoLightMode} alt="Logo" className='w-10 h-10'/>
                 ):(
@@ -127,7 +127,7 @@ export default function HeadersPortfolio() {
                 )}
               </div>
 
-              <div className='  items-center  p-3 justify-end flex  '>
+              <div className='  items-center  px-3 py-1 justify-end flex  '>
 
                   {/**Desktop */}
                   <div className='relative justify-end  space-x-5 whitespace-nowrap hidden md:flex grid grid-cols-2'>

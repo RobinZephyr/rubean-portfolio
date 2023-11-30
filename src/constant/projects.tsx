@@ -1,4 +1,4 @@
-import { iconJournalComplete, iconPortfolioVid, iconSirmatafarm, iconStandardCheckpoint, iconVideoGameSystem, journalComplete, portfolioVid, sirmatafarm, standardCheckpoint, videoGameSystem } from "@/assets"
+import { iconJournalComplete, iconPortfolio, iconPortfolioVid, iconSirmatafarm, iconStandardCheckpoint, iconVideoGameSystem, journalComplete, portfolioVid, sirmatafarm, standardCheckpoint, videoGameSystem, webPortfolio } from "@/assets"
 import { FaHouseChimney, FaLaptopFile, FaToolbox } from "react-icons/fa6"
 import { IoIosContact } from "react-icons/io"
 import { IoInformationCircleSharp } from "react-icons/io5"
@@ -53,6 +53,16 @@ export const projects = [
         icon:iconSirmatafarm,
         parts:[
             { text: 'A boooking website for the Sirmata Ecofarm and Nature Park. \nWe are doing our best.', styles: {} },
+          ],
+    },
+    {
+        id:6,
+        projectName:'2023 Portfolio Website',
+        link:'rubean-portfolio.vercel.app',
+        image:webPortfolio,
+        icon:iconPortfolio,
+        parts:[
+            { text: `My first Web Portfolio. \nA Pity I can't seem to find it.`, styles: {} },
           ],
     },
 

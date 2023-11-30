@@ -30,6 +30,8 @@ import standardCheckpoint from '../assets/avatar/projects/UFT.png'
 import videoGameSystem from '../assets/avatar/projects/VideoGameSystem.png'
 import journalComplete from '../assets/avatar/projects/journal.jpg'
 import sirmatafarm from '../assets/avatar/projects/sirmata.png'
+import webPortfolio from '../assets/avatar/projects/portfolio_web.png'
+
 
 import iconPortfolioVid from '../assets/avatar/projects/icon_portfolio.png'
 import iconStandardCheckpoint from '../assets/avatar/projects/icon_standardCheckpoint.png'
@@ -37,6 +39,7 @@ import iconVideoGameSystem from '../assets/avatar/projects/icon_videogames.png'
 import iconJournalComplete from '../assets/avatar/projects/icon_journal.png'
 import iconSirmatafarm from '../assets/avatar/projects/icon_sirmata.png'
 import iconSelector from '../assets/avatar/projects/slectIcon.png'
+import iconPortfolio from '../assets/avatar/projects/icon_portfolio_website.png'
 
 import iconYoutube from '../assets/avatar/projects/icon_youtube.png'
 import iconSirmata from '../assets/avatar/projects/sirmata_logo.png'
@@ -72,6 +75,7 @@ export {
     photoshop,
     paintToolSai,
     nextjs,
+
 //Project
     portfolioVid,
     standardCheckpoint,
@@ -79,6 +83,8 @@ export {
     journalComplete,
     sirmatafarm,
     iconSelector,
+    webPortfolio,
+
 
     iconJournalComplete,
     iconPortfolioVid,
@@ -87,6 +93,7 @@ export {
     iconStandardCheckpoint,
     iconYoutube,
     iconSirmata,
+    iconPortfolio,
 
 
 
