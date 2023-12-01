@@ -28,7 +28,7 @@ const AvatarHomeAnimation = () => {
         priority
       />
       </div>
-      <div className={`-top-10 md:-top-20  absolute md:full`}>
+      <div className={`-top-10 md:-top-20  absolute md:w-full md:opacity-0 xlg:opacity-1`}>
         <Image
           src={circle}
           className=" AvatarCircle opacity-0 w-52 h-52 md:w-100% md:h-[250px] md:max-w-[250px]   "
