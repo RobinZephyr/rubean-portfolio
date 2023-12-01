@@ -98,31 +98,22 @@ function ProjectPortfolio() {
                 <TitleProject />
             </div>
             <div className='p-5  px-3  md:pt-16 md:pb-16  flex justify-center h-full items-center '>
-                <div className='md:grid md:grid-cols-2 md:max-w-7xl md:gap-10'>
-
-                <div className='flex justify-center mt-5 md:mt-0  '>
-                    <div className=' flex-col  w-full md:w-100% md:max-w-[500px] min-w-60%'>
-                        <div className='mt-5 items-center relative  md:mt-0 projectTextboxIntro opacity-0'>
-                          <PortfolioTextbox data={selectedProjectData} />
-                        </div>
-                        <div className=' md:block mt-5 projectSelectIntro opacity-0 '>
-                          <ProjectSelection onProjectSelect={handleProjectSelect} />
-                        </div>
-                    </div>
+            <div className='md:grid md:grid-cols-2 md:max-w-7xl md:gap-10 flex-col-reverse flex'>
+            <div className='flex justify-center mt-5 md:mt-0'>
+              <div className='flex-col w-full md:w-100% md:max-w-[500px] min-w-60%'>
+                <div className='mt-5 items-center relative md:mt-0 projectTextboxIntro opacity-0'>
+                  <PortfolioTextbox data={selectedProjectData} />
                 </div>
-                
-                <div className='flex justify-center w-full h-full relative md:mt-0 mt-2 projectSchowcaseIntro opacity-0'>
-                {selectedProjectData ? (
-                  <ProjectShowcase selectedProjectData={selectedProjectData} />
-                ) : (
-                  ""
-                )}
+                <div className='md:block mt-5 projectSelectIntro opacity-0'>
+                  <ProjectSelection onProjectSelect={handleProjectSelect} />
                 </div>
+              </div>
+            </div>
 
-
-              
-
-                </div>
+            <div className='flex justify-center w-full h-full relative md:mt-0 mt-2 projectSchowcaseIntro opacity-0'>
+              {selectedProjectData ? <ProjectShowcase selectedProjectData={selectedProjectData} /> : ''}
+            </div>
+    </div>
             </div>
         </div>
     );

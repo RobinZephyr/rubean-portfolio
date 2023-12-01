@@ -25,7 +25,7 @@ export default function Home() {
         <div  id="about" className='h-full  w-100%' style={{overflowX:'hidden', overflowY:'hidden'}}> 
           <AboutPortfolio/>
         </div>
-        <div  id="projects" className='h-full overflow-x-none w-full' style={{overflowX:'hidden'}}>
+        <div  id="projects" className='h-full overflow-x-none w-full' style={{overflowX:'hidden', overflowY:'hidden'}}>
           <ProjectPortfolio/>
         </div>
         <div  id="contact"className='h-full overflow-x-none w-full pt-10' style={{overflowX:'hidden'}}>
