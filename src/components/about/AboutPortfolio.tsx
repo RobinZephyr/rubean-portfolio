@@ -150,7 +150,7 @@ useEffect(() => {
 
   
   return (
-    <div className='h-full w-full md:mb-[4rem] text-text justify-center bg-bkg md:pb-20 lg:h-screen' >
+  <div className='h-full w-full md:mb-[4rem] mb-[2rem] text-text justify-center bg-bkg md:pb-20 lg:h-screen' >
       <div className=''>
         <AboutTitle/>
       </div>
