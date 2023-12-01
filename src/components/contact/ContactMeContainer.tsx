@@ -8,11 +8,11 @@ function ContactMeContainer() {
 
     
   return (
-    <div className='w-full'>
+    <div className='w-full '>
         <div className=' relative abslolute pb-4'>
             <ContactNamplate name="Lets Talk!"/>
         </div>
-        <div className='md:grid md:grid-cols-2 w-full border-letterBorderColor border-2 py-2 pt-5 px '>
+        <div className='md:grid md:grid-cols-2 w-full border-letterBorderColor border-2 py-2 pt-5 lg:py-10 '>
             <div className='flex justify-center w-full'>
                 <ContactForm/>
             </div>
@@ -24,11 +24,11 @@ function ContactMeContainer() {
                 </div>
 
 
-                <div className='md:h-60% max-w-[500px] w-full md:hidden    '>
-                    <div className=' underline text-xl  left-0 relative'>
+                <div className='md:h-60% max-w-[500px] lg:max-w-[600px] w-full md:hidden    '>
+                    <div className=' underline text-xl l  left-0 relative'>
                         Personal Contacts:
                     </div>
-                    <div className='text-lg  md:text-xl flex items-center mt-3 '>
+                    <div className='text-lg  md:text-xl  flex items-center mt-3 '>
                         <span className=''>
                             <FaEnvelope/>
                         </span>

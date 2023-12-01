@@ -84,7 +84,7 @@ export default function HeadersPortfolio() {
       headerHeight = 90; // Adjust this value as needed for your design
     }
   
-    const headerHeightContact = 73;
+    const headerHeightContact =  20;
   
     if (link === 'home') {
       const homeSection = document.getElementById('home');

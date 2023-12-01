@@ -33,7 +33,7 @@ export default function HomePortolio() {
   };
   
   return (
-<div className='mb-[5rem]  ' >
+<div className='mb-[5rem] lg:h-screen  ' >
 
     <div className='pt-5 md:pt-0 '>
         <TitleHome/>

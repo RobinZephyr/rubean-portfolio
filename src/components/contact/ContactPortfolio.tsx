@@ -27,8 +27,8 @@ function ContactPortfolio() {
         <TitleContact/>
       </div>
 
-      <div className='w-full flex justify-center mt-5 p-5  '>
-        <div className='md:max-w-3xl w-full '>
+      <div className='w-full flex justify-center mt-5 p-5  lg:h-screen  items-center'>
+        <div className='md:max-w-3xl 2xl:max-w-5xl w-full  '>
             <div className=' contactFormIntro opacity-0'>
               <ContactMeContainer/>
             </div>

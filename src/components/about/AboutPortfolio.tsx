@@ -150,23 +150,23 @@ useEffect(() => {
 
   
   return (
-    <div className='h-full w-full  text-text justify-center bg-bkg md:pb-20' >
+    <div className='h-full w-full md:mb-[4rem] text-text justify-center bg-bkg md:pb-20 lg:h-screen' >
       <div className=''>
         <AboutTitle/>
       </div>
       
-      <div className=' p-5 flex justify-center pt-10 h-full w-full'>
-        <div className='md:grid md:grid-cols-2 w-full  md:max-w-5xl   '>
+      <div className=' p-5 flex justify-center pt-10 h-full w-full flex items-center'>
+        <div className='md:grid md:grid-cols-2 md:max-w-7xl md:gap-10  '>
           <div  onClick={increaseAboutDialog} >
             <ProfileImage onToggleHideProfile={setHideProfile} />
           </div>
 
-          <div className='mt-10 md:mt-0   w-full flex justify-center  '>
-            <div className='w-full  max-w-[450px]'>
-              <div className=' items-center flex  md:h-50%'>
+          <div className='mt-10 md:mt-10 px-3   w-full flex justify-center  '>
+            <div className='w-full max-w-[300px] sm:min-w-[350px]  sm:max-w-[400px] flex-col-reverse flex md:flex-col '>
+              <div className=' items-center flex   mt-5 md:mt-10'>
                 <AvatarAboutAnimation/>
               </div>
-              <div className='aboutTextboxMobile items-center flex opacity-0 mt-5 md:mt-0 '>
+              <div className='aboutTextboxMobile items-center flex opacity-0  md:mt-5  '>
                 <AboutTextbox aboutDialog={aboutDialog} increaseAboutDialog={increaseAboutDialog} />
               </div>
             </div>
