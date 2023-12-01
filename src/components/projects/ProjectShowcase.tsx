@@ -79,7 +79,7 @@ interface ProjectData {
                     <Image
                         src={selectedProjectData.image}
                         alt={selectedProjectData.projectName}
-                        className='h-70% max-w-[300px] md:w-full md:max-w-[340px] md:max-h-[500px]  rounded-md shadow-md md:mt-0 projectTransition'
+                        className='md:h-70% w-full max-w-[280px] md:w-full md:max-w-[340px] md:max-h-[500px]  rounded-md shadow-md md:mt-0 projectTransition'
                        
                     />
                 )}
