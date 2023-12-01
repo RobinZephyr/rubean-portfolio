@@ -46,7 +46,7 @@ function ContactForm() {
 
         Swal.fire({
             title: "Email sent successfully",
-            text: "I'll get to you ASAP",
+            text: "I'll get back to you ASAP.",
             icon: "success"
           });
           

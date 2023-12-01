@@ -12,7 +12,7 @@ function FooterPortfolio() {
              Copyright © 2023 Esguerra
             </span>
            </div>
-           <div className='flex w-10% min-w-[70px] md:min-w-[100px] text-2xl md:text-3xl  '>
+           {/* <div className='flex w-10% min-w-[70px] md:min-w-[100px] text-2xl md:text-3xl  '>
                 <div className='flex justify-evenly  w-full'>
                 <span>
                     <a href="https://www.facebook.com/profile.php?id=100006948285802" className='flex justify-center' >
@@ -25,7 +25,7 @@ function FooterPortfolio() {
                     </a>
                 </span>
                 </div>
-           </div>
+           </div> */}
         </div>
         </div>
 
