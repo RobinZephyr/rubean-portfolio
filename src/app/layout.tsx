@@ -40,7 +40,6 @@ export default function RootLayout({
     <>
     <head>
       <title>
-      <link rel="icon" href="/assets/avatar/projects/icon_portfolio_website.png" type="image/png" />
         Rubean Rakeru Portfolio
       </title>
     </head>

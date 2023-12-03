@@ -1,52 +1,75 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Marquee from 'react-fast-marquee'
 import Image from 'next/image';
 import { skills } from '@/constant/skills';
+import { avatarLaptopBig, rubeanProflie } from '@/assets';
 gsap.registerPlugin(ScrollTrigger);
 
-function Test() {
 
-  const playNuttonActivate = () => {
-    gsap.to('.nuttonActivate', {
-      duration: 4,
-      ease: 'power2.out',
-      opacity: 1,
-      x: 400,
+function Test() {
+  const [hideProfile, setHideProfile] = useState(false);
+
+  const hideProfilePic = (event: React.MouseEvent<HTMLDivElement>) => {
+    const hideProfilePicOutro = event.currentTarget.querySelector('.hideProfilePicOutro');
+    const showNewPicIntro = event.currentTarget.querySelector('.showNewPicIntro');
+    gsap.set(showNewPicIntro, { opacity: 0, scaleX: 0 });
+    gsap.to(hideProfilePicOutro, {
+      opacity: 0,
+      scaleX: 0,
+      duration: 0.3,
+      ease: 'power4.out',
+      onComplete: () => {
+        setHideProfile(!hideProfile);
+        gsap.set(hideProfilePicOutro, { display: 'none' });
+        gsap.set(showNewPicIntro, { display: 'block' });
+        gsap.fromTo(
+          showNewPicIntro,
+          { opacity: 0, scaleX: 0 },
+          { opacity: 1, scaleX: 1, duration: 0.3, ease: 'power4.out' }
+        );
+      },
     });
   };
 
+  useEffect(() => {
+    gsap.set('.showNewPicIntro', { opacity: 0, scaleX: 0, display: 'none' });
+  }, []);
+
   return (
     <div className='text-white h-screen bg-white'>
-      <div className='border-2 border-red-900 w-[500px] py-3' style={{overflowY:'hidden'}}>
-      <Marquee className=' '>
-        {skills.map((skill) => (
-            <div key={skill.id} className='min-w-[5rem] relative fadeAnimationSkills mr-3'>
-
-              {/* Hover Show */}
-              <div
-                className=' h-full absolute top-0 left-0 w-full'>
-                <span className='absolute flex bgSkillSelect opacity-0   w-full h-full text-white text-xs '>
-                  <div className='w-full h-full flex  items-center justify-center border-4  border-white rounded-sm '>
-                    <span className='m-1'>
-                    {skill.skill}
-                    </span>
-                  </div>
-                  <div className=' skillButton absolute  w-full h-full bg-opacity-70 hover:bg:black-900'/>
-                </span>
-              </div>
-
-              {/* Container for skill image */}
-              <div className='px-2 w-full h-full py-1  item bg-textbox shadow-sm w-[5rem]'>
-                <Image src={skill.image} alt={skill.skill} className='' title={skill.skill} />
-              </div>
-            </div>
-          ))}
-        </Marquee>
+      <div
+        className='profileImage w-full h-full flex justify-center md:p-5 relative'
+        style={{ zIndex: '50' }}
+        onClick={hideProfilePic}
+      >
+        <div
+          title="Thanks!"
+          className={`hover:cursor-pointer w-56 h-72 md:w-[340px] border-2 border-textbox shadow-sm ${
+            hideProfile ? 'hideProfilePicOutro' : 'showNewPicIntro'
+          } md:h-[450px] object-cover rounded-full`}
+        >
+          <Image
+            src={avatarLaptopBig}
+            alt="Nvm its fine"
+            className='w-56 h-72 md:w-[340px] md:h-[450px] object-cover rounded-full'
+          />
+        </div>
+        <div
+          title="Click Me"
+          className={`w-56 h-72 hover:cursor-pointer md:w-[340px] md:h-[450px] bg-white object-cover rounded-full ${
+            hideProfile ? 'showNewPicIntro' : 'hideProfilePicOutro'
+          }`}
+        >
+          <Image
+            src={rubeanProflie}
+            alt="Please dont Look"
+            className='w-56 h-72 md:w-[340px] md:h-[450px] object-cover rounded-full'
+          />
+        </div>
       </div>
-
     </div>
   );
 }

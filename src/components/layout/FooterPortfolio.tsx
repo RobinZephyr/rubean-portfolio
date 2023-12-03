@@ -6,8 +6,8 @@ function FooterPortfolio() {
   return (
     <div className='  w-full text-text flex justify-center  bg-bkg items-center py-2 '>
         <div className='w-full flex justify-center bg-border border-content  border-b-2 py-2 border-t-2 '>
-        <div className=' flex items-center justify-start w-90% max-w-[450px] md:max-w-[800px] '>
-           <div className=' flex-wrap text-sm md:text-lg w-full'>
+        <div className=' flex items-center w-full justify-center '>
+           <div className=' flex-wrap text-sm md:text-lg '>
             <span className=''>
              Copyright © 2023 Esguerra
             </span>

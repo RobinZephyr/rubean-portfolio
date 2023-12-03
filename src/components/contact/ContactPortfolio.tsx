@@ -12,6 +12,7 @@ function ContactPortfolio() {
         start: 'top 70%',
         end: 'bottom 500px',
         scrub: 1,
+        once:true
       },
       y: 0,
       duration: 2,

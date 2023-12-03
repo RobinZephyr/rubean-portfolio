@@ -47,6 +47,7 @@ function ProjectPortfolio() {
           start: 'top 80%',
           end: 'bottom 400px',
           scrub: 1,
+        once:true
         },
         y: 0,
         duration: 2,
@@ -63,6 +64,7 @@ function ProjectPortfolio() {
           start: 'top 80%',
           end: 'bottom 400px',
           scrub: 1,
+        once:true
         },
         y: 0,
         duration: 2,
@@ -79,6 +81,7 @@ function ProjectPortfolio() {
           start: 'top 80%',
           end: 'bottom 400px',
           scrub: 1,
+        once:true
         },
         y: 0,
         duration: 2,

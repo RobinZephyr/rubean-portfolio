@@ -22,6 +22,7 @@ export default function AboutPortfolio() {
         start: 'top 60%',
         end: 'bottom 400px',
         scrub: 1,
+        once:true
       },
       duration: .5,
       ease: 'power1.out',
@@ -37,6 +38,7 @@ export default function AboutPortfolio() {
         start: 'top 60%',
         end: 'bottom 200px',
         scrub: 1,
+        once:true
       },
       y: 0,
       duration: 2,
@@ -52,6 +54,7 @@ export default function AboutPortfolio() {
         start: 'top 60%',
         end: 'bottom 400px',
         scrub: 1,
+        once:true
       },
       x: 0,
       duration: 2,
@@ -84,6 +87,7 @@ export default function AboutPortfolio() {
         start: 'top 60%',
         end: 'bottom 200px',
         scrub: 1,
+        once:true
       },
       y: 0,
       duration: 2,
@@ -99,6 +103,7 @@ export default function AboutPortfolio() {
         start: 'top 60%',
         end: 'bottom 200px',
         scrub: 1,
+        once:true
       },
       y: 0,
       duration: 2,
