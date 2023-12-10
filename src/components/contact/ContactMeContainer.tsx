@@ -44,16 +44,21 @@ function ContactMeContainer() {
                     <div className=' underline text-xl  left-0 relative'>
                         Personal Contacts:
                     </div>
-                    <div className='text-lg md:text-xl flex items-center mt-3 whitespace-nowrap '>
+                    <a href='mailto:rubeanrakeru@gmail.com'>
+                    <div className='text-lg md:text-xl flex items-center mt-3 whitespace-nowrap hover:text-pink-200 transition ease-in-out delay-.5 duration-300'>
                         <span className=''>
                             <FaEnvelope/>
                         </span>
                         <span className='pl-2'>rubeanrakeru@gmail.com</span>
                     </div>
-                    <div className='text-lg md:text-xl flex items-center  mt-2 '>
+                    </a>
+                    <a href="tel:+639150844151">
+                    <div className='text-lg md:text-xl flex items-center  mt-2   hover:text-pink-200 transition ease-in-out delay-.5 duration-300'>
                         <FaPhone/>
                         <span className='pl-2'>0915-0844-151</span>
                     </div>
+                    </a>
+
                 </div>
             </div>  
         </div>

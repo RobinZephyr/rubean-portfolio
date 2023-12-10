@@ -112,7 +112,7 @@ export function AnimationTransition() {
       duration: .8,
       x:0,
       ease: "power4.inOut",
-      delay: 8.3, // stagger the animation
+      delay: 3.7, // stagger the animation
     });
 
     gsap.set(".ContactAndDownload", { opacity: 0, y:10});

@@ -16,6 +16,8 @@ const AboutTextbox: React.FC<{ aboutDialog: number; increaseAboutDialog: () => v
         ease: 'power4.inout',
         yoyo: true,
         repeat: -1,
+        duration: 1,
+        stagger: 0.1, 
       });
   }, []); 
 
@@ -40,8 +42,8 @@ const AboutTextbox: React.FC<{ aboutDialog: number; increaseAboutDialog: () => v
         </div>
           </div>
 
-          <div className='w-full flex justify-end play-icon opacity-0  h-[20px]  ' onClick={increaseAboutDialog}>
-              <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-10px]  hover:cursor-pointer nextDialogindicatorAbout   transform duration-200 opacity-100 hover:text-gray-400 '/>
+          <div className='w-full flex justify-end play-icon opacity-0  h-[20px] glow-effect ' onClick={increaseAboutDialog}>
+              <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute  right-0 bottom-[-10px]  hover:cursor-pointer nextDialogindicatorAbout   transform duration-200 opacity-100 hover:text-pink-200 '/>
           </div>
         </div>
 

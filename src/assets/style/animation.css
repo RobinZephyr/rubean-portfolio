@@ -113,3 +113,24 @@
   transition-timing-function: cubic-bezier(0.5,0.4,0.7);
 }
 
+@keyframes glowAnimation {
+  0% {
+    filter: drop-shadow(0 0 3px rgba(253, 253, 253, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 7px rgb(255, 192, 192, 1));
+  }
+  100% {
+    filter: drop-shadow(0 0 3px rgba(253, 253, 253, 0.8));
+  }
+}
+
+.glow-effect {
+  animation: glowAnimation 2s infinite alternate; /* Adjust the duration as needed */
+  transition: filter 0.3s ease-in-out;
+}
+
+.glow-effect:hover {
+  animation: none; /* Disable the animation on hover */
+  filter: drop-shadow(0 0 7px rgb(247, 247, 247));
+}

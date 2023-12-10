@@ -19,7 +19,7 @@ function ProjectSelection({ onProjectSelect }: ProjectSelectionProps) {
         const selectorIconGsap = document.querySelector('.selectorIconGsap');
         gsap.set(selectorIconGsap, { scale: 1 });
         gsap.to(selectorIconGsap, {
-            scale: .5,
+            scale: .2,
             ease: 'power1.inOut',
             duration: 5,
             onComplete: () => {
