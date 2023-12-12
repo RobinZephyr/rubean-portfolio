@@ -123,7 +123,10 @@ const config: Config = {
         letterBorderColor: "hsl(var(--color-letterBorderColor) / <alpha-value>)",
         
         footerBkg: "hsl(var(--color-footerBkg) / <alpha-value>)",
+
+        contactInfo: "hsl(var(--color-contactInfo) / <alpha-value>)",
         
+        hoverNext: "hsl(var(--color-hoverNext) / <alpha-value>)",
         
         darkPink:'#C8A7A3',
         darkBrown:'#222222',

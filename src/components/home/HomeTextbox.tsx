@@ -114,9 +114,9 @@ const HomeTextbox: React.FC = () => {
             ))}
           </div>
           </div>
-          <div className='w-full flex justify-end play-icon opacity-0 h-[20px] glow-effect' onClick={advanceDialog}>
-  <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute transform duration-200 opacity-100 hover:text-pink-200 hover:cursor-pointer right-0 bottom-[-10px] nextDialogindicatorHome' />
-</div>
+          <div className='w-full flex justify-end play-icon opacity-0 h-[20px]  ' onClick={advanceDialog}>
+          <FaLocationPin className='text-text md:text-2xl p-0 fadeInDown absolute transform glow-effect duration-200 opacity-100 hover:text-hoverNext hover:cursor-pointer right-0 bottom-[-10px] nextDialogindicatorHome' />
+        </div>
         </div>
       </div>
     </div>

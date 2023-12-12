@@ -79,6 +79,12 @@
 
         /*contact Border Color*/
         --color-footerBkg:0 16.67% 10.59%;/*Dark Brown Black*/
+
+        /*contactInfo Border Color*/
+        --color-contactInfo:6 19% 78%; /*Dark Pink*/
+
+        /*contactInfo Border Color*/
+        --color-hoverNext:0	100%	96.67%;/*Pink*/
       }
 
       /*Light Mode*/
@@ -129,7 +135,14 @@
 
         /*contact Border Color*/
         --color-footerBkg:6 19% 78%; /*Dark Pink*/
+
+        /*contactInfo Border Color*/
+        --color-contactInfo:0 0% 24%;
+
+          /*hoverNext Border Color*/
+          --color-hoverNext:0 0% 24%; /*Light GRay*/
         }
+        
     }
 
 
@@ -137,5 +150,6 @@
 .space {
   margin-right: .7rem;
 }
+
 
 

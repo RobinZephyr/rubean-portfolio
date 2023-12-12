@@ -45,7 +45,7 @@ function ContactMeContainer() {
                         Personal Contacts:
                     </div>
                     <a href='mailto:rubeanrakeru@gmail.com'>
-                    <div className='text-lg md:text-xl flex items-center mt-3 whitespace-nowrap hover:text-pink-200 transition ease-in-out delay-.5 duration-300'>
+                    <div className='text-lg md:text-xl flex items-center mt-3 whitespace-nowrap hover:text-contactInfo transition ease-in-out delay-.5 duration-300'>
                         <span className=''>
                             <FaEnvelope/>
                         </span>
@@ -53,7 +53,7 @@ function ContactMeContainer() {
                     </div>
                     </a>
                     <a href="tel:+639150844151">
-                    <div className='text-lg md:text-xl flex items-center  mt-2   hover:text-pink-200 transition ease-in-out delay-.5 duration-300'>
+                    <div className='text-lg md:text-xl flex items-center  mt-2   hover:text-contactInfo transition ease-in-out delay-.5 duration-300'>
                         <FaPhone/>
                         <span className='pl-2'>0915-0844-151</span>
                     </div>
