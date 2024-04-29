@@ -1,155 +1,165 @@
-    @tailwind base;
-    @tailwind components;
-    @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    @font-face {
-      font-family: 'PixelFont';
-      src: url('../assets/font/PIXEL_FONT.001.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'PixeBoy';
-      src: url('../assets/font/PixeBoy-z8XGD.ttf') format('truetype');
-    }
-    @font-face {
-      font-family: 'MushroomFont';
-      src: url('../assets/font/Mushroomfont2.ttf') format('truetype');
-    }
-*{
+@font-face {
+  font-family: "PixelFont";
+  src: url("../assets/font/PIXEL_FONT.001.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PixeBoy";
+  src: url("../assets/font/PixeBoy-z8XGD.ttf") format("truetype");
+}
+@font-face {
+  font-family: "MushroomFont";
+  src: url("../assets/font/Mushroomfont2.ttf") format("truetype");
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
-    body{
-      font-family: 'PixelFont', sans-serif;
-      padding: 0%;
-      margin: 0%;
-      width: 100%;
-      min-width: 320px;
-      height: 100vh;
-      overflow-x: hidden;
-      background-color: black;
-    }
+body {
+  font-family: "PixelFont", sans-serif;
+  padding: 0%;
+  margin: 0%;
+  width: 100%;
+  min-width: 320px;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: black;
+}
 
-    @layer base {
-      /*Dark Mode*/
-      :root {
-        
-        --color-bkg:0 0% 13%; /*Brown Black*/
-        --color-border:0 0% 13%; /*Brown Black*/
-        --color-content:0 0% 100%; /*White*/
+@layer base {
+  /*Dark Mode*/
+  :root {
+    --color-bkg: 0 0% 13%; /*Brown Black*/
+    --color-border: 0 0% 13%; /*Brown Black*/
+    --color-content: 0 0% 100%; /*White*/
 
+    /*Text*/
+    --color-text: 0 0% 100%; /*White*/
+    --color-textHover: 0 0% 80%; /*White*/
 
-        /*Text*/
-        --color-text:0 0% 100%; /*White*/
-        --color-textHover:0	0%	80%; /*White*/
+    /*Toggle Button*/
+    --color-toggle: 0 0% 100%; /*White*/
+    --color-toggleHover: 0 0% 80%; /*Light Gray*/
 
+    /*Title Border*/
+    --color-titleBorder: 6 19% 78%; /*Dark Pink*/
 
-        /*Toggle Button*/
-        --color-toggle:0 0% 100%;  /*White*/
-        --color-toggleHover:0	0%	80%; /*Light Gray*/
+    /*Avatar Spotlight*/
+    --color-avatarSpotlight: invert(12%) sepia(7%) saturate(481%)
+      hue-rotate(314deg) brightness(88%) contrast(79%); /*Avatar Spotlight*/
 
-        /*Title Border*/
-        --color-titleBorder:6 19% 78%; /*Dark Pink*/
+    /*Nameplate*/
+    --color-namePlate: 0 16.67% 10.59%; /*Dark Brown Black*/
+    --color-namePlateText: 0 0% 100%; /*White*/
 
-        /*Avatar Spotlight*/
-        --color-avatarSpotlight: invert(12%) sepia(7%) saturate(481%) hue-rotate(314deg) brightness(88%) contrast(79%);  /*Avatar Spotlight*/
+    /*Textbox*/
+    --color-textbox: 0 3.23% 18.04%; /*Light Brown Black*/
 
-        /*Nameplate*/
-        --color-namePlate:0 16.67% 10.59%;/*Dark Brown Black*/
-        --color-namePlateText:0 0% 100%; /*White*/
-        
-        /*Textbox*/
-        --color-textbox: 0 3.23% 18.04%;/*Light Brown Black*/
-       
-        /*Download CV*/
-        --color-downloadButton: 0 0% 13%; /*Brown Black*/
+    /*Download CV*/
+    --color-downloadButton: 0 0% 13%; /*Brown Black*/
 
-        /*MobileMenu*/
-        --color-mainMenu:0 0% 13%; /*Brown Black*/
-        --color-borderMenu:0 100% 0%; /*Black*/
+    /*MobileMenu*/
+    --color-mainMenu: 0 0% 13%; /*Brown Black*/
+    --color-borderMenu: 0 100% 0%; /*Black*/
 
-        /*Skills Menu*/
-        --color-skillMenu:6 19% 78%; /*Dark Pink*/
+    /*Skills Menu*/
+    --color-skillMenu: 6 19% 78%; /*Dark Pink*/
 
-        --color-projectSelectorFilter:  invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%); /*White*/
-        
-        /*contact Border Color*/
-        --color-letterBorderColor:0 0% 100%; /*White*/
+    --color-projectSelectorFilter: invert(92%) sepia(93%) saturate(0%)
+      hue-rotate(202deg) brightness(106%) contrast(106%); /*White*/
 
-        /*contact Border Color*/
-        --color-footerBkg:0 16.67% 10.59%;/*Dark Brown Black*/
+    /*contact Border Color*/
+    --color-letterBorderColor: 0 0% 100%; /*White*/
 
-        /*contactInfo Border Color*/
-        --color-contactInfo:6 19% 78%; /*Dark Pink*/
+    /*contact Border Color*/
+    --color-footerBkg: 0 16.67% 10.59%; /*Dark Brown Black*/
 
-        /*contactInfo Border Color*/
-        --color-hoverNext:0	100%	96.67%;/*Pink*/
-      }
+    /*contactInfo Border Color*/
+    --color-contactInfo: 6 19% 78%; /*Dark Pink*/
 
-      /*Light Mode*/
-      :root[data-theme="light"]{
-        /*White*/
-        --color-bkg:0 0% 98%; /**White*/
-        
-        /*Pink*/
-        --color-border:0	100%	96.67%;
+    /*contactInfo Border Color*/
+    --color-hoverNext: 0 100% 96.67%; /*Pink*/
+  }
 
-          /*Brown Black*/
-        --color-content:0 0% 13%;
+  /*Light Mode*/
+  :root[data-theme="light"] {
+    /*White*/
+    --color-bkg: 0 0% 98%; /**White*/
 
-          /*Title Border*/
-          --color-titleBorder:0 0% 13%; /*Brown Black*/
+    /*Pink*/
+    --color-border: 0 100% 96.67%;
 
-          /*Text*/
-          --color-text:0 0% 13%; /*Brown Black*/
-          --color-textHover:0 3% 19%;/* Light Brown Black*/
+    /*Brown Black*/
+    --color-content: 0 0% 13%;
 
-          /*Toggle Button*/
-          --color-toggle:0 0% 13%; /*Brown Black*/
-          --color-toggleHover:0 3% 19%;/* Light Brown Black*/
+    /*Title Border*/
+    --color-titleBorder: 0 0% 13%; /*Brown Black*/
 
-          /*Avatar Spotlight*/
-          --color-avatarSpotlight:invert(94%) sepia(2%) saturate(1230%) hue-rotate(314deg) brightness(100%) contrast(102%); /*Avatar Spotlight*/
+    /*Text*/
+    --color-text: 0 0% 13%; /*Brown Black*/
+    --color-textHover: 0 3% 19%; /* Light Brown Black*/
 
-            /*Nameplate*/
-          --color-namePlate:0 3% 19%;/*Light Brown Black*/
-          --color-namePlateText:0 21%  11%;/*Dark Brown Black*/
+    /*Toggle Button*/
+    --color-toggle: 0 0% 13%; /*Brown Black*/
+    --color-toggleHover: 0 3% 19%; /* Light Brown Black*/
 
-          /*Textbox*/
-          --color-textbox: 0	100%	96.67%;/*Pink*/
+    /*Avatar Spotlight*/
+    --color-avatarSpotlight: invert(94%) sepia(2%) saturate(1230%)
+      hue-rotate(314deg) brightness(100%) contrast(102%); /*Avatar Spotlight*/
 
-          /*Download CV*/
-          --color-downloadButton:0	0%	80%; /*White*/
+    /*Nameplate*/
+    --color-namePlate: 0 3% 19%; /*Light Brown Black*/
+    --color-namePlateText: 0 21% 11%; /*Dark Brown Black*/
 
-          /*MobileMenu*/
-        --color-mainMenu:6 19% 78%; /*Dark Pink*/
-        --color-borderMenu:0 0% 13%; /*Brown Black*/
+    /*Textbox*/
+    --color-textbox: 0 100% 96.67%; /*Pink*/
 
-          /*Skills Menu*/
-          --color-skillMenu:0 0% 13%; /*Brown Black*/
-          --color-projectSelectorFilter:  invert(0%) sepia(6%) saturate(24%) hue-rotate(268deg) brightness(97%) contrast(107%);/*Black*/
-     
-        /*contact Border Color*/
-        --color-letterBorderColor:0 0% 19%; /*Brown Black*/
+    /*Download CV*/
+    --color-downloadButton: 0 0% 80%; /*White*/
 
-        /*contact Border Color*/
-        --color-footerBkg:6 19% 78%; /*Dark Pink*/
+    /*MobileMenu*/
+    --color-mainMenu: 6 19% 78%; /*Dark Pink*/
+    --color-borderMenu: 0 0% 13%; /*Brown Black*/
 
-        /*contactInfo Border Color*/
-        --color-contactInfo:0 0% 24%;
+    /*Skills Menu*/
+    --color-skillMenu: 0 0% 13%; /*Brown Black*/
+    --color-projectSelectorFilter: invert(0%) sepia(6%) saturate(24%)
+      hue-rotate(268deg) brightness(97%) contrast(107%); /*Black*/
 
-          /*hoverNext Border Color*/
-          --color-hoverNext:0 0% 24%; /*Light GRay*/
-        }
-        
-    }
+    /*contact Border Color*/
+    --color-letterBorderColor: 0 0% 19%; /*Brown Black*/
 
+    /*contact Border Color*/
+    --color-footerBkg: 6 19% 78%; /*Dark Pink*/
 
-    
+    /*contactInfo Border Color*/
+    --color-contactInfo: 0 0% 24%;
+
+    /*hoverNext Border Color*/
+    --color-hoverNext: 0 0% 24%; /*Light GRay*/
+  }
+}
+
 .space {
-  margin-right: .7rem;
+  margin-right: 0.7rem;
 }
 
+.scroll {
+  width: 20px;
+  height: 200px;
+  overflow: auto;
+  float: left;
+  margin: 0 10px;
+}
 
+.scroll2::-webkit-scrollbar {
+  width: 5px;
+}
 
+.scroll2::-webkit-scrollbar-thumb {
+  background: #666;
+}
